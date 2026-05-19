@@ -12,14 +12,9 @@
         echo "si te conectaste ". "<br>";
     }
 
-    $codigo=NULL;
-    $usuario=$_POST['usuario'];
-    $nombrepro=$_POST['nombrepro'];
-    $precio=$_POST['precio'];
-    $cantidad=$_POST['cantidad'];
-    $tipo=$_POST['tipo'];
+    $codigo=$_GET['codigo'];
 
-    $sql="INSERT INTO produc (codigo, usuario, precio, nombrepro,  cantidad, tipo) VALUES ('$codigo','$usuario', '$precio', '$nombrepro', '$cantidad','$tipo')";
+    $sql="DELETE FROM produc WHERE codigo='$codigo'";
     $query= mysqli_query($conn,$sql);
 
     if($query){

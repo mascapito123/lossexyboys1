@@ -367,8 +367,8 @@ section.cuadro{
                     <td><?php echo $row['precio']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
                     <td>
-                      <a class="edi" href="editar_admin.php?id=<?php echo $row['id']; ?>">EDITAR</a>
-                      <a class="eli" href="eliminar_admin.php?id=<?php echo $row['id']; ?>">ELIMINAR</a>
+                      <a class="edi" href="editar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">EDITAR</a>
+                      <a class="eli" href="eliminar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">ELIMINAR</a>
                     </td>
                   </tr>
                   <dialog class="modal modaltodo" data-index="<?php echo $i; ?>">
