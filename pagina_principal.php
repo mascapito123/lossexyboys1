@@ -418,6 +418,7 @@ footer a:hover{
                     <a href="registro.php">Registrarse</a>
                     <a href="creacion.php">Creacion de vasos</a>
                     <a href="creacionjugos.php">Creacion de jugos</a>
+                    <a href="adminbueno.php">Panel de Administracion</a>
                 </div>
 
             </section>
