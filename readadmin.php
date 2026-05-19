@@ -312,6 +312,8 @@ section.cuadro{
   <div class="dropdown-content">
     <a href="ubicacion.html">Ubicación</a>
     <a href="registro.html">Registrarse</a>
+     <a href="creacion.php">Creacion de vasos</a>
+    <a href="creacionjugos.php">Creacion de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
