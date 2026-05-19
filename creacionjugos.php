@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrate en Boomble</title>
+  <title>Fabricación de los vasos</title>
   <style>
     * {
       box-sizing: border-box;
@@ -38,7 +38,7 @@
     nav a:hover {
       color: #5eff6ce5;
     }
-          .dropdown {
+      .dropdown {
   position: relative;
   display: inline-block;
 }
@@ -75,11 +75,11 @@
       margin-top: 60px;
     }
     .goldaabajo {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
     footer h4 {
       color: #fff;
@@ -126,6 +126,16 @@
       background: #3cffce;
     }
 
+    .titulo {
+      width: 100vw;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+
     .contenido {
       display: flex;
       flex-wrap: wrap;
@@ -162,7 +172,7 @@
       margin-bottom: 20px;
       text-align: center;
     }
-    p{
+     p{
       font-size: 30px;
       line-height: 1.8;
       text-align: justify;
@@ -170,88 +180,85 @@
        font-family: "Times New Roman", Times, serif;
         font-size: 20px;
     }
-    h1 {
-color: #4CAF50;
-text-align: center;
-margin-top: 40px;
-}
-form {
-background-color: white;
-max-width: 600px;
-margin: auto;
-padding: 20px;
-border-radius: 8px;
-}
-label {
-display: block;
-margin-top: 15px;
-font-weight: bold;
-}
-input, select, textarea {
-width: 99%;
-padding: 10px;
-margin-top: 5px;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-button {
-background-color: #4CAF50;
-color: white;
-padding: 10px 20px;
-border: none;
-margin-top: 20px;
-width: 100%;
-font-size: 16px;
+    .dropdown {
+  position: relative;
+  display: inline-block;
 }
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #5eff6ce5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   </style>
 </head>
 <body>
-  <header>
-    <a href="pagina_principal.php">
-      <img src="logo bomble.png" alt="Logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="productos.php">NUESTROS JUGOS</a></li>
-        <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-        <li><a href="quienes.php">QUIENES SOMOS</a></li>
-        <li><a href="telefonos .php">TELEFONOS</a></li>
-   <li class="dropdown">
-  <a href="#">MÁS</a>
+<header>
+  <a href="pagina_principal.php">
+  <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
+  </a>
+  <nav>
+    <ul>
+      <li><a href="productos.php">NUESTROS JUGOS</a></li>
+      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="quienes.php">QUIENES SOMOS</a></li>
+      <li><a href="telefonos .php">TELEFONOS</a></li>
+      <li class="dropdown">
+  <a href="productos.php">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
     <a href="registro.php">Registrarse</a>
-    <a href="creacion.php">Creación de vasos</a>
-    <a href="creacionjugos.php">Creación de jugos</a>
+    <a href="creacion.php">Creacion de vasos</a>
+    <a href="creacionjugos.php">Creacion de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
-      </ul>
-    </nav>
-  </header>
+    </ul>
+  </nav>
+</header>
 
-    
+  <div class="titulo">FABRICACIÓN DE JUGOS</div>
+
+<section class="contenido">
+  <img src="jugos1.jpg" alt="Preparación de jugos naturales">
+  <div class="letra">
+    <p>La elaboración de nuestros jugos comienza con la selección de frutas frescas y naturales, cuidadosamente elegidas según su punto ideal de maduración. Cada fruta es lavada y desinfectada con productos ecológicos, asegurando mantener su sabor y propiedades intactas.</p>
+    <p>Nos enfocamos en trabajar con productores locales para garantizar ingredientes de calidad y reducir el impacto ambiental. Las frutas son peladas y cortadas a mano, preservando sus nutrientes y evitando procesos industriales que alteren su esencia natural.</p>
+    <p>El jugo se extrae mediante métodos caseros que conservan el sabor auténtico y la textura original de la fruta. No utilizamos conservantes, colorantes ni azúcares añadidos, solo la dulzura natural que cada fruta ofrece.</p>
+    <p>Cada preparación se realiza al momento, en pequeñas cantidades, para garantizar frescura y pureza. El resultado es un jugo 100% natural, lleno de energía y vitalidad, ideal para disfrutar en cualquier momento del día.</p>
+  </div>
 </section>
-<h1>REGISTRATE EN BOOMBLE</h1>
-<form action="create_registro.php" method="post">
-<label for="nombre">NOMBRE COMPLETO:</label>
-<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" required>
-<label for="telefono">TELEFONO</label>
-<input type="number" placeholder="12345678" id="telefono" name="telefono" required>
-<label for="email">CORREO ELECTRONICO:</label>
-<input type="email" placeholder="pepe121@gmail.com" id="email" name="email" required>
-<label for="direccion">DIRECCION:</label>
-<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
-<label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" required>
-<label for="comentarios">COMENTARIOS ADICIONALES:</label>
-<textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
-<button type="submit">Enviar Pedido</button>
-</form>
 
-
-
+<section class="contenido reverse">
+  <img src="jugos2.jpg" alt="Jugos frescos y naturales">
+  <div class="letra">
+    <p>Después de la extracción, los jugos se filtran suavemente para conservar su textura ligera y agradable. Cada mezcla se prueba con cuidado para equilibrar la dulzura, la acidez y el aroma, logrando combinaciones refrescantes y únicas.</p>
+    <p>Utilizamos envases ecológicos y reciclables, reafirmando nuestro compromiso con el medio ambiente. Nuestros jugos son elaborados con dedicación, siguiendo un proceso artesanal que respeta los ciclos naturales de cada ingrediente.</p>
+    <p>De esta manera, cada botella refleja nuestra filosofía: ofrecer un producto saludable, auténtico y lleno de vida, hecho con manos que valoran la naturaleza. Cada sorbo cuenta una historia de frescura, bienestar y sostenibilidad.</p>
+    <p>Porque en cada jugo que elaboramos, ponemos el mismo cariño y esmero que en casa, manteniendo viva la tradición de lo natural, lo casero y lo verdaderamente saludable.</p>
+  </div>
+</section>
+</section>
   <footer>
     <div class="goldaabajo">
       <div>
@@ -294,3 +301,4 @@ font-size: 16px;
   </footer>
 </body>
 </html>
+

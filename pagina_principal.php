@@ -443,18 +443,13 @@ footer a:hover{
     </div>
 </section>
 <section class="sections">
-    <div class="mitch">
+    <div class="reinaduende">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Combos">
-
-    <div class="reinaduende">
-        <img src="combos.jpg" alt="Combos">
         <h2>COMBOS</h2>
-        <a href="combos.php">COMPRA AHORA</a>
+        <a href="vendedor/vendedor.php">VENDEDOR</a>
     </div>
-    <div class="bombastic">
-        <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">
     <div class="reinaduende">
-        <img src="quienes.png" alt="Quiénes Somos">
+        <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">
         <h2>QUIENES SOMOS</h2>
         <a href="quienes.php">MÁS INFORMACIÓN</a>
     </div>

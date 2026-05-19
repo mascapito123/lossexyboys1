@@ -218,7 +218,7 @@ main.main {
       <li><a href="horarioatencion.php">PROGRAMAS</a></li>
       <li><a href="combos.php">COMBOS</a></li>
       <li><a href="quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="telefonos.php">TELEFONOS</a></li>
+      <li><a href="telefonos .php">TELEFONOS</a></li>
      <li class="dropdown">
   <a href="#">MÁS</a>
   <div class="dropdown-content">
