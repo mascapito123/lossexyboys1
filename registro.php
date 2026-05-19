@@ -222,7 +222,6 @@ font-size: 16px;
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
     <a href="registro.php">Registrarse</a>
-    <a href="sexiboys.php">Usuarios</a>
     <a href="creacion.php">Creación de vasos</a>
     <a href="creacionjugos.php">Creación de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>
