@@ -1,5 +1,6 @@
 <?php
 $jugo = $_GET['jugo'];
+$precio = $_GET['precio'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -241,13 +242,13 @@ input[type="submit"]:hover{
         <h1>¿Quieres comprar?</h1>
         <form action="insert_produc.php" method="post" class="form-grid">
           <div>
-            <label for="codigo">Código</label>
-            <input id="codigo" type="text" name="codigo" required value="BB-">
+            <label for="Precio">Precio</label>
+            <input id="Precio" type="text" name="Precio" value="<?php echo $precio; ?>" readonly>
           </div>
 
           <div>
             <label for="producto">Producto</label>
-            <input id="producto" type="text" name="producto" required value="<?php echo $jugo; ?>" readonly>
+            <input id="producto" type="text" name="producto" value="<?php echo $jugo; ?>" readonly>
           </div>
           <div>
             <label for="vasos">Vasos</label>

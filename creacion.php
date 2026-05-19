@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>telefonos</title>
-<style>
-  * {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-    header {
+  header {
     background: #111;
     color: #fff;
     padding: 12px 40px;
@@ -27,7 +27,7 @@
     grid-auto-flow: column;
     justify-content: center;
     list-style: none;
-    gap: 70px;
+    gap: 20px;
   }
   nav a {
     color: #fff;
@@ -36,70 +36,80 @@
   nav a:hover {
     color: #5eff6ce5;
   }
-  body {
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  .pepe {
+    background: #f6f6f6;
+    padding: 60px 20px;
+    display: grid;
+    justify-content: center;
+  }
+  .pepe-contenido {
+    max-width: 1100px;
+    display: grid;
+    gap: 20px;
+  }
+  .pepe h1 {
+    font-size: 46px;
+    font-weight: 800;
+  }
+  .pepe h1 span {
+    color: #111;
+  }
+  .pepep p {
+    font-size: 22px;
+    color: #555;
+  }
+  .pepe-img img {
+    width: 1000px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .pepe-img img:hover {
+    transform: scale(1.03);
+  }
+.main-content {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.contact-container {
-  max-width: 800px;
+.vasos {
+  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
-.contact-card {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
 
-.contact-card:hover {
-  transform: translateY(-5px);
-}
-
-.contact-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-  border: 3px solid #25D366;
-}
-
-.contact-info {
-  flex: 1;
-}
-
-.contact-info p {
-  margin: 5px 0;
-  font-size: 1.1rem;
+.vasos h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
   color: #333;
 }
 
-.whatsapp-link {
-  display: inline-flex;
+.vasos-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   align-items: center;
-  padding: 8px 16px;
-  background: #25D366;
-  color: white !important;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background 0.3s ease;
 }
 
-.whatsapp-link:hover {
-  background: #128C7E;
+.vasos-item img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.whatsapp-link img {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+.vasos-item p {
+  font-size: 30px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #444;
+  font-family: "Times New Roman", Times, serif;
 }
+
+
   footer {
     background: #111;
     color: #ccc;
@@ -187,10 +197,10 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-</style>
+    </style>
 </head>
 <body>
-<header>
+  <header>
   <a href="pagina_principal.php">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
@@ -198,6 +208,7 @@
     <ul>
       <li><a href="productos.php">NUESTROS JUGOS</a></li>
       <li><a href="horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="combos.php">COMBOS</a></li>
       <li><a href="quienes.php">QUIENES SOMOS</a></li>
       <li><a href="telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
@@ -207,75 +218,27 @@
     <a href="registro.php">Registrarse</a>
     <a href="creacion.php">Creacion de vasos</a>
     <a href="creacionjugos.php">Creacion de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>
   </nav>
 </header>
 
-<div class="contact-container">
-  <div class="contact-card">
-    <img src="isac.png" alt="Isac" class="contact-image">
-    <div class="contact-info">
-      <p><strong>Isac Castellon</strong></p>
-      <a href="https://api.whatsapp.com/send?phone=59168552545&text=quiero%20saber%20que%20productos%20tienen" 
-         class="whatsapp-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Contactar por WhatsApp
-      </a>
-    </div>
-  </div>
 
-  <div class="contact-card">
-    <img src="malaga.png" alt="Alexander" class="contact-image">
-    <div class="contact-info">
-      <p><strong>Alexander Malaga</strong></p>
-      <a href="https://api.whatsapp.com/send?phone=59162615517&text=quiero%20saber%20que%20productos%20tienen" 
-         class="whatsapp-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Contactar por WhatsApp
-      </a>
+<div class="vasos">
+  <h1>La fabricación de los vasos</h1>
+  <div class="vasos-content">
+    <div class="vasos-item">
+      <p>Se selecciona un bambú maduro, luego a la caña se le corta en secciones con una sierra, utilizando los nudos internos como la base natural del vaso, luego se lija o se usa una escofina para dejar el interior completamente hueco y liso. Se limpia el interior y el exterior de la caña. Se deja secar completamente para asegurar su durabilidad. Se lijan los bordes y la superficie (con lija fina) para que queden suaves al tacto.</p>
+      <img src="lija.jpg" alt="lija">
     </div>
-  </div>
-
-  <div class="contact-card">
-    <img src="leo.png" alt="Leonel" class="contact-image">
-    <div class="contact-info">
-      <p><strong>Leonel Villaroel</strong></p>
-      <a href="https://api.whatsapp.com/send?phone=59162992656&text=quiero%20saber%20que%20productos%20tienen" 
-         class="whatsapp-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Contactar por WhatsApp
-      </a>
-    </div>
-  </div>
-
-  <div class="contact-card">
-    <img src="fer.png" alt="Fernando" class="contact-image">
-    <div class="contact-info">
-      <p><strong>Fernando Camargo</strong></p>
-      <a href="https://api.whatsapp.com/send?phone=59171409698&text=quiero%20saber%20que%20productos%20tienen" 
-         class="whatsapp-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Contactar por WhatsApp
-      </a>
-    </div>
-  </div>
-
-  <div class="contact-card">
-    <img src="mateo.png" alt="Mateo" class="contact-image">
-    <div class="contact-info">
-      <p><strong>Mateo Salazar</strong></p>
-      <a href="https://api.whatsapp.com/send?phone=59163875529&text=quiero%20saber%20que%20productos%20tienen" 
-         class="whatsapp-link" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Contactar por WhatsApp
-      </a>
+    
+    <div class="vasos-item">
+      <img src="sierra.jpg" alt="sierra">
+      <p>Se corta la cáscara dura con una segueta, serrucho o cúter. Es crucial que el corte sea limpio y recto. Se extrae toda la pulpa y las semillas de la parte interna (la "carne") con una cuchara, espátula o herramienta similar. Se raspa cuidadosamente el interior hasta que quede completamente limpio, liso y blanco. Se lijan los bordes del corte para suavizarlos.</p>
     </div>
   </div>
 </div>
-
 
 <footer>
   <div class="goldaabajo">
