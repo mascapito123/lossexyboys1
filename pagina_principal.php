@@ -427,7 +427,7 @@ footer a:hover{
         <h1>BOOMBLE</h1>
         <div class="botones">
             <a href="productos.php">JUGOS</a>
-            <a href="horarioatencion.php">HORARIA</a>
+            <a href="horarioatencion.php">HORARIO</a>
             <a href="quienes.php">QUIENES</a>
             <a href="telefonos .php">TELEFONOS</a>
             <section class="dropdown">
