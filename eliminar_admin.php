@@ -2,7 +2,7 @@
     $servidor="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBD="admin1";
+    $nombreBD="adminbueno";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
     if($conn -> connect_error){
@@ -20,3 +20,4 @@
     if($query){
         header("location: readadmin.php");
     }
+?>
