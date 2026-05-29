@@ -298,21 +298,23 @@ section.cuadro{
 </head>
 <body>
     <header>
-  <a href="pagina_principal.html">
+  <a href="../pagina_principal.php">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
   <nav>
     <ul>
-      <li><a href="productos.html">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.html">PROGRAMAS</a></li>
-      <li><a href="quienes.html">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .html">TELEFONOS</a></li>
+      <li><a href="../productos.php">NUESTROS JUGOS</a></li>
+      <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="../quienes.php">QUIENES SOMOS</a></li>
+      <li><a href="../telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
   <a href="#" class="dropbtn">MÁS</a>
   <div class="dropdown-content">
-    <a href="ubicacion.html">Ubicación</a>
-    <a href="registro.html">Registrarse</a>
-    <a href="adminbueno.php">Panel de Administración</a>
+    <a href="../ubicacion.php">Ubicación</a>
+    <a href="../registro.php">Registrarse</a>
+    <a href="../creacion.php">Creacion de vasos</a>
+    <a href="../creacionjugos.php">Creacion de jugos</a>
+    <a href="../adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>
@@ -367,8 +369,8 @@ section.cuadro{
                     <td><?php echo $row['precio']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
                     <td>
-                      <a class="edi" href="editar_admin.php?id=<?php echo $row['id']; ?>">EDITAR</a>
-                      <a class="eli" href="eliminar_admin.php?id=<?php echo $row['id']; ?>">ELIMINAR</a>
+                      <a class="edi" href="editar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">EDITAR</a>
+                      <a class="eli" href="eliminar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">ELIMINAR</a>
                     </td>
                   </tr>
                   <dialog class="modal modaltodo" data-index="<?php echo $i; ?>">
