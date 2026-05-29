@@ -216,7 +216,7 @@
 
 <div class="contact-container">
   <div class="contact-card">
-    <img src="isac.png" alt="Isac" class="contact-image">
+    <img src="isac1.jpg" alt="Isac" class="contact-image">
     <div class="contact-info">
       <p><strong>Isac Castellon</strong></p>
       <a href="https://api.whatsapp.com/send?phone=59168552545&text=quiero%20saber%20que%20productos%20tienen" 
@@ -228,7 +228,7 @@
   </div>
 
   <div class="contact-card">
-    <img src="malaga.png" alt="Alexander" class="contact-image">
+    <img src="alex.jpg" alt="Alexander" class="contact-image">
     <div class="contact-info">
       <p><strong>Alexander Malaga</strong></p>
       <a href="https://api.whatsapp.com/send?phone=59162615517&text=quiero%20saber%20que%20productos%20tienen" 
@@ -240,7 +240,7 @@
   </div>
 
   <div class="contact-card">
-    <img src="leo.png" alt="Leonel" class="contact-image">
+    <img src="leo.jpg" alt="Leonel" class="contact-image">
     <div class="contact-info">
       <p><strong>Leonel Villaroel</strong></p>
       <a href="https://api.whatsapp.com/send?phone=59162992656&text=quiero%20saber%20que%20productos%20tienen" 
@@ -264,7 +264,7 @@
   </div>
 
   <div class="contact-card">
-    <img src="mateo.png" alt="Mateo" class="contact-image">
+    <img src="mateo.jpg" alt="Mateo" class="contact-image">
     <div class="contact-info">
       <p><strong>Mateo Salazar</strong></p>
       <a href="https://api.whatsapp.com/send?phone=59163875529&text=quiero%20saber%20que%20productos%20tienen" 
