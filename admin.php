@@ -328,47 +328,9 @@ section.cuadro{
             </form>
         </dialog>
     </section>
-    <footer>
-  <div class="goldaabajo">
-    <div>
-      <h4>NOSOTROS</h4>
-      <ul>
-        <li><a href="#">Nuestra historia</a></li>
-        <li><a href="#">Nuestra filosofía</a></li>
-        <li><a href="#">Responsabilidad social</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>TIENDA</h4>
-      <ul>
-        <li><a href="#">Programa 7 días</a></li>
-        <li><a href="#">Dieta líquida de 1 día</a></li>
-        <li><a href="#">Otros productos</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>AYUDA</h4>
-      <ul>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Preguntas frecuentes</a></li>
-        <li><a href="#">Términos y condiciones</a></li>
-      </ul>
-    </div>
-    <div class="subscribe">
-      <h4>SUSCRÍBETE</h4>
-      <p>Recibe nuestras últimas noticias</p>
-      <input type="email" placeholder="Tu email...">
-      <button>OK</button>
-      <div class="redes-musculoso">
-        <a href="#">🌐</a>
-        <a href="#">📘</a>  
-        <a href="#">📸</a>
-        <a href="#">📍</a>  
-      </div>
-    </div>
-  </div>
-</footer>
-
+    <?php
+      include("pie_pg.php");
+    ?>
     <script>
         var pan = document.getElementById("pan");
         var char = document.getElementById("char");
