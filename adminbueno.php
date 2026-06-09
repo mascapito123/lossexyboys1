@@ -433,7 +433,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>📦 Gestionar Productos</h3>
+                    <h3>📦 Gestionar ventas</h3>
                     <p>Mantén actualizado el inventario, añade stock y controla el catálogo visible.</p>
                 </div>
                 <ul class="action-list">
@@ -448,7 +448,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>📊 Reportes del Sistema</h3>
+                    <h3>📊 Reportes del Stock</h3>
                     <p>Analiza las métricas de rendimiento globales, errores y estadísticas clave.</p>
                 </div>
                 <ul class="action-list">
