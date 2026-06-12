@@ -145,12 +145,6 @@ section.cuadro{
     border:transparent
 
   }
-    footer {
-    background: #111;
-    color: #ccc;
-    padding: 40px 20px;
-    margin-top: 40px;
-  }
   .isac{
     border-radius: 50%;
     width: 250px;
