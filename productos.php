@@ -149,7 +149,7 @@
 
 <header>
   <a href="pagina_principal.php">
-  <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
+  <img src="imagenes/logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
   <nav>
     <ul>
