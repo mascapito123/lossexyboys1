@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-  * {
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -77,25 +76,31 @@ section.cuadro{
     grid-template-columns: 100%;
     grid-template-rows: 250px 500px;
     grid-template-areas:
-      "a"
+      "c"
       "b";
     gap: 10px;
   }
-    .a {
-    grid-area: a;
+  .c{
     background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
+    grid-area: c;
     border-radius: 6px;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 100px 150px;
-    grid-template-areas: 
-    "i d"
-    "i n";
-  }
-  .a img{
-    border-radius: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.c img{
+  border-radius: 100%;
     width: 250px;
-  }
+}
+
+.par{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
     .b {
     grid-area: b;
     background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
@@ -133,113 +138,49 @@ section.cuadro{
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
-  border: 1px solid #4CAF50;
+  border: 2px solid #4CAF50;
   border-radius: 5px;
   cursor: pointer;
-  
+
   }
   .pan, .char, .joqui, .bomm, .panoch {
     padding: 10px 20px;
     background-color: transparent;
-    border: transparent;
-  }
-    footer {
-    background: #111;
-    color: #ccc;
-    padding: 40px 20px;
-    margin-top: 40px;
-  }
-  .goldaabajo {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  footer h4 {
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  footer ul {
-    list-style: none;
-  }
-  footer li {
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  footer a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  footer a:hover {
-    color: #fff;
-  }
-  .redes-musculoso a {
-    margin-right: 10px;
-    display: inline-block;
-    font-size: 18px;
-  }
-  .subscribe {
-    display: grid;
-    gap: 10px;
-  }
-  .subscribe input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    width: 80%;
-  }
-  .subscribe button {
-    background: #3cff46;
-    border: none;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .subscribe button:hover {
-    background: #3cffce;
-  }
-
-  .d{
-    font-size: 100px;
-    grid-area: d;
+    border:transparent;
   }
     </style>
 </head>
 <body>
     <header>
-  <a href="pagina_principal.html">
+  <a href="pagina_principal.php">
   <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
   </a>
   <nav>
     <ul>
-      <li><a href="productos.html">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.html">PROGRAMAS</a></li>
-      <li><a href="combos.html">COMBOS</a></li>
-      <li><a href="quienes.html">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .html">TELEFONOS</a></li>
+      <li><a href="productos.php">NUESTROS JUGOS</a></li>
+      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="combos.php">COMBOS</a></li>
+      <li><a href="quienes.php">QUIENES SOMOS</a></li>
+      <li><a href="telefonos.php">TELEFONOS</a></li>
       <li class="dropdown">
-  <a href="productos.html">MÁS</a>
+  <a href="productos.php">MÁS</a>
   <div class="dropdown-content">
-    <a href="ubicacion.html">Ubicación</a>
-    <a href="registro.html">Registrarse</a>
-    <a href="creacion.php">Creacion de vasos</a>
-    <a href="creacionjugos.php">Creacion de jugos</a>
-    <a href="adminbueno.php">Panel de Administracion</a>
+    <a href="ubicacion.php">Ubicación</a>
+    <a href="registro.php">Registrarse</a>
   </div>
 </li>
     </ul>
   </nav>
 </header>
     <section class="cuadro">
-         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
-            <nav>
-            <h1 class="d">VENDEDOR</h1>
-          </nav>
+        
+        <div class="c">
+            <img src="fer.png" alt="fernando" class="par">
+            <h1 style="font-size: 4em; color: #4CAF50;">Datos del vendedor</h1>
+            <p style="font-size: 2em; color: black;">Fernando Camargo encargado de la venta y desarrollo de los productos para que cumplan todas las medidas de sanidad necesarias, entre las tareas y verificavciones que el encargado debe realizar estan:
+</p>
         </div>
-
-        <div class="b">
+<div class="b">
             <table>
                 <tr>
                     <th>Clientes</th>
@@ -296,49 +237,12 @@ section.cuadro{
             </form>
         </dialog>
     </section>
-    <footer>
-  <div class="goldaabajo">
-    <div>
-      <h4>NOSOTROS</h4>
-      <ul>
-        <li><a href="#">Nuestra historia</a></li>
-        <li><a href="#">Nuestra filosofía</a></li>
-        <li><a href="#">Responsabilidad social</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>TIENDA</h4>
-      <ul>
-        <li><a href="#">Programa 7 días</a></li>
-        <li><a href="#">Dieta líquida de 1 día</a></li>
-        <li><a href="#">Otros productos</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>AYUDA</h4>
-      <ul>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Preguntas frecuentes</a></li>
-        <li><a href="#">Términos y condiciones</a></li>
-      </ul>
-    </div>
-    <div class="subscribe">
-      <h4>SUSCRÍBETE</h4>
-      <p>Recibe nuestras últimas noticias</p>
-      <input type="email" placeholder="Tu email...">
-      <button>OK</button>
-      <div class="redes-musculoso">
-        <a href="#">🌐</a>
-        <a href="#">📘</a>  
-        <a href="#">📸</a>
-        <a href="#">📍</a>  
-      </div>
-    </div>
-  </div>
-</footer>
+    <?php
+     include("pie_pg.php");
+    ?>
 
     <script>
-        var pan = document.getElementById("pan");
+        var pan = document.getElementById("pan");s
         var char = document.getElementById("char");
         var joqui = document.getElementById("joqui");
         var bomm = document.getElementById("bomm");
