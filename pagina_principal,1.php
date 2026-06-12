@@ -353,12 +353,8 @@ nav a:hover{
         <a href="productos.php">COMPRAR AHORA</a>
     </div>
 </section>
-    <?php
-<<<<<<< HEAD:pagina_principal.html
+     <?php
       include("pie_pg.php");
-=======
-     include("pie_pg.php");
->>>>>>> d13b5ab1fc059e80be1b6dbcba4e33f0a396257b:pagina_principal,1.php
     ?>
 </body>
 </html>

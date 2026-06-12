@@ -68,10 +68,6 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> d13b5ab1fc059e80be1b6dbcba4e33f0a396257b
     .titulo {
       width: 100vw;
       background: #111;
@@ -206,11 +202,7 @@
 </section>
 </section>
     <?php
-<<<<<<< HEAD
       include("pie_pg.php");
-=======
-     include("pie_pg.php");
->>>>>>> d13b5ab1fc059e80be1b6dbcba4e33f0a396257b
     ?>
 </body>
 </html>
