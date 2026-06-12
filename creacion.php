@@ -179,8 +179,9 @@
       <p>Se corta la cáscara dura con una segueta, serrucho o cúter. Es crucial que el corte sea limpio y recto. Se extrae toda la pulpa y las semillas de la parte interna (la "carne") con una cuchara, espátula o herramienta similar. Se raspa cuidadosamente el interior hasta que quede completamente limpio, liso y blanco. Se lijan los bordes del corte para suavizarlos.</p>
     </div>
   </div>
+</div>
     <?php
-     include("pie_pg.php");
+      include("pie_pg.php");
     ?>
 </body>
 </html>

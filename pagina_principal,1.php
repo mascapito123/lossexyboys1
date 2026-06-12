@@ -54,12 +54,10 @@ header{
     justify-content:space-between;
     align-items:center;
 }
-
 .empresa{
     color:white;
     font-size:28px;
 }
-
 nav a{
     color:white;
     text-decoration:none;
@@ -67,7 +65,6 @@ nav a{
     font-size:18px;
     transition:0.3s;
 }
-
 nav a:hover{
     color:#5eff6ce5;
 }
@@ -75,7 +72,6 @@ nav a:hover{
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -85,19 +81,16 @@ nav a:hover{
   z-index: 1;
   border-radius: 5px;
 }
-
 .dropdown-content a {
   color: #fff;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
-
 .dropdown-content a:hover {
   background-color: #333;
     color: #5eff6ce5;
 }
-
 .contenido{
     width:100%;
     height:100vh;
@@ -108,20 +101,17 @@ nav a:hover{
     text-align:center;
     color:white;
 }
-
 .contenido h1{
     font-size:100px;
     letter-spacing:5px;
     margin-bottom:30px;
     text-shadow:0 0 15px rgba(0,0,0,0.7);
 }
-
 .botones{
     display:flex;
     gap:40px;
     flex-wrap:wrap;
 }
-
 .botones a{
     color:white;
     text-decoration:none;
@@ -130,14 +120,11 @@ nav a:hover{
     border-bottom:3px solid white;
     transition:0.3s;
 }
-
 .botones a:hover{
     transform:scale(1.1);
     color:#5eff6ce5;
     border-color:#5eff6ce5;
 }
-
-
 .sections{
     display:grid;
     grid-template-columns:
@@ -147,7 +134,6 @@ nav a:hover{
     margin:60px auto;
     padding:20px;
 }
-
 .mitch{
     background:#fafafa;
 
@@ -164,7 +150,6 @@ nav a:hover{
 
     overflow:hidden;
 }
-
 .mitch img{
     width:100%;
     height:400px;
@@ -179,12 +164,10 @@ nav a:hover{
 .mitch img:hover{
     transform:scale(1.05);
 }
-
 .mitch h2{
     font-size:22px;
     font-weight:700;
 }
-
 .mitch a{
     display:inline-block;
 
@@ -201,12 +184,9 @@ nav a:hover{
 
     transition:0.3s;
 }
-
 .mitch a:hover{
     background:#333;
 }
-
-
 .bombastic{
     background:#fafafa;
 
@@ -223,7 +203,6 @@ nav a:hover{
 
     overflow:hidden;
 }
-
 .bombastic img{
     width:100%;
     height:400px;
@@ -234,16 +213,13 @@ nav a:hover{
 
     transition:0.3s;
 }
-
 .bombastic img:hover{
     transform:scale(1.05);
 }
-
 .bombastic h2{
     font-size:22px;
     font-weight:700;
 }
-
 .bombastic a{
     display:inline-block;
 
@@ -260,11 +236,9 @@ nav a:hover{
 
     transition:0.3s;
 }
-
 .bombastic a:hover{
     background:#333;
 }
-
 .reinaduende{
     background:#fafafa;
     border-radius:10px;
@@ -275,7 +249,6 @@ nav a:hover{
     gap:10px;
     overflow:hidden;
 }
-
 .reinaduende img{
     width:100%;
     height:400px;
@@ -283,7 +256,6 @@ nav a:hover{
     border-radius:8px;
     transition:0.3s;
 }
-
 .reinaduende img:hover{
     transform:scale(1.05);
 }
@@ -292,7 +264,6 @@ nav a:hover{
     font-size:22px;
     font-weight:700;
 }
-
 .reinaduende a{
     display:inline-block;
     background:#111;
@@ -303,7 +274,6 @@ nav a:hover{
     font-size:14px;
     transition:0.3s;
 }
-
 .reinaduende a:hover{
     background:#333;
 }
@@ -383,8 +353,8 @@ nav a:hover{
         <a href="productos.php">COMPRAR AHORA</a>
     </div>
 </section>
-    <?php
-     include("pie_pg.php");
+     <?php
+      include("pie_pg.php");
     ?>
 </body>
 </html>
