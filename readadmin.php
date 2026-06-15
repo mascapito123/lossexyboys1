@@ -273,31 +273,35 @@ section.cuadro{
             <dialog id="modalAñadir" class="modaluse">
               <form action="insertar_admin.php" method="post" class="use">
                   <label for="usuario" class="use-label">Usuario:</label>
-                  <input type="text" class="use-input" id="usuario" name="usuario" required><br>
+                  <input type="text" class="use-input" id="usuario" name="usuario" ><br>
 
                   <label for="nombre" class="use-label">Nombre:</label>
-                  <input type="text" class="use-input" id="nombre" name="nombre" required><br>
+                  <input type="text" class="use-input" id="nombre" name="nombre"><br>
 
                   <label for="tele" class="use-label">Teléfono:</label>
-                  <input type="number" class="use-input" id="tele" name="tele" required><br>
+                  <input type="number" class="use-input" id="tele" name="tele" ><br>
 
                   <label for="naci" class="use-label">Fecha de nacimiento:</label>
-                  <input type="date" class="use-input" id="naci" name="naci" required><br>
+                  <input type="date" class="use-input" id="naci" name="naci" ><br>
 
                   <label for="correo" class="use-label">Correo:</label>
-                  <input type="email" class="use-input" id="correo" name="correo" required><br>
+                  <input type="email" class="use-input" id="correo" name="correo" ><br>
 
                   <label for="contraseña" class="use-label">Contraseña:</label>
-                  <input type="password" class="use-input" id="contraseña" name="contraseña" required><br>
+                  <input type="password" class="use-input" id="contraseña" name="contraseña"><br>
 
                   <label for="reportes" class="use-label">Reportes:</label>
-                  <input type="text" class="use-input" id="reportes" name="reportes" required><br>
+                  <input type="text" class="use-input" id="reportes" name="reportes"><br>
 
-                  <label for="tipo" class="use-label">Tipo:</label>
-                  <input type="text" class="use-input" id="tipo" name="tipo" required><br>
-
+                  <label for="tipo" class="use-label">Genero:</label>
+                  <select class="use-input" id="tipo" name="tipo">
+                    <option value="opcion_1">Hombre</option>
+                    <option value="opcion_2">Mujer</option>
+                    <option value="opcion_3">Prefiero no decirlo</option>
+                  </select>
+                  
                   <label for="dire" class="use-label">Dirección:</label>
-                  <input type="text" class="use-input" id="dire" name="dire" required><br>
+                  <input type="text" class="use-input" id="dire" name="dire"><br>
     
                 <input type="submit" value="Registrar" class="bot">
     
@@ -305,7 +309,46 @@ section.cuadro{
             </dialog>
             
           </nav>
-          
+          <script>
+            $(document).ready(function(){
+              $(".use").validate({
+                rulesa:{
+                  usuario:{
+                    requierd: true,
+                    minlegnth: 6,
+                    maxlegnth: 15
+                  },
+                  nombre:{
+                    required: true,
+                    maxlegth: 15
+                  },
+                  tele:{
+                    required: true,
+                    maxength: 8,
+                    minlength: 8
+                  },
+                  naci:{
+                    reqiored: true
+                  },
+                  correo:{
+                    required: true
+                  },
+                  contraseña:{
+                    required: true,
+                    maxlenght: 20,
+                    minlenght: 8
+                  },
+                  reportes:{
+                    maxlength: 150
+                  },
+                  dire:{
+                    required: true,
+                    maxlength: 200
+                  }
+                }
+              })
+            })
+          </script>
         </div>
         <div class="b">
             <table>
