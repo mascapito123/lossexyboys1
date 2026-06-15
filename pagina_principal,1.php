@@ -280,6 +280,9 @@ nav a:hover{
 </style>
 </head>
 <body>
+    <?php
+include ("encabezado.php");
+?>
 <section class="vid">
     <video autoplay muted loop playsinline>
         <source src="Bomble.mp4" type="video/mp4">
