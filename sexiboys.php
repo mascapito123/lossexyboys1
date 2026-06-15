@@ -208,31 +208,9 @@ main.main {
 </head>
 <body>
 
-<header>
-  <a href="pagina_principal.php">
-    <img src="logo bomble.png" alt="Logo" class="logo">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="productos.php">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="combos.php">COMBOS</a></li>
-      <li><a href="quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .php">TELEFONOS</a></li>
-     <li class="dropdown">
-  <a href="#">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
-    <a href="creacion.php">Creación de vasos</a>
-    <a href="creacionjugos.php">Creación de jugos</a>
-    <a href="adminbueno.php">Panel de Administracion</a>
-  </div>
-</li>
-
-    </ul>
-  </nav>
-</header>
+<?php
+include ("encabezado.php");
+?>
 
 <main class="main">
 <div class="form-box">
