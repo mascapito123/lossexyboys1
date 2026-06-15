@@ -177,7 +177,6 @@ font-size: 25px;
         <input type="text" class="use-input" id="dire" name="dire" required value="<?php echo $row['dire']; ?>"><br>
     
                 <input type="submit" value="Registrar" class="bot">
-    
     </form>
     <?php
       include("pie_pg.php");
