@@ -151,7 +151,7 @@ font-size: 16px;
 <body>
   <header>
     <a href="pagina_principal.php">
-      <img src="logo bomble.png" alt="Logo" class="logo">
+      <img src="imagenes/logo bomble.png" alt="Logo" class="logo">
     </a>
     <nav>
       <ul>
