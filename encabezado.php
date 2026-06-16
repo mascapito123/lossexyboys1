@@ -6,7 +6,6 @@
   <title>Document</title>
 </head>
 <style>
-  
   header {
     background: #111;
     color: #fff;

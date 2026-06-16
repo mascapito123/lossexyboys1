@@ -7,26 +7,10 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
     <style>
-    body {
-            font-family: Arial, sans-serif;
-            color: #333;
-    }
-    * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background: #111;
-    color: #fff;
-    padding: 12px 40px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-  }
     .sections {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-temle-columns: 50% 50%; 
+    grid-template-rows: 100%;
     gap: 30px;
     max-width: 1200px;
     margin: 40px auto;
@@ -58,23 +42,7 @@
   }
   .reinaduende a:hover {
     background: #333;
-  }
-    .promotion-link {
-            padding: 5px;
-            background-color: #b2ffb2;
-            text-align: center;
-            width: 1500px;
-            height: 150px;
-            margin: 20px auto;
-            display: block;    
-            max-width: 90%;
-            font-size: 100px;
-
-    }
-    .isac{
-      background-color: rgb(0, 128, 90);
-
-    }    
+  }  
 </style>
 </head>
 <body>
@@ -83,10 +51,17 @@ include ("encabezado.php");
 ?>
   <section class="sections">
   <div class="reinaduende">
-    <a href="comprar.php?jugo=horchata&precio=5"><img src="https://images.aws.nestle.recipes/original/8eaf50148ed521383df5d9793cba995f_whatsapp_image_2022-04-28_at_1.00.26_pm_(2).jpeg" alt="Programas Hábitos"></a>
+    <img src="https://images.aws.nestle.recipes/original/8eaf50148ed521383df5d9793cba995f_whatsapp_image_2022-04-28_at_1.00.26_pm_(2).jpeg" alt="Programas Hábitos">
   </div>
-</section>
-<h2>Jugo de horchata</h2>
+   <h1>Jugo de horcata</h1>
+    <h2>Descirpccion</h2>
+    <p>
+      Un 
+   </p>
+   <a href="comprar.php?jugo=horchata&precio=5">
+   <button>Compra</button>
+   </a>
+   </section>
     <?php
      include("pie_pg.php");
     ?>

@@ -10,32 +10,6 @@
     margin: 0;
     padding: 0;
   }
-  header {
-    background: #111;
-    color: #fff;
-    padding: 12px 40px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-  }
-  header img.logo {
-    height: 100px;
-    width: 100px;
-  }
-  nav ul {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    list-style: none;
-    gap: 20px;
-  }
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  nav a:hover {
-    color: #5eff6ce5;
-  }
   .pepe {
     background: #f6f6f6;
     padding: 60px 20px;
@@ -108,43 +82,19 @@
   color: #444;
   font-family: "Times New Roman", Times, serif;
 }
-  .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #111;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 5px;
-}
-
-.dropdown-content a {
-  color: #fff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #333;
-  color: #5eff6ce5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
     </style>
 </head>
 <body>
+<<<<<<< HEAD
   <?php
 include ("encabezado.php");
 ?>
 
+=======
+      <?php
+include ("encabezado.php");
+?>
+>>>>>>> 9faa2606ff7fcc09d2056abf7beea390ccc3daec
 
 <div class="vasos">
   <h1>La fabricación de los vasos</h1>
