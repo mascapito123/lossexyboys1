@@ -149,47 +149,67 @@ font-size: 16px;
   </style>
 </head>
 <body>
-  <header>
-    <a href="pagina_principal.php">
-      <img src="imagenes/logo bomble.png" alt="Logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="productos.php">NUESTROS JUGOS</a></li>
-        <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-        <li><a href="quienes.php">QUIENES SOMOS</a></li>
-        <li><a href="telefonos .php">TELEFONOS</a></li>
-   <li class="dropdown">
-  <a href="#">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
-    <a href="creacion.php">Creación de vasos</a>
-    <a href="creacionjugos.php">Creación de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-      </ul>
-    </nav>
-  </header>
+  <?php
+include ("encabezado.php");
+?>
 
     
 </section>
 <h1>REGISTRATE EN BOOMBLE</h1>
-<form action="create_registro.php" method="post">
+<form action="create_registro.php" method="post" class="registr">
 <label for="nombre">NOMBRE COMPLETO:</label>
 <input type="text" placeholder="pepe torrico" id="nombre" name="nombre" required>
+
 <label for="telefono">TELEFONO</label>
 <input type="number" placeholder="12345678" id="telefono" name="telefono" required>
+
 <label for="email">CORREO ELECTRONICO:</label>
 <input type="email" placeholder="pepe121@gmail.com" id="email" name="email" required>
+
 <label for="direccion">DIRECCION:</label>
 <textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
+
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
 <input type="number" id="CI" name="CI" required>
+
 <label for="comentarios">COMENTARIOS ADICIONALES:</label>
 <textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
+
 <button type="submit">Enviar Pedido</button>
+
+<script>
+$(document).ready(function(){
+              $(".registr").validate({
+                rulesa:{
+                  nombre:{
+                    requierd: true,
+                    minlegnth: 10,
+                    maxlegnth: 20
+                  },
+                  telefono:{
+                    required: true,
+                    maxlegth: 8
+                  },
+                  email:{
+                    required: true,
+                    maxength: 20,
+                    minlength: 20
+                  },
+                  direccion:{
+                    required: true,
+                    maxlenght: 20,
+                    minlenght: 10
+                  },
+                  CI:{
+                    required: true,
+                    maxlength:7 ,
+                    minlenght:7 
+                  },
+                }
+              })
+            })
+</script>
+
 </form>
     <?php
      include("pie_pg.php");

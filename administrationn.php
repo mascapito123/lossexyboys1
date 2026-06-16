@@ -179,27 +179,9 @@ section.cuadro{
     </style>
 </head>
 <body>
-    <header>
-  <a href="pagina_principal.php">
-  <img src="logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="productos.php">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="combos.php">COMBOS</a></li>
-      <li><a href="quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="telefonos.php">TELEFONOS</a></li>
-      <li class="dropdown">
-  <a href="productos.php">MÁS</a>
-  <div class="dropdown-content">
-    <a href="ubicacion.php">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
-  </div>
-</li>
-    </ul>
-  </nav>
-</header>
+    <?php
+include ("encabezado.php");
+?>
     <section class="cuadro">
         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
           <nav>
