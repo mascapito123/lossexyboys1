@@ -241,7 +241,7 @@ section.cuadro{
 <body>
   
     <header>
-    <a href="pagina_principal.php">
+    <a href="../pagina_principal.php">
       <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
     </a>
     <nav>
