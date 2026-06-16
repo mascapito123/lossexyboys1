@@ -299,6 +299,11 @@
     </style>
 </head>
 <body>
+<<<<<<< HEAD:adminbueno.php
+    <?php
+include ("encabezado.php");
+?>
+=======
     <header>
     <a href="../pagina_principal.php">
       <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
@@ -322,6 +327,7 @@
       </ul>
     </nav>
   </header>
+>>>>>>> 861c3b7fb6e38623d0c003272010bed0d6bff382:admin/adminbueno.php
 
     <div class="content">
       <aside>
