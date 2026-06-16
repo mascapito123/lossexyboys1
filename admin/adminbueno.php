@@ -421,7 +421,7 @@
     </main>
     </div>
     <?php
-      include("pie_pg.php");
+      include("../pie_pg.php");
     ?>
 </body>
 </html>
