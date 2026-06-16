@@ -179,7 +179,7 @@ font-size: 25px;
                 <input type="submit" value="Registrar" class="bot">
     </form>
     <?php
-      include("pie_pg.php");
+      include("../pie_pg.php");
     ?>
 </body>
 </html>
