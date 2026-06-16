@@ -21,102 +21,6 @@ $resultado = $conn->query($sql);
     <title>Lista de registros</title>
 
 <style>
-body{
-  font-family: Arial, sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #064e3b;
-  color: #e6ffee;
-}
-
-header {
-    background: #111;
-    color: #fff;
-    padding: 12px 40px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-}
-header img.logo {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-}
-nav ul {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    list-style: none;
-    gap: 70px;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-nav a:hover {
-    color: #5eff6ce5;
-}
-
-footer {
-    background: #111;
-    color: #ccc;
-    padding: 40px 20px;
-    margin-top: 40px;
-}
-.goldaabajo {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-footer h4 {
-    color: #fff;
-    margin-bottom: 10px;
-}
-footer ul {
-    list-style: none;
-}
-footer li {
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-footer a {
-    color: #ccc;
-    text-decoration: none;
-}
-footer a:hover {
-    color: #fff;
-}
-.redes-musculoso a {
-    margin-right: 10px;
-    display: inline-block;
-    font-size: 18px;
-}
-.subscribe {
-    display: grid;
-    gap: 10px;
-}
-.subscribe input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    width: 80%;
-}
-.subscribe button {
-    background: #3cff46;
-    border: none;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.subscribe button:hover {
-    background: #3cffce;
-}
-
 main.main {
   flex: 1;               
   display: flex;
@@ -170,36 +74,6 @@ main.main {
 .actions button:hover{
     background:#05392e;
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #111;
-    min-width: 160px;
-    border-radius: 8px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
-    padding: 10px 0;
-    z-index: 100;
-}
-.dropdown-content a {
-    color: #fff;
-    padding: 10px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #05a362;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 .dropdown > a {
     cursor: pointer;
 }
