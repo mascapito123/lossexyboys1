@@ -239,8 +239,9 @@ section.cuadro{
 </style>
 </head>
 <body>
+  header
     <?php
-include ("encabezado.php");
+include ("../encabezado.php");
 ?>
     <section class="cuadro">
         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
@@ -369,7 +370,7 @@ include ("encabezado.php");
         </div>
     </section>
     <?php
-     include("pie_pg.php");
+     include("../pie_pg.php");
     ?>
 <script>
         var boton = document.querySelectorAll(".btn-modal");
