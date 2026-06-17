@@ -102,16 +102,9 @@ input[type="submit"]:hover{
     </style>
 </head>
 <body>
-<<<<<<< HEAD
 <?php
 include ("encabezado.php");
 ?>
-=======
-    <?php
-include ("encabezado.php");
-?>
-
->>>>>>> 9faa2606ff7fcc09d2056abf7beea390ccc3daec
     <main class="main">
       <div class="form-box">
         <h1>¿Quieres comprar?</h1>
