@@ -12,14 +12,12 @@
         echo "si te conectaste ". "<br>";
     }
 
-    $codigo=NULL;
-    $producto=$_POST['produc'];
-    $cantidad=$_POST['cantidad'];
-    $precio=$_POST['precio'];
+    $codigo=$_GET['codigo'];
 
-    $sql="INSERT INTO carro (codigo,producto,cantidad,precio) VALUES ('$codigo','$producto','$cantidad','$precio')";
+    $sql="DELETE FROM carro WHERE codigo='$codigo'";
     $query= mysqli_query($conn,$sql);
 
     if($query){
         header("location: ../productos.php");
     }
+?>

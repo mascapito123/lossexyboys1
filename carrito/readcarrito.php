@@ -274,13 +274,11 @@ section.cuadro{
             <button class="bot" id="añadir">AÑADIR</button>
             <dialog id="modalAñadir" class="modaluse">
               <form action="insert_carrito.php" method="post" class="use">
-                  <label for="codigo" class="use-label">codigo:</label>
-                  <input type="text" class="use-input" id="codigo" name="codigo" readonly><br>
 
-                  <label for="produc" class="use-label">producto:</label>
+                  <label for="produc" class="use-label">Nombre del producto:</label>
                   <input type="text" class="use-input" id="produc" name="produc"><br>
 
-                  <label for="cantidad" class="use-label">cantidad:</label>
+                  <label for="cantidad" class="use-label">Cantidad:</label>
                   <input type="number" class="use-input" id="cantidad" name="cantidad" ><br>
 
                   <label for="precio" class="use-label">Precio:</label>
@@ -349,8 +347,8 @@ section.cuadro{
                     <td><?php echo $row['cantidad']; ?></td>
                     <td><?php echo $row['precio']; ?></td>
                     <td>
-                      <a class="edi" href="editar_admin.php?id=<?php echo $row['codigo']; ?>">EDITAR</a>
-                      <a class="eli" href="eliminar_admin.php?id=<?php echo $row['codigo']; ?>">ELIMINAR</a>
+                      <a class="edi" href="editar_carrito.php?codigo=<?php echo $row['codigo']; ?>">EDITAR</a>
+                      <a class="eli" href="eliminar_carrito.php?codigo=<?php echo $row['codigo']; ?>">ELIMINAR</a>
                     </td>
                 </tr>
                 <?php $i++; endwhile;?>
@@ -362,16 +360,6 @@ section.cuadro{
      include("../pie_pg.php");
     ?>
 <script>
-        var boton = document.querySelectorAll(".btn-modal");
-        boton.forEach(function(button) {
-            button.addEventListener("click", function() {
-                var index = button.getAttribute("data-index");
-                var modal = document.querySelector(".modaltodo[data-index='" + index + "']");
-                if (modal) {
-                    modal.showModal();
-                }
-            });
-        });
 
         var aña = document.getElementById("añadir");
         var modalAñadir = document.getElementById("modalAñadir");
