@@ -125,10 +125,6 @@ section.cuadro{
     <?php
 include ("encabezado.php");
 ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9faa2606ff7fcc09d2056abf7beea390ccc3daec
     <section class="cuadro">
         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
           <nav>
