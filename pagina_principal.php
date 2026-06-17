@@ -326,7 +326,7 @@ nav a:hover{
         <a href="quienes.php">QUIENES</a>
         <a href="telefonos .php">TELEFONOS</a>
             <section class="dropdown">
-                <a href="#">MAS</a>
+                <a href="">REGISTRO</a>
                 <div class="dropdown-content">
                     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
                     <a href="registro.php">Registrarse</a>
@@ -346,7 +346,7 @@ nav a:hover{
             <a href="quienes.php">QUIENES</a>
             <a href="telefonos .php">TELEFONOS</a>
             <section class="dropdown">
-                <a href="#">MAS</a>
+                <a href="registro.php">REGISTRO</a>
                 <div class="dropdown-content">
                     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
                     <a href="registro.php">Registrarse</a>
