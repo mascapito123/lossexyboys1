@@ -2,7 +2,7 @@
     $servidor="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBD="admin2";
+    $nombreBD="admin1";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
     if($conn -> connect_error){
@@ -11,7 +11,7 @@
     else{
         echo "si te conectaste ". "<br>";
     }
-    $sql= "SELECT * FROM produc";
+    $sql= "SELECT * FROM adminis";
     $query = $conn->query($sql);
 
 ?>
@@ -28,6 +28,10 @@
     padding: 0;
   }
   
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 section.cuadro{
     width: 99%;
     margin: 10px;
@@ -126,12 +130,6 @@ section.cuadro{
     background-color: transparent;
     border: transparent;
   }
-    footer {
-    background: #111;
-    color: #ccc;
-    padding: 40px 20px;
-    margin-top: 40px;
-  }
   .isac{
     border-radius: 50%;
     width: 250px;
@@ -179,123 +177,129 @@ section.cuadro{
     top: 200px;
     left: 200px;
   }
-
-  .goldaabajo {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-  footer h4 {
-    color: #fff;
-    margin-bottom: 10px;
-  }
-  footer ul {
-    list-style: none;
-  }
-  footer li {
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  footer a {
-    color: #ccc;
-    text-decoration: none;
-  }
-  footer a:hover {
-    color: #fff;
-  }
-  .redes-musculoso a {
-    margin-right: 10px;
-    display: inline-block;
-    font-size: 18px;
-  }
-  .subscribe {
-    display: grid;
-    gap: 10px;
-  }
-  .subscribe input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    width: 80%;
-  }
-  .subscribe button {
-    background: #3cff46;
-    border: none;
-    color: #fff;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .subscribe button:hover {
-    background: #3cffce;
-  }
-    </style>
+</style>
 </head>
 <body>
     <?php
 include ("encabezado.php");
 ?>
     <section class="cuadro">
-        <div class="a"><img src="fer.png" alt="pep " class="isac" >
+        <div class="a"><img src="Isac.png" alt="pep " class="isac" >
           <nav>
-            <h1 class="d">VENDEDOR</h1>
+            <h1 class="d">ADMINISTRADOR</h1>
           </nav>
           <nav class="info">
           
             <button class="bot" id="añadir">AÑADIR</button>
             <dialog id="modalAñadir" class="modaluse">
-              <form action="insert_vendedor.php" method="post" class="use">
+              <form action="insertar_admin.php" method="post" class="use">
                   <label for="usuario" class="use-label">Usuario:</label>
-                  <input type="text" class="use-input" id="usuario" name="usuario" required><br>
+                  <input type="text" class="use-input" id="usuario" name="usuario" ><br>
 
-                  <label for="nombrepro" class="use-label">Nombre del producto:</label>
-                  <input type="text" class="use-input" id="nombrepro" name="nombrepro" required><br>
+                  <label for="nombre" class="use-label">Nombre:</label>
+                  <input type="text" class="use-input" id="nombre" name="nombre"><br>
 
-                  <label for="cantidad" class="use-label">Cantidad:</label>
-                  <input type="number" class="use-input" id="cantidad" name="cantidad" required><br>
+                  <label for="tele" class="use-label">Teléfono:</label>
+                  <input type="number" class="use-input" id="tele" name="tele" ><br>
 
-                  <label for="procio" class="use-label">Precio:</label>
-                  <input type="number" class="use-input" id="precio" name="precio" required><br>
+                  <label for="naci" class="use-label">Fecha de nacimiento:</label>
+                  <input type="date" class="use-input" id="naci" name="naci" ><br>
 
-                  <label for="tipo" class="use-label">Tipo:</label>
-                  <input type="text" class="use-input" id="tipo" name="tipo" required><br>
+                  <label for="correo" class="use-label">Correo:</label>
+                  <input type="email" class="use-input" id="correo" name="correo" ><br>
 
-                 <input type="submit" value="Registrar" class="bot">
+                  <label for="contraseña" class="use-label">Contraseña:</label>
+                  <input type="password" class="use-input" id="contraseña" name="contraseña"><br>
+
+                  <label for="reportes" class="use-label">Reportes:</label>
+                  <input type="text" class="use-input" id="reportes" name="reportes"><br>
+
+                  <label for="tipo" class="use-label">Genero:</label>
+                  <select class="use-input" id="tipo" name="tipo">
+                    <option value="opcion_1">Hombre</option>
+                    <option value="opcion_2">Mujer</option>
+                    <option value="opcion_3">Prefiero no decirlo</option>
+                  </select>
+                  
+                  <label for="dire" class="use-label">Dirección:</label>
+                  <input type="text" class="use-input" id="dire" name="dire"><br>
+    
+                <input type="submit" value="Registrar" class="bot">
     
               </form>
             </dialog>
+            
           </nav>
+          <script>
+            $(document).ready(function(){
+              $(".use").validate({
+                rulesa:{
+                  usuario:{
+                    requierd: true,
+                    minlegnth: 6,
+                    maxlegnth: 15
+                  },
+                  nombre:{
+                    required: true,
+                    maxlegth: 15
+                  },
+                  tele:{
+                    required: true,
+                    maxength: 8,
+                    minlength: 8
+                  },
+                  naci:{
+                    reqiored: true
+                  },
+                  correo:{
+                    required: true
+                  },
+                  contraseña:{
+                    required: true,
+                    maxlenght: 20,
+                    minlenght: 8
+                  },
+                  reportes:{
+                    maxlength: 150
+                  },
+                  dire:{
+                    required: true,
+                    maxlength: 200
+                  }
+                }
+              })
+            })
+          </script>
         </div>
         <div class="b">
             <table>
                 <tr>
                     <th>USUARIO</th>
-                    <th>PRODUCTO</th>
-                    <th>CANTIDAD</th>
-                    <th>PRECIO</th>
+                    <th>CORREO</th>
+                    <th>CONTRAÑESA</th>
+                    <th>REPORTES</th>
                     <th>TIPO</th>
                 </tr>
                 <tbody>
                 <?php $i = 0; while($row = mysqli_fetch_assoc($query)):?>
                   <tr>
                     <td><button class="pan btn-modal" data-index="<?php echo $i; ?>"><?php echo $row['usuario']; ?></button></td>
-                    <td><?php echo $row['nombrepro']; ?></td>
-                    <td><?php echo $row['cantidad']; ?></td>
-                    <td><?php echo $row['precio']; ?></td>
+                    <td><?php echo $row['correo']; ?></td>
+                    <td><?php echo $row['contraseña']; ?></td>
+                    <td><?php echo $row['reportes']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
                     <td>
-                      <a class="edi" href="editar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">EDITAR</a>
-                      <a class="eli" href="eliminar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">ELIMINAR</a>
+                      <a class="edi" href="editar_admin.php?id=<?php echo $row['id']; ?>">EDITAR</a>
+                      <a class="eli" href="eliminar_admin.php?id=<?php echo $row['id']; ?>">ELIMINAR</a>
                     </td>
                   </tr>
                   <dialog class="modal modaltodo" data-index="<?php echo $i; ?>">
                     <center><h2><?php echo $row['usuario']?></h2><br></center>
-                    <p>Nombre:<?php echo $row['nombrepro']?></p>
-                    <p>Telefono:<?php echo $row['cantidad']?></p>
-                    <p>Fecha de nacimiento: <?php echo $row['precio']?></p>
-                    <p>Correo: <?php echo $row['tipo']?></p>
+                    <p>Nombre:<?php echo $row['nombre']?></p>
+                    <p>Telefono:<?php echo $row['tele']?></p>
+                    <p>Fecha de nacimiento: <?php echo $row['naci']?></p>
+                    <p>Correo: <?php echo $row['correo']?></p>
+                    <p>Direccion:<?php echo $row['dire']?></p>
                     <form  method='dialog'>
                       <center><button class='botoncito'>cerrar</button></center>
                     </form>
@@ -305,46 +309,9 @@ include ("encabezado.php");
             </table>
         </div>
     </section>
-    <footer>
-  <div class="goldaabajo">
-    <div>
-      <h4>NOSOTROS</h4>
-      <ul>
-        <li><a href="#">Nuestra historia</a></li>
-        <li><a href="#">Nuestra filosofía</a></li>
-        <li><a href="#">Responsabilidad social</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>TIENDA</h4>
-      <ul>
-        <li><a href="#">Programa 7 días</a></li>
-        <li><a href="#">Dieta líquida de 1 día</a></li>
-        <li><a href="#">Otros productos</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>AYUDA</h4>
-      <ul>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Preguntas frecuentes</a></li>
-        <li><a href="#">Términos y condiciones</a></li>
-      </ul>
-    </div>
-    <div class="subscribe">
-      <h4>SUSCRÍBETE</h4>
-      <p>Recibe nuestras últimas noticias</p>
-      <input type="email" placeholder="Tu email...">
-      <button>OK</button>
-      <div class="redes-musculoso">
-        <a href="#">🌐</a>
-        <a href="#">📘</a>  
-        <a href="#">📸</a>
-        <a href="#">📍</a>  
-      </div>
-    </div>
-  </div>
-</footer>
+    <?php
+     include("pie_pg.php");
+    ?>
 <script>
         var boton = document.querySelectorAll(".btn-modal");
         boton.forEach(function(button) {
