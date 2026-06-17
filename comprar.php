@@ -102,16 +102,11 @@ input[type="submit"]:hover{
     </style>
 </head>
 <body>
-<<<<<<< HEAD
+
 <?php
 include ("encabezado.php");
 ?>
-=======
-    <?php
-include ("encabezado.php");
-?>
-
->>>>>>> 9faa2606ff7fcc09d2056abf7beea390ccc3daec
+  
     <main class="main">
       <div class="form-box">
         <h1>¿Quieres comprar?</h1>
@@ -125,9 +120,9 @@ include ("encabezado.php");
             <label for="producto">Producto</label>
             <input id="producto" type="text" name="producto" value="<?php echo $jugo; ?>" readonly>
           </div>
-          <div>
-            <label for="vasos">Vasos</label>
-            <select id="vasos" name="vasos" required>
+         <label for="vasos">Vasos</label>
+            <div>
+             <select id="vasos" name="vasos" required>
               <option value="tutuma">tutuma</option>
               <option value="bambu">bambu</option>
               <option value="vasos de vidrio">vasos de vidrio</option>
