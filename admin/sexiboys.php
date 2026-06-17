@@ -83,7 +83,7 @@ main.main {
 <body>
 
 <?php
-include ("encabezado.php");
+include ("../encabezado.php");
 ?>
 
 <main class="main">
@@ -117,7 +117,7 @@ if ($resultado->num_rows > 0) {
 </div>
 </main>
     <?php
-     include("pie_pg.php");
+     include("../pie_pg.php");
     ?>
 </body>
 </html>

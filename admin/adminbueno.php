@@ -330,7 +330,7 @@
           </div>
           <ul>
               <li><a href="#" class="active">Inicio</a></li>
-              <li><a href="#">Usuarios</a></li>
+              <li><a href="sexiboys.php">Usuarios</a></li>
               <li><a href="#">Productos</a></li>
               <li><a href="vendedor/vendedor.php">Ventas</a></li>
               <li><a href="#">Ajustes</a></li>
