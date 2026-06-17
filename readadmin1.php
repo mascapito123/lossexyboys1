@@ -158,8 +158,8 @@ section.cuadro{
 </head>
 <body>
     <?php
-include ("encabezado.php");
-?>
+      include ("encabezado.php");
+    ?>
     <section class="cuadro">
         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
           <nav>
