@@ -94,10 +94,10 @@
       <input type="email" placeholder="Tu email...">
       <button>OK</button>
       <div class="redes-musculoso">
-        <a href="#">🌐</a>
-        <a href="#">📘</a>  
-        <a href="#">📸</a>
-        <a href="#">📍</a>  
+        <a href="https://instagram.com">🌐</a>
+        <a href="https://facebook.com">📘</a>  
+        <a href="https://twitter.com">📸</a>
+        <a href="https://google.com">📍</a>  
       </div>
     </div>
   </div>
