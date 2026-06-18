@@ -358,9 +358,9 @@ nav a:hover{
 </section>
 <section class="sections">
     <div class="reinaduende">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyTw9oCPkdU5cnUBa7Vurj3sFDKWccqHJRBQ&s" alt="Combos">
-        <h2>COMBOS</h2>
-        <a href="vendedor/vendedor.php">VENDEDOR</a>
+        <img src="https://img.magnific.com/vector-premium/ilustracion-cajero-uniforme-azul-ayudando-cortesmente-cliente_1263357-19417.jpg?semt=ais_hybrid&w=740&q=80" alt="vendedor">
+        <h2>VENDEDOR</h2>
+        <a href="vendedor/vendedor.php">VER MÁS</a>
     </div>
     <div class="reinaduende">
         <img src="https://cdn-icons-png.flaticon.com/512/42/42994.png" alt="Quiénes Somos">

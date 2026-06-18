@@ -313,7 +313,7 @@
   <a href="#">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
+    <a href="../usuarios/registro.php">Registrarse</a>
     <a href="../creacion.php">Creación de vasos</a>
     <a href="../creacionjugos.php">Creación de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>
@@ -330,9 +330,9 @@
           </div>
           <ul>
               <li><a href="#" class="active">Inicio</a></li>
-              <li><a href="sexiboys.php">Usuarios</a></li>
+              <li><a href="../usuarios/read_registro.php">Usuarios</a></li>
               <li><a href="#">Productos</a></li>
-              <li><a href="vendedor/vendedor.php">Ventas</a></li>
+              <li><a href="../vendedor/vendedor.php">Ventas</a></li>
               <li><a href="#">Ajustes</a></li>
           </ul>
       </aside>
@@ -385,7 +385,7 @@
                     <li>Eliminar del catálogo</li>
                 </ul>
                 <div class="card-actions">
-                    <a href="#" class="btn btn-primary">Inventario</a>
+                    <a href="../vendedor/vendedor.php" class="btn btn-primary">Inventario</a>
                 </div>
             </div>
 

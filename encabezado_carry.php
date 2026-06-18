@@ -314,7 +314,7 @@ transition: .3s;
   <a href="productos.php">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
+    <a href="usuarios/registro.php">Registrarse</a>
     <a href="creacion.php">Creacion de vasos</a>
     <a href="creacionjugos.php">Creacion de jugos</a>
     <a href="admin/adminbueno.php">Panel de Administración</a>

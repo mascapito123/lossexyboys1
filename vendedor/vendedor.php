@@ -297,9 +297,29 @@ section.cuadro{
     </style>
 </head>
 <body>
-    <?php
-include ("encabezado.php");
-?>
+  <header>
+    <a href="../pagina_principal.php">
+      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="../productos.php">NUESTROS JUGOS</a></li>
+        <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
+        <li><a href="../quienes.php">QUIENES SOMOS</a></li>
+        <li><a href="../telefonos .php">TELEFONOS</a></li>
+  <li class="dropdown">
+  <a href="#">MÁS</a>
+  <div class="dropdown-content">
+    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
+    <a href="../registro.php">Registrarse</a>
+    <a href="../creacion.php">Creación de vasos</a>
+    <a href="../creacionjugos.php">Creación de jugos</a>
+    <a href="../admin/adminbueno.php">Panel de Administración</a>
+  </div>
+</li>
+      </ul>
+    </nav>
+  </header>
     <section class="cuadro">
         <div class="a"><img src="fer.png" alt="pep " class="isac" >
           <nav>
@@ -346,7 +366,7 @@ include ("encabezado.php");
                     <td><button class="pan btn-modal" data-index="<?php echo $i; ?>"><?php echo $row['usuario']; ?></button></td>
                     <td><?php echo $row['nombrepro']; ?></td>
                     <td><?php echo $row['cantidad']; ?></td>
-                    <td><?php echo $row['precio']; ?></td>
+                    <td>$<?php echo $row['precio']; ?></td>
                     <td><?php echo $row['tipo']; ?></td>
                     <td>
                       <a class="edi" href="editar_vendedor.php?codigo=<?php echo $row['codigo']; ?>">EDITAR</a>
