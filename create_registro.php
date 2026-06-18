@@ -18,10 +18,11 @@ $comentarios = $_POST['comentarios'];
 $sql = "INSERT INTO registro (nombre, telefono, email, direccion, CI, comentarios) VALUES ('$nombre', '$telefono', '$email', '$direccion', '$CI', '$comentarios')";
 
 if ($conn->query($sql) === TRUE) {
-echo "Usuario creado correctamente";
+    header("location: pagina_principal.php");
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
+    
 
 $conn->close();
 ?>
