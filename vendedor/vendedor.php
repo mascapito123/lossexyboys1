@@ -470,6 +470,7 @@ section.cuadro{
                     minlenght: 11
                   }
               },
+                },
               messajes:{
                 usuartio:{
                     required: "Ingresa un nombre de usuario",

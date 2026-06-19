@@ -204,28 +204,28 @@ font-size: 16px;
 <h1>REGISTRATE EN BOOMBLE</h1>
 <form action="create_registro.php" method="post" class="registr">
 <label for="nombre">NOMBRE COMPLETO:</label>
-<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" required>
+<input type="text" placeholder="pepe torrico" id="nombre" name="nombre">
 
 <label for="usuario">USUARIO:</label>
-<input type="text" placeholder="pepe torrico" id="usuario" name="usuario" required>
+<input type="text" placeholder="pepe torrico" id="usuario" name="usuario">
 
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" required>
+<input type="number" id="CI" name="CI" >
 
 <label for="pass">CONTRASEÑA:</label>
-<input type="password" placeholder="pepe torrico" id="pass" name="pass" required>
+<input type="password" placeholder="pepe torrico" id="pass" name="pass">
 
 <label for="telefono">TELEFONO</label>
-<input type="number" placeholder="12345678" id="telefono" name="telefono" required>
+<input type="number" placeholder="12345678" id="telefono" name="telefono">
 
 <label for="estado">ESTADO:</label>
-<input type="text" placeholder="12345678" id="estado" name="estado" required>
+<input type="text" placeholder="12345678" id="estado" name="estado">
 
 <label for="rol">ROL:</label>
-<input type="number" placeholder="12345678" id="rol" name="rol" required>
+<input type="number" placeholder="12345678" id="rol" name="rol">
 
 <label for="direccion">DIRECCION:</label>
-<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
+<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" ></textarea>
 
 <label for="comentarios">COMENTARIOS ADICIONALES:</label>
 <textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
@@ -240,14 +240,14 @@ font-size: 16px;
             $(document).ready(function(){
               $(".use").validate({
                 rules:{
-                  usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
-                  },
                   nombre:{
                     required: true,
                     maxlegth: 15
+                  },
+                    usuario:{
+                    requierd: true,
+                    minlegnth: 6,
+                    maxlegnth: 15
                   },
                   pass:{
                     required: true,
@@ -259,18 +259,16 @@ font-size: 16px;
                     maxlegnth: 8,
                     minlegnth: 8
                   },
+                  estado:{
+                    requiered: true
+                  },
+                  rol:{
+                    required: true
+                  },
                   CI:{
                     required: true,
                     maxlenth: 8,
                     minlenght: 7
-                  },
-                  email:{
-                    required: true
-                  },
-                  contraseña:{
-                    required: true,
-                    maxlenght: 20,
-                    minlenght: 8
                   },
                   comentarios:{
                     maxlength: 200
@@ -305,13 +303,11 @@ font-size: 16px;
                     maxlength: "Ingresa tu carnet de identidad veradadero",
                     minlength: "Ingresa tu carnet de identidad veradadero"
                   },
-                  email: {
-                    required: "Ingersa un correo electronico valido"
+                  estado: {
+                    required: "Ingresa tu estado actual"
                   },
-                  contraseña: {
-                    required: "Ingresa tu contraseña",
-                    maxlength: "La contraseña no puede tener más de 20 caracteres",
-                    minlength: "La contraseña debe tener al menos 8 caracteres"
+                  rol: {
+                    required: "Ingresa tu rol en la empresa"
                   },
                   comentarios: {
                     maxlength: "Los comentarios dirirgidos a la empresas no bebe sobrepasar los 200 caracters"
