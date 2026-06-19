@@ -113,7 +113,16 @@ include ("encabezado.php");
       <div class="form-box">
         <h1>¿Quieres comprar?</h1>
         <form action="carrito/insert_carrito.php" method="post" class="form-grid">
-          
+          <div>
+            <label for="producto">Nombre del Usuario</label>
+            <input id="usuario" type="text" name="usuario" >
+          </div>
+
+          <div>
+            <label for="estado">ESTADO </label>
+            <input id="produc" type="text" name="estado">
+          </div>
+
           <div>
             <label for="producto">Nombre del Producto</label>
             <input id="produc" type="text" name="produc" value="<?php echo $jugo; ?>" readonly>
@@ -126,6 +135,11 @@ include ("encabezado.php");
           <div>
             <label for="precio">Precio</label>
             <input id="precio" type="number" name="precio" value="<?php echo $precio; ?>" readonly>
+          </div>
+
+          <div>
+            <label for="vendedor">Nombre del Vendedor</label>
+            <input id="vendedor" type="text" name="vendedor" value="Isac Castellon" >
           </div>
 
           <div class="form-actions">
