@@ -143,7 +143,7 @@
     border-radius: 18px;
     padding: 0;
     width: 90%;
-    max-width: 900px;
+    max-width: 1200px;
     background: transparent;
 }
 
@@ -332,18 +332,26 @@ transition: .3s;
             <table>
                 <tr>
                     <th>CODIGO</th>
+                    <th>NOMBRE</th>
+                    <th>ESTADO</th>
                     <th>PRDUCTO</th>
                     <th>CANTIDAD</th>
                     <th>PRECIO</th>
+                    <TH>VENDEDOR</TH>
+                    <TH>FECHA</TH>
                     <th><button id="cerrarCarrito" class="cerrar">seguir comprando</button></th>
                 </tr>
                 <tbody>
                 <?php $i = 0; $total = 0; while($row = mysqli_fetch_assoc($query)):?>
                   <tr>
                     <td><button class="pan btn-modal" data-index="<?php echo $i; ?>"><?php echo $row['codigo']; ?></button></td>
+                    <TD><?php echo $row['nombre']; ?></TD>
+                    <td><?php echo $row['estado']; ?></td>
                     <td><?php echo $row['producto']; ?></td>
                     <td><?php echo $row['cantidad']; ?></td>
                     <td><?php echo $row['precio']; ?></td>
+                    <td><?php echo $row['vendedor']; ?></td>
+                    <td><?php echo $row['fecha_registro']; ?></td>
                     <td>
                       <a class="eli" href="carrito/eliminar_carrito.php?codigo=<?php echo $row['codigo']; ?>">ELIMINAR</a>
                     </td>
@@ -355,7 +363,7 @@ transition: .3s;
                 ?>
                 </tbody>
                 <tr>
-                    <td colspan="4">Total: $<?php echo number_format($total, 2); ?></td>
+                    <td colspan="8">Total: $<?php echo number_format($total, 2); ?></td>
                     <td><button class="pagar">PAGAR YA?</button></td>
                 </tr>
             </table>
