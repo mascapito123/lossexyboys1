@@ -11,6 +11,11 @@
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
+<<<<<<< HEAD
+    
+     
+=======
+>>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
     .titulo {
       width: 100vw;
       background: #111;
