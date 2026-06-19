@@ -78,10 +78,6 @@
   height: 24px;
   margin-right: 8px;
 }
-<<<<<<< HEAD
-  
-=======
->>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
 </style>
 </head>
 <body>
