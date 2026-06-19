@@ -201,37 +201,24 @@ font-size: 16px;
     </nav>
   </header>
 </section>
-<h1>REGISTRATE EN BOOMBLE</h1>
-<form action="create_registro.php" method="post" class="registr">
-<label for="nombre">NOMBRE COMPLETO:</label>
-<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" required>
+<h1>INICIAR SESIÓN</h1>
 
-<label for="usuario">USUARIO:</label>
-<input type="text" placeholder="pepe torrico" id="usuario" name="usuario" required>
+<form action="../sesiones2026/uno.php" method="post" class="registr">
 
-<label for="pass">CONTRASEÑA:</label>
-<input type="password" placeholder="pepe torrico" id="pass" name="pass" required>
+    <label for="usuario">USUARIO:</label>
+    <input type="text"
+           id="usuario"
+           name="usuario"
+           placeholder="Ingresa tu usuario"
+           required>
 
-<label for="telefono">TELEFONO</label>
-<input type="number" placeholder="12345678" id="telefono" name="telefono" required>
-
-<label for="email">CORREO ELECTRONICO:</label>
-<input type="email" placeholder="pepe121@gmail.com" id="email" name="email" required>
-
-<label for="direccion">DIRECCION:</label>
-<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
-
-<label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" required>
-
-<label for="comentarios">COMENTARIOS ADICIONALES:</label>
-<textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
-
-<button type="submit">Enviar Pedido</button>
-<p>
-    ¿Ya tienes cuenta?
-    <a href="iniciar_sesion.php">Inicia sesión aquí</a>
-</p>
+    <label for="pass">CONTRASEÑA:</label>
+    <input type="password"
+           id="pass"
+           name="pass"
+           placeholder="Ingresa tu contraseña"
+           required>
+    <button type="submit">Iniciar Sesión</button>
 </form>
 <script>
 $(document).ready(function(){

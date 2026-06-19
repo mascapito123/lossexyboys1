@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `admin1`.`adminis` (
   `usuario` VARCHAR(45) NULL,
   `reportes` VARCHAR(45) NULL,
   `correo` VARCHAR(45) NULL,
-  `contraseña` VARCHAR(45) NULL,
+  `pass` VARCHAR(45) NULL,
   `tipo` VARCHAR(45) NULL,
   `naci` DATE NULL,
   `nombre` VARCHAR(45) NULL,

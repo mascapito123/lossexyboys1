@@ -4,7 +4,7 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-$conexion = mysqli_connect("localhost", "root", "", "usuario");
+$conexion = mysqli_connect("localhost", "root", "", "admin1");
 
 if (!$conexion) {
     die("Error de conexión: " . mysqli_connect_error());
@@ -13,7 +13,7 @@ if (!$conexion) {
 $usuario = $_POST['usuario'];
 $pass = $_POST['pass'];
 
-$sql = "SELECT * FROM usuarios WHERE usuario='$usuario' AND pass='$pass'";
+$sql = "SELECT * FROM adminis WHERE usuario='$usuario' AND pass='$pass'";
 
 $resultado = mysqli_query($conexion, $sql);
 
