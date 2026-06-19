@@ -331,19 +331,19 @@ section.cuadro{
             <dialog id="modalAñadir" class="modaluse">
               <form action="insert_vendedor.php" method="post" class="use">
                   <label for="usuario" class="use-label">Usuario:</label>
-                  <input type="text" class="use-input" id="usuario" name="usuario" required><br>
+                  <input type="text" class="use-input" id="usuario" name="usuario" ><br>
 
                   <label for="nombrepro" class="use-label">Nombre del producto:</label>
-                  <input type="text" class="use-input" id="nombrepro" name="nombrepro" required><br>
+                  <input type="text" class="use-input" id="nombrepro" name="nombrepro" ><br>
 
                   <label for="cantidad" class="use-label">Cantidad:</label>
-                  <input type="number" class="use-input" id="cantidad" name="cantidad" required><br>
+                  <input type="number" class="use-input" id="cantidad" name="cantidad" ><br>
 
                   <label for="precio" class="use-label">Precio:</label>
-                  <input type="number" class="use-input" id="precio" name="precio" required><br>
+                  <input type="number" class="use-input" id="precio" name="precio" ><br>
 
                   <label for="tipo" class="use-label">Tipo:</label>
-                  <input type="text" class="use-input" id="tipo" name="tipo" required><br>
+                  <input type="text" class="use-input" id="tipo" name="tipo" ><br>
 
                  <input type="submit" value="Registrar" class="bot">
     
@@ -445,6 +445,58 @@ section.cuadro{
         aña.addEventListener("click", function() {
             modalAñadir.showModal();
         });
+       $(document).ready(function(){
+          $(".use").validate({
+                rulesa:{
+                  usuario:{
+                    requierd: true,
+                    minlegnth: 6,
+                    maxlegnth: 15
+                  },
+                  nombrepro:{
+                    required: true,
+                    maxlegth: 20
+                  },
+                  cantidad:{
+                    required: true,
+                    maxlegnth: 3,
+                    minlegnth: 1
+                  },
+                  precio:{
+                    required: true,
+                  tipo:{
+                    required: true,
+                    maxlenght: 15,
+                    minlenght: 11
+                  }
+              },
+              messajes:{
+                usuartio:{
+                    required: "Ingresa un nombre de usuario",
+                    minlenght: "El usuario debe ser de 6 caractreres",
+                    maxlenght: "El usuario no debe sobrepasar los 15 caracteres"
+                  },
+                  nombrepro:{
+                    required: "Ingresa el nombre del producto que se desea agregar al catalogo",
+                    maxlenght: "Ingrese un nombre de producto valido"
+                  },
+                  cantidad:{
+                    required: "Ingresa la cantidad del producto que se desea agregar al catalogo",
+                    maxlenght: "La cantidad del producto no debe sobrepasar la centena",
+                    minlenght: "La cantidad del producto debe ser almenos de 1 unidad"
+                  },
+                  precio:{
+                    required: "Ingresa el precio del producto"
+                  },
+                  tipo:{
+                    required: "Ingresa el tipo del producto",
+                    maxlenght: "El tipo del producto debe ser valido",
+                    minlenght: "El tipo dde producto debe ser valido"    
+                }
+              }
+            })
+          })
+          </script>
     </script>
 
 </body>
