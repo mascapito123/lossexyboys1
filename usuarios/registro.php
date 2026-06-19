@@ -209,20 +209,23 @@ font-size: 16px;
 <label for="usuario">USUARIO:</label>
 <input type="text" placeholder="pepe torrico" id="usuario" name="usuario" required>
 
+<label for="CI">CARNET DE IDENTIDAD(CI):</label>
+<input type="number" id="CI" name="CI" required>
+
 <label for="pass">CONTRASEÑA:</label>
 <input type="password" placeholder="pepe torrico" id="pass" name="pass" required>
 
 <label for="telefono">TELEFONO</label>
 <input type="number" placeholder="12345678" id="telefono" name="telefono" required>
 
-<label for="email">CORREO ELECTRONICO:</label>
-<input type="email" placeholder="pepe121@gmail.com" id="email" name="email" required>
+<label for="estado">ESTADO:</label>
+<input type="text" placeholder="12345678" id="estado" name="estado" required>
+
+<label for="rol">ROL:</label>
+<input type="number" placeholder="12345678" id="rol" name="rol" required>
 
 <label for="direccion">DIRECCION:</label>
 <textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
-
-<label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" required>
 
 <label for="comentarios">COMENTARIOS ADICIONALES:</label>
 <textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
