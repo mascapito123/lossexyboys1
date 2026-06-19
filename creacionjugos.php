@@ -11,7 +11,6 @@
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     .titulo {
       width: 100vw;
       background: #111;
