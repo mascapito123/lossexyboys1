@@ -123,8 +123,13 @@ font-size: 25px;
 </head>
 <body>
     <?php
+<<<<<<< Updated upstream
 include ("encabezadocarri.php");
 ?>
+=======
+    include ("encabezadocarri.php");
+    ?>
+>>>>>>> Stashed changes
     <form action="editado_carrito.php" method="post" class="use">
         <label for="id" class="use-label">codigo:</label>
         <input type="text" class="use-input" id="codigo" name="codigo" value="<?php echo $row['codigo']; ?>" readonly><br>

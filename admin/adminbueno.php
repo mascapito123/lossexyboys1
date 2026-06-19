@@ -244,8 +244,13 @@
 </head>
 <body>
     <?php
+<<<<<<< Updated upstream
 include ("encabezadoadmin.php");
 ?>
+=======
+    include ("encabezadoadmin.php");
+    ?>
+>>>>>>> Stashed changes
 
     <div class="content">
       <aside>

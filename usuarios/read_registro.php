@@ -168,8 +168,13 @@ main.main {
 <body>
 
 <?php
+<<<<<<< Updated upstream
 include ("encabezadousua.php");
 ?>
+=======
+    include ("encabezadousua.php")
+    ?>
+>>>>>>> Stashed changes
 
 <main class="main">
 <div class="form-box">

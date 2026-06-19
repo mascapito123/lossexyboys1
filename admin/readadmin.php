@@ -241,8 +241,13 @@ section.cuadro{
 <body>
   
     <?php
+<<<<<<< Updated upstream
 include ("encabezadoadmin.php");
 ?>
+=======
+    include ("encabezadoadmin.php");
+    ?>
+>>>>>>> Stashed changes
 
     <section class="cuadro">
         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
