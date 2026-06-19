@@ -33,7 +33,7 @@ section.cuadro{
     justify-content: center;
     gap: 20px;
     color: white;
-}
+  }
 
 .c img{
   border-radius: 100%;
@@ -57,15 +57,8 @@ section.cuadro{
         "c"
         "b";
     }
-    h1{
-        font-size: 2.2rem; 
-    }
-    p{
-        font-size: 1rem;
-    }
-    .b{
-
-    }
+   
+    
   }
   table{
     width: 100%;

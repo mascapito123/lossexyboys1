@@ -16,6 +16,9 @@
     margin: 0;
     padding: 0;
   }
+  .sectionsa,
+  .sectionsb,
+  .sectionsc{
   .reinaduende {
     background: #fafafa;
     border-radius: 10px;
@@ -59,14 +62,15 @@
     .isac{
       background-color: rgb(0, 128, 90);
 
-    }    
+    }  
+    }
 </style>
 </head>
 <body>
 <?php
 include ("encabezado_carry.php");
 ?>
-  <section class="sections">
+  <section class="sectionsa">
   <div class="reinaduende">
     <a href="comprar.php?jugo=horchata&precio=5"><img src="https://images.aws.nestle.recipes/original/8eaf50148ed521383df5d9793cba995f_whatsapp_image_2022-04-28_at_1.00.26_pm_(2).jpeg" alt="Programas Hábitos"></a>
     <h2>Jugo de Horchata</h2><br>
@@ -81,7 +85,7 @@ include ("encabezado_carry.php");
   </div>
 </section>
 
-<section class="sections">
+<section class="sectionsb">
   <div class="reinaduende">
     <a href="comprar.php?jugo=sandia&precio=5"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTG1QLcdgKiPvjqqbh6LVIIHNIBkYaX-8t8RKoaJ0kr5BaY80ab" alt="Programas Hábitos"></a>
     <h2>Jugo de SANDIA</h2>
@@ -96,7 +100,7 @@ include ("encabezado_carry.php");
 
   </div>
 </section>
-<section class="sections">
+<section class="sectionsc">
   <div class="reinaduende">
     <a href="comprar.php?jugo=mocochinchi&precio=5"><img src="https://www.recetas.com.bo/sites/default/files/2024-09/mocochinchi.jpg" alt="Programas Hábitos"></a>
     <h2>Mocochinchi</h2>
