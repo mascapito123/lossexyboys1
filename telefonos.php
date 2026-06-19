@@ -10,10 +10,6 @@
     margin: 0;
     padding: 0;
   }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
   body {
   background-color: #f5f5f5;
   font-family: Arial, sans-serif;
@@ -77,6 +73,47 @@
   width: 24px;
   height: 24px;
   margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+
+  .contact-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .contact-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .whatsapp-link {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .whatsapp-link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 </style>
 </head>
