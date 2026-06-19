@@ -10,10 +10,7 @@
     margin: 0;
     padding: 0;
   }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
+
   body {
   background-color: #f5f5f5;
   font-family: Arial, sans-serif;
@@ -78,10 +75,7 @@
   height: 24px;
   margin-right: 8px;
 }
-<<<<<<< HEAD
-  
-=======
->>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
+
 </style>
 </head>
 <body>
