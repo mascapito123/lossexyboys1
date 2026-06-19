@@ -212,16 +212,16 @@ font-size: 16px;
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
 <input type="number" id="CI" name="CI" >
 
-<label for="pass">paseword:</label>
+<label for="pass">Contraseña:</label>
 <input type="password" placeholder="pepe torrico" id="pass" name="pass">
 
-<label for="telefono">NS XDDDDDDDD</label>
+<label for="telefono">Telefono</label>
 <input type="number" placeholder="12345678" id="telefono" name="telefono">
 
-<label for="estado">ESTADO paralitico:</label>
+<label for="estado">ESTADO:</label>
 <input type="text" placeholder="12345678" id="estado" name="estado">
 
-<label for="rol">ROLeo:</label>
+<label for="rol">ROL:</label>
 <input type="number" placeholder="12345678" id="rol" name="rol">
 
 <label for="direccion">DIRECCION:</label>
@@ -253,7 +253,7 @@ font-size: 16px;
                     required: true,
                     maxlenht: 10,
                     minlenght: 5
-                  }
+                  },
                   telefono:{
                     required: true,
                     maxlegnth: 8,
