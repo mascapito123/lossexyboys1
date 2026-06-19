@@ -102,25 +102,25 @@
 include ("encabezado.php");
 ?>
 
-  <div class="titulo">FABRICACIÓN DE JUGOS</div>
+  <div class="titulo">Historia de Boomble</div>
 
 <section class="contenido">
   <img src="jugos1.jpg" alt="Preparación de jugos naturales">
   <div class="letra">
-    <p>La elaboración de nuestros jugos comienza con la selección de frutas frescas y naturales, cuidadosamente elegidas según su punto ideal de maduración. Cada fruta es lavada y desinfectada con productos ecológicos, asegurando mantener su sabor y propiedades intactas.</p>
-    <p>Nos enfocamos en trabajar con productores locales para garantizar ingredientes de calidad y reducir el impacto ambiental. Las frutas son peladas y cortadas a mano, preservando sus nutrientes y evitando procesos industriales que alteren su esencia natural.</p>
-    <p>El jugo se extrae mediante métodos caseros que conservan el sabor auténtico y la textura original de la fruta. No utilizamos conservantes, colorantes ni azúcares añadidos, solo la dulzura natural que cada fruta ofrece.</p>
-    <p>Cada preparación se realiza al momento, en pequeñas cantidades, para garantizar frescura y pureza. El resultado es un jugo 100% natural, lleno de energía y vitalidad, ideal para disfrutar en cualquier momento del día.</p>
+    <p>La historia de Boomble comenzó en la ciudad de Cochabamba, en las aulas del Colegio Pedro Poveda. Allí se conocieron dos jóvenes que, aunque provenían de lugares diferentes, compartían el mismo deseo de emprender y crear algo que dejara huella.
+Edson era originario del Beni. Desde pequeño había crecido rodeado de una gran variedad de frutas tropicales y había aprendido a valorar la riqueza natural de su tierra. Cuando se mudó a Cochabamba para continuar sus estudios en el Colegio Pedro Poveda, tuvo que adaptarse a una nueva ciudad, nuevos compañeros y nuevas experiencias.
+Fue en ese colegio donde conoció a Isac, un joven cochabambino muy sociable, creativo y siempre dispuesto a ayudar a los demás. Aunque al principio solo eran compañeros de clase, con el tiempo se hicieron grandes amigos gracias a los proyectos que realizaban juntos y a las largas conversaciones sobre sus metas para el futuro.
+Durante una actividad escolar relacionada con el emprendimiento, ambos comenzaron a intercambiar ideas sobre posibles negocios. Edson hablaba con entusiasmo sobre las frutas del Beni y los sabores únicos que había disfrutado durante su infancia. Isac, por su parte, aportaba ideas sobre cómo presentar esos productos de una manera innovadora y atractiva para los consumidores.</p>
   </div>
 </section>
 
 <section class="contenido reverse">
   <img src="jugos2.jpg" alt="Jugos frescos y naturales">
   <div class="letra">
-    <p>Después de la extracción, los jugos se filtran suavemente para conservar su textura ligera y agradable. Cada mezcla se prueba con cuidado para equilibrar la dulzura, la acidez y el aroma, logrando combinaciones refrescantes y únicas.</p>
-    <p>Utilizamos envases ecológicos y reciclables, reafirmando nuestro compromiso con el medio ambiente. Nuestros jugos son elaborados con dedicación, siguiendo un proceso artesanal que respeta los ciclos naturales de cada ingrediente.</p>
-    <p>De esta manera, cada botella refleja nuestra filosofía: ofrecer un producto saludable, auténtico y lleno de vida, hecho con manos que valoran la naturaleza. Cada sorbo cuenta una historia de frescura, bienestar y sostenibilidad.</p>
-    <p>Porque en cada jugo que elaboramos, ponemos el mismo cariño y esmero que en casa, manteniendo viva la tradición de lo natural, lo casero y lo verdaderamente saludable.</p>
+    <p>Después de muchas conversaciones, nació una idea que les pareció perfecta: crear una empresa dedicada a la elaboración de jugos naturales que combinaran la riqueza de las frutas benianas con una visión moderna y sostenible.
+Comenzaron investigando recetas, probando mezclas de frutas y aprendiendo sobre nutrición y cuidado ambiental. Querían que sus productos fueran saludables, deliciosos y respetuosos con la naturaleza. Por eso decidieron utilizar recipientes reutilizables de bambú y tutuma, promoviendo hábitos de consumo responsables.
+Aquel proyecto que empezó como una tarea escolar fue creciendo poco a poco hasta convertirse en Boomble, una marca inspirada en la amistad, la creatividad y el amor por la naturaleza. Edson aportó el conocimiento y la inspiración de las frutas del Beni, mientras que Isac contribuyó con su visión emprendedora y su capacidad para convertir las ideas en realidad.
+Hoy, Boomble representa mucho más que una empresa de jugos. Es el resultado de la unión de dos amigos que se conocieron en el Colegio Pedro Poveda y que demostraron que las mejores ideas pueden surgir cuando personas con diferentes orígenes trabajan juntas por un mismo sueño.</p>
   </div>
 </section>
 </section>
@@ -129,4 +129,3 @@ include ("encabezado.php");
     ?>
 </body>
 </html>
-
