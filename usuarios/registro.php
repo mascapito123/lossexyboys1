@@ -220,7 +220,7 @@ include ("encabezadousua.php");
 </form>
          <script>
             $(document).ready(function(){
-              $(".use").validate({
+              $("form").validate({
                 rules:{
                   nombre:{
                     required: true,
@@ -299,8 +299,8 @@ include ("encabezadousua.php");
                     maxlength: "Verificar que la direeccion sea verdadera"
                   }
                 }
-              })
-            })
+              });
+            });
           </script>
 
 </form>
