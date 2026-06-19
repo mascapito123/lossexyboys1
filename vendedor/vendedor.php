@@ -436,8 +436,6 @@ section.cuadro{
               }
             })
           })
-          </script>
     </script>
-
 </body>
 </html>
