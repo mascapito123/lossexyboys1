@@ -335,17 +335,25 @@ section.cuadro{
             <table>
                 <tr>
                     <th>CODIGO</th>
+                    <th>NOMBRE</th>
+                    <th>ESTADO</th>
                     <th>PRDUCTO</th>
                     <th>CANTIDAD</th>
                     <th>PRECIO</th>
+                    <TH>VENDEDOR</TH>
+                    <TH>FECHA</TH>
                 </tr>
                 <tbody>
                 <?php $i = 0; while($row = mysqli_fetch_assoc($query)):?>
                   <tr>
                     <td><button class="pan btn-modal" data-index="<?php echo $i; ?>"><?php echo $row['codigo']; ?></button></td>
+                    <TD><?php echo $row['nombre']; ?></TD>
+                    <td><?php echo $row['esatado']; ?></td>
                     <td><?php echo $row['producto']; ?></td>
                     <td><?php echo $row['cantidad']; ?></td>
                     <td><?php echo $row['precio']; ?></td>
+                    <td><?php echo $row['vendedor']; ?></td>
+                    <td><?php echo $row['fecha_registro']; ?></td>
                     <td>
                       <a class="edi" href="editar_carrito.php?codigo=<?php echo $row['codigo']; ?>">EDITAR</a>
                       <a class="eli" href="eliminar_carrito.php?codigo=<?php echo $row['codigo']; ?>">ELIMINAR</a>
