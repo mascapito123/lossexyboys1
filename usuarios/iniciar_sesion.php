@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registrate en Boomble</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
   <style>
     header {
     background: #111;
@@ -175,6 +177,7 @@ font-size: 16px;
 }
 
   </style>
+  
 </head>
 <body>
     <?php
@@ -202,38 +205,43 @@ include ("encabezadousua.php");
 </form>
 <script>
 $(document).ready(function(){
-              $(".registr").validate({
-                rulesa:{
-                  nombre:{
-                    requierd: true,
-                    minlegnth: 10,
-                    maxlegnth: 20
-                  },
-                  telefono:{
-                    required: true,
-                    maxlegth: 8
-                  },
-                  email:{
-                    required: true,
-                    maxength: 20,
-                    minlength: 20
-                  },
-                  direccion:{
-                    required: true,
-                    maxlenght: 20,
-                    minlenght: 10
-                  },
-                  CI:{
-                    required: true,
-                    maxlength:7 ,
-                    minlenght:7 
-                  },
-                }
-              })
-            })
+  $(".registr").validate({
+    rules:{
+      usuario: {
+        required: true,
+        minlength: 4,
+        maxlength: 15
+      },
+      pass: {
+        required: true,
+        minlength: 5,
+        maxlength: 20
+      }
+    },
+    messages:{
+      usuario: {
+        required: "Ingresa tu usuario",
+        minlength: "El usuario debe tener al menos 4 caracteres",
+        maxlength: "El usuario no puede sobrepasar los 15 caracteres"
+      },
+      pass: {
+        required: "Ingresa tu contraseña",
+        minlength: "La contraseña debe tener al menos 5 caracteres",
+        maxlength: "La contraseña no puede superar los 20 caracteres"
+      }
+    },
+    errorElement: "div",
+    errorPlacement: function(error, element) {
+      error.css({
+        color: "red",
+        marginTop: "5px",
+        fontSize: "0.9em"
+      });
+      error.insertAfter(element);
+    }
+  });
+});
 </script>
-
-</form>
     <?php
      include("../pie_pg.php");
     ?>

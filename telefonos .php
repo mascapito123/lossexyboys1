@@ -10,10 +10,14 @@
     margin: 0;
     padding: 0;
   }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
+  header {
+    background: #111;
+    color: #fff;
+    padding: 12px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
   body {
   background-color: #f5f5f5;
   font-family: Arial, sans-serif;

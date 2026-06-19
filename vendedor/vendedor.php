@@ -366,52 +366,52 @@ section.cuadro{
         });
        $(document).ready(function(){
           $(".use").validate({
-                rulesa:{
+                rules:{
                   usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
                   },
                   nombrepro:{
                     required: true,
-                    maxlegth: 20
+                    maxlength: 20
                   },
                   cantidad:{
                     required: true,
-                    maxlegnth: 3,
-                    minlegnth: 1
+                    maxlength: 3,
+                    minlength: 1
                   },
                   precio:{
-                    required: true,
+                    required: true
+                  },
                   tipo:{
                     required: true,
-                    maxlenght: 15,
-                    minlenght: 11
+                    maxlength: 15,
+                    minlength: 3
                   }
-              },
                 },
-              messajes:{
-                usuartio:{
+              messages:{
+                usuario:{
                     required: "Ingresa un nombre de usuario",
-                    minlenght: "El usuario debe ser de 6 caractreres",
-                    maxlenght: "El usuario no debe sobrepasar los 15 caracteres"
+                    minlength: "El usuario debe ser de al menos 6 caracteres",
+                    maxlength: "El usuario no debe sobrepasar los 15 caracteres"
                   },
                   nombrepro:{
-                    required: "Ingresa el nombre del producto que se desea agregar al catalogo",
-                    maxlenght: "Ingrese un nombre de producto valido"
+                    required: "Ingresa el nombre del producto que se desea agregar al catálogo",
+                    maxlength: "Ingrese un nombre de producto válido"
                   },
                   cantidad:{
-                    required: "Ingresa la cantidad del producto que se desea agregar al catalogo",
-                    maxlenght: "La cantidad del producto no debe sobrepasar la centena",
-                    minlenght: "La cantidad del producto debe ser almenos de 1 unidad"
+                    required: "Ingresa la cantidad del producto que se desea agregar al catálogo",
+                    maxlength: "La cantidad del producto no debe sobrepasar los 3 dígitos",
+                    minlength: "La cantidad del producto debe ser al menos 1 unidad"
                   },
                   precio:{
                     required: "Ingresa el precio del producto"
                   },
                   tipo:{
                     required: "Ingresa el tipo del producto",
-                    maxlenght: "El tipo del producto debe ser valido",
-                    minlenght: "El tipo dde producto debe ser valido"    
+                    maxlength: "El tipo del producto debe ser válido",
+                    minlength: "El tipo de producto debe ser válido"
                 }
               }
             })

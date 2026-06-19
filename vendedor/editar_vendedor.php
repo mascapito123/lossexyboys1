@@ -25,6 +25,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <style>
     * {
     box-sizing: border-box;
@@ -117,10 +119,8 @@ font-size: 25px;
   .subscribe button:hover {
     background: #3cffce;
   }
-    </style>   
+    </style>
 </head>
-<body>
-    </head>
 <body>
   <?php
 include ("encabezadovende.php");
@@ -188,5 +188,80 @@ include ("encabezadovende.php");
     </div>
   </div>
 </footer>
+<script>
+  $(document).ready(function(){
+    $(".use").validate({
+      rules: {
+        codigo: {
+          required: true,
+          digits: true
+        },
+        usuario: {
+          required: true,
+          minlength: 6,
+          maxlength: 15
+        },
+        nombrepro: {
+          required: true,
+          maxlength: 50
+        },
+        cantidad: {
+          required: true,
+          digits: true,
+          min: 1,
+          max: 999
+        },
+        precio: {
+          required: true,
+          number: true,
+          min: 1
+        },
+        tipo: {
+          required: true,
+          maxlength: 20
+        }
+      },
+      messages: {
+        codigo: {
+          required: "Ingresa el código del producto",
+          digits: "El código debe contener solo números"
+        },
+        usuario: {
+          required: "Ingresa un usuario",
+          minlength: "El usuario debe tener al menos 6 caracteres",
+          maxlength: "El usuario no debe superar los 15 caracteres"
+        },
+        nombrepro: {
+          required: "Ingresa el nombre del producto",
+          maxlength: "El nombre del producto no debe superar los 50 caracteres"
+        },
+        cantidad: {
+          required: "Ingresa la cantidad",
+          digits: "La cantidad debe ser un número entero",
+          min: "La cantidad debe ser al menos 1",
+          max: "La cantidad no puede ser mayor a 999"
+        },
+        precio: {
+          required: "Ingresa el precio",
+          number: "El precio debe ser un número",
+          min: "El precio debe ser mayor a 0"
+        },
+        tipo: {
+          required: "Ingresa el tipo de producto",
+          maxlength: "El tipo no debe superar los 20 caracteres"
+        }
+      },
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        error.css({
+          color: "red",
+          marginTop: "5px",
+          fontSize: "0.9em"
+        });
+        error.insertAfter(element);
+      }
+    });
+  });
+</script>
 </body>
 </html>

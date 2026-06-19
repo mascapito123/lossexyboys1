@@ -21,6 +21,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
     <style>
         * {
     box-sizing: border-box;
@@ -237,7 +240,7 @@ section.cuadro{
     left: 200px;
   }
 </style>
-</head>
+
 <body>
   
     <?php
@@ -273,42 +276,51 @@ include ("encabezadocarri.php");
           <script>
             $(document).ready(function(){
               $(".use").validate({
-                rulesa:{
-                  usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
-                  },
-                  nombre:{
+                rules: {
+                  produc: {
                     required: true,
-                    maxlegth: 15
+                    maxlength: 100
                   },
-                  tele:{
+                  cantidad: {
                     required: true,
-                    maxength: 8,
-                    minlength: 8
+                    digits: true,
+                    min: 1,
+                    max: 9999
                   },
-                  naci:{
-                    reqiored: true
-                  },
-                  correo:{
-                    required: true
-                  },
-                  contraseña:{
+                  precio: {
                     required: true,
-                    maxlenght: 20,
-                    minlenght: 8
-                  },
-                  reportes:{
-                    maxlength: 150
-                  },
-                  dire:{
-                    required: true,
-                    maxlength: 200
+                    number: true,
+                    min: 0.01
                   }
+                },
+                messages: {
+                  produc: {
+                    required: "Ingresa el nombre del producto",
+                    maxlength: "El nombre del producto no puede superar los 100 caracteres"
+                  },
+                  cantidad: {
+                    required: "Ingresa la cantidad",
+                    digits: "La cantidad debe ser un número entero",
+                    min: "La cantidad debe ser al menos 1",
+                    max: "La cantidad no puede superar los 9999"
+                  },
+                  precio: {
+                    required: "Ingresa el precio",
+                    number: "El precio debe ser un número válido",
+                    min: "El precio debe ser mayor a 0"
+                  }
+                },
+                errorElement: "div",
+                errorPlacement: function(error, element) {
+                  error.css({
+                    color: "red",
+                    marginTop: "5px",
+                    fontSize: "0.9em"
+                  });
+                  error.insertAfter(element);
                 }
-              })
-            })
+              });
+            });
           </script>
         </div>
         <div class="b">

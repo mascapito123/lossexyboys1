@@ -25,6 +25,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+</head>
+<body>
     <style>
     * {
     box-sizing: border-box;
@@ -119,9 +123,8 @@ margin-top: 20px;
 width: 100%;
 font-size: 25px;
 }
-    </style>   
-</head>
-<body>
+    </style>
+    
     <?php
 include ("encabezadousua.php");
 ?>
@@ -149,5 +152,68 @@ include ("encabezadousua.php");
     <?php
       include("../pie_pg.php");
     ?>
+<script>
+  $(document).ready(function(){
+    $(".use").validate({
+      rules: {
+        nombre: {
+          required: true,
+          maxlength: 60
+        },
+        tele: {
+          required: true,
+          digits: true,
+          minlength: 7,
+          maxlength: 10
+        },
+        email: {
+          required: true,
+          email: true,
+          maxlength: 80
+        },
+        direccion: {
+          required: true,
+          maxlength: 200
+        },
+        comentarios: {
+          maxlength: 200
+        }
+      },
+      messages: {
+        nombre: {
+          required: "Ingresa tu nombre",
+          maxlength: "El nombre no puede superar los 60 caracteres"
+        },
+        tele: {
+          required: "Ingresa tu teléfono",
+          digits: "El teléfono solo puede contener números",
+          minlength: "El teléfono debe tener al menos 7 dígitos",
+          maxlength: "El teléfono no puede tener más de 10 dígitos"
+        },
+        email: {
+          required: "Ingresa tu correo",
+          email: "Ingresa un correo válido",
+          maxlength: "El correo no puede superar los 80 caracteres"
+        },
+        direccion: {
+          required: "Ingresa tu dirección",
+          maxlength: "La dirección no puede superar los 200 caracteres"
+        },
+        comentarios: {
+          maxlength: "Los comentarios no deben superar los 200 caracteres"
+        }
+      },
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        error.css({
+          color: "red",
+          marginTop: "5px",
+          fontSize: "0.9em"
+        });
+        error.insertAfter(element);
+      }
+    });
+  });
+</script>
 </body>
 </html>

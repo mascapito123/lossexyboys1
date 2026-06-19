@@ -2,7 +2,7 @@
     $servidor="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBD="admin3";
+    $nombreBD="admin1";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
     if($conn -> connect_error){
@@ -21,6 +21,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <style>
         * {
     box-sizing: border-box;
@@ -237,6 +239,7 @@ section.cuadro{
     left: 200px;
   }
 </style>
+
 </head>
 <body>
   
@@ -294,31 +297,34 @@ include ("encabezadoadmin.php");
           <script>
             $(document).ready(function(){
               $(".use").validate({
-                rulesa:{
+                rules:{
                   usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
                   },
                   nombre:{
                     required: true,
-                    maxlegth: 15
+                    maxlength: 50
                   },
                   tele:{
                     required: true,
-                    maxength: 8,
-                    minlength: 8
+                    digits: true,
+                    minlength: 7,
+                    maxlength: 10
                   },
                   naci:{
-                    reqiored: true
+                    required: true,
+                    date: true
                   },
                   correo:{
-                    required: true
+                    required: true,
+                    email: true
                   },
                   contraseña:{
                     required: true,
-                    maxlenght: 20,
-                    minlenght: 8
+                    minlength: 8,
+                    maxlength: 20
                   },
                   reportes:{
                     maxlength: 150
@@ -326,10 +332,62 @@ include ("encabezadoadmin.php");
                   dire:{
                     required: true,
                     maxlength: 200
+                  },
+                  tipo:{
+                    required: true
                   }
+                },
+                messages:{
+                  usuario:{
+                    required: "Ingresa un usuario",
+                    minlength: "El usuario debe tener al menos 6 caracteres",
+                    maxlength: "El usuario no puede superar los 15 caracteres"
+                  },
+                  nombre:{
+                    required: "Ingresa el nombre",
+                    maxlength: "El nombre no puede superar los 50 caracteres"
+                  },
+                  tele:{
+                    required: "Ingresa el teléfono",
+                    digits: "El teléfono debe contener solo números",
+                    minlength: "El teléfono debe tener al menos 7 dígitos",
+                    maxlength: "El teléfono no puede tener más de 10 dígitos"
+                  },
+                  naci:{
+                    required: "Selecciona la fecha de nacimiento",
+                    date: "Ingresa una fecha válida"
+                  },
+                  correo:{
+                    required: "Ingresa el correo",
+                    email: "Ingresa un correo válido"
+                  },
+                  contraseña:{
+                    required: "Ingresa la contraseña",
+                    minlength: "La contraseña debe tener al menos 8 caracteres",
+                    maxlength: "La contraseña no puede superar los 20 caracteres"
+                  },
+                  reportes:{
+                    maxlength: "Los reportes no pueden superar los 150 caracteres"
+                  },
+                  dire:{
+                    required: "Ingresa la dirección",
+                    maxlength: "La dirección no puede superar los 200 caracteres"
+                  },
+                  tipo:{
+                    required: "Selecciona el género"
+                  }
+                },
+                errorElement: "div",
+                errorPlacement: function(error, element) {
+                  error.css({
+                    color: "red",
+                    marginTop: "5px",
+                    fontSize: "0.9em"
+                  });
+                  error.insertAfter(element);
                 }
-              })
-            })
+              });
+            });
           </script>
         </div>
         <div class="b">

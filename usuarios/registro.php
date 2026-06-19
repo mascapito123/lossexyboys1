@@ -6,7 +6,8 @@
   <title>Registrate en Boomble</title>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
-  <style>
+</script>
+<style>
     header {
     background: #111;
     color: #fff;
@@ -175,7 +176,6 @@ margin-top: 20px;
 width: 100%;
 font-size: 16px;
 }
-
   </style>
 </head>
 <body>
@@ -189,22 +189,31 @@ include ("encabezadousua.php");
 <input type="text" placeholder="pepe torrico" id="nombre" name="nombre">
 
 <label for="usuario">USUARIO:</label>
-<input type="text" placeholder="pepe torrico" id="usuario" name="usuario">
+<input type="text" placeholder="seximan" id="usuario" name="usuario">
 
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" >
+<input type="number" id="CI" name="CI" placeholder="12345678">
 
 <label for="pass">Contraseña:</label>
-<input type="password" placeholder="pepe torrico" id="pass" name="pass">
+<input type="password" placeholder="Ingresa tu contraseña" id="pass" name="pass">
 
 <label for="telefono">Telefono</label>
 <input type="number" placeholder="12345678" id="telefono" name="telefono">
 
 <label for="estado">ESTADO:</label>
-<input type="text" placeholder="12345678" id="estado" name="estado">
+<select id="estado" name="estado">
+  <option value="" disabled selected>Selecciona un estado</option>
+  <option value="soltero">Soltero</option>
+  <option value="casado">Casado</option>
+</select>
 
 <label for="rol">ROL:</label>
-<input type="number" placeholder="12345678" id="rol" name="rol">
+<select id="rol" name="rol">
+  <option value="" disabled selected>Selecciona un rol</option>
+  <option value="cliente">Cliente</option>
+  <option value="administrador">Administrador</option>
+  <option value="vendedor">Vendedor</option>
+</select>
 
 <label for="direccion">DIRECCION:</label>
 <textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" ></textarea>
@@ -218,92 +227,94 @@ include ("encabezadousua.php");
     <a href="iniciar_sesion.php">Inicia sesión aquí</a>
 </p>
 </form>
-         <script>
+          <script>
             $(document).ready(function(){
-              $("form").validate({
+              $("form.registr").validate({
                 rules:{
                   nombre:{
                     required: true,
-                    maxlegth: 15
+                    maxlength: 50
                   },
-                    usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
+                  usuario:{
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
+                  },
+                  CI:{
+                    required: true,
+                    digits: true,
+                    minlength: 7,
+                    maxlength: 8
                   },
                   pass:{
                     required: true,
-                    maxlenht: 10,
-                    minlenght: 5
+                    minlength: 5,
+                    maxlength: 10
                   },
                   telefono:{
                     required: true,
-                    maxlegnth: 8,
-                    minlegnth: 8
+                    digits: true,
+                    minlength: 8,
+                    maxlength: 8
                   },
                   estado:{
-                    requiered: true
+                    required: true
                   },
                   rol:{
                     required: true
                   },
-                  CI:{
-                    required: true,
-                    maxlenth: 8,
-                    minlenght: 7
-                  },
-                  comentarios:{
-                    maxlength: 200
-                  },
                   direccion:{
                     required: true,
+                    maxlength: 200
+                  },
+                  comentarios:{
                     maxlength: 200
                   }
                 },
                 messages: {
-                  usuario: {
-                    required: "Ingreser un nombre de ususario apropiado",
-                    minlength: "Su usuario no bebe ser mayor de 6 caracteras",
-                    maxlength: "Su usuario no puede sobrepasar los 15 caracteres"
-                  },
                   nombre: {
                     required: "Ingresa tu nombre completo",
-                    maxlength: "Su nombre no puede sobrepasar los 15 caracteers"
+                    maxlength: "Su nombre no puede sobrepasar los 50 caracteres"
                   },
-                  pass: {
-                    required: "Por favor, ingresa una contraseña",
-                    maxlength: "La contraseña solo debe ser de 10 caracteres",
-                    minlength: "La contraseña bebe ser de al menos unos 5 ccaracters"
-                  },
-                  telefono: {
-                    required: "Ingresa tu numero telefonico",
-                    maxlength: "Ingresa tu numero de telefono verdadero",
-                    minlength: "El numero de telefono tiene que ser real"
+                  usuario: {
+                    required: "Ingresa un nombre de usuario apropiado",
+                    minlength: "Su usuario debe tener al menos 6 caracteres",
+                    maxlength: "Su usuario no puede sobrepasar los 15 caracteres"
                   },
                   CI: {
                     required: "Ingresa tu carnet de identidad",
-                    maxlength: "Ingresa tu carnet de identidad veradadero",
-                    minlength: "Ingresa tu carnet de identidad veradadero"
+                    digits: "El carnet solo puede contener números",
+                    minlength: "El carnet debe tener entre 7 y 8 dígitos",
+                    maxlength: "El carnet debe tener entre 7 y 8 dígitos"
+                  },
+                  pass: {
+                    required: "Por favor, ingresa una contraseña",
+                    minlength: "La contraseña debe tener al menos 5 caracteres",
+                    maxlength: "La contraseña no puede ser mayor a 10 caracteres"
+                  },
+                  telefono: {
+                    required: "Ingresa tu número telefónico",
+                    digits: "El teléfono solo puede contener números",
+                    minlength: "El número de teléfono debe tener 8 dígitos",
+                    maxlength: "El número de teléfono debe tener 8 dígitos"
                   },
                   estado: {
-                    required: "Ingresa tu estado actual"
+                    required: "Selecciona tu estado"
                   },
                   rol: {
-                    required: "Ingresa tu rol en la empresa"
-                  },
-                  comentarios: {
-                    maxlength: "Los comentarios dirirgidos a la empresas no bebe sobrepasar los 200 caracters"
+                    required: "Selecciona tu rol"
                   },
                   direccion: {
-                    required: "Ingrese la direccion de su domicilio",
-                    maxlength: "Verificar que la direeccion sea verdadera"
+                    required: "Ingrese la dirección de su domicilio",
+                    maxlength: "La dirección no debe sobrepasar los 200 caracteres"
+                  },
+                  comentarios: {
+                    maxlength: "Los comentarios no deben sobrepasar los 200 caracteres"
                   }
                 }
               });
             });
           </script>
-
-</form>
     <?php
      include("../pie_pg.php");
     ?>

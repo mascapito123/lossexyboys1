@@ -366,7 +366,7 @@ transition: .3s;
                 </tbody>
                 <tr>
                     <td colspan="8">Total: $<?php echo number_format($total, 2); ?></td>
-                    <td><button class="pagar">PAGAR YA?</button></td>
+                    <td><button class="pagar" href="../comprado.php">PAGAR YA?</button></td>
                 </tr>
             </table>
         </div>
