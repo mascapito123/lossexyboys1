@@ -218,12 +218,19 @@ font-size: 16px;
 <label for="telefono">TELEFONO</label>
 <input type="number" placeholder="12345678" id="telefono" name="telefono" required>
 
-<label for="estado">ESTADO:</label>
-<input type="text" placeholder="12345678" id="estado" name="estado" required>
+<label for="estado" class="use-label">ESTADO:</label>
+                  <select class="use-input" id="estado" name="estado">
+                    <option value="opcion_1">SOLTERO</option>
+                    <option value="opcion_2">CASADO</option>
+                    <option value="opcion_3">VIUDO</option>
+                  </select>
 
-<label for="rol">ROL:</label>
-<input type="number" placeholder="12345678" id="rol" name="rol" required>
-
+ <label for="rol" class="use-label">ROL:</label>
+                  <select class="use-input" id="rol" name="rol">
+                    <option value="opcion_1">USUARIO</option>
+                    <option value="opcion_2">ADMINISTRADOR</option>
+                    <option value="opcion_3">VENDEDOR</option>
+                  </select>
 <label for="direccion">DIRECCION:</label>
 <textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
 
