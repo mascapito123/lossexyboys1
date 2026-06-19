@@ -97,7 +97,7 @@
         <a href="https://instagram.com">🌐</a>
         <a href="https://facebook.com">📘</a>  
         <a href="https://twitter.com">📸</a>
-        <a href="https://google.com">📍</a>  
+        <a href="https://tiktok.com">📍</a>  
       </div>
     </div>
   </div>
