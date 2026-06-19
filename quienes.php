@@ -130,7 +130,8 @@
 
 <body>
 
-<?php include("encabezado.php"); ?>
+<?php include("encabezado.php"); 
+?>
 
 <div class="main-content">
 

@@ -91,6 +91,33 @@
     margin: 40px auto;
   }
 
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header img.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 </style>
 <body>
   <header>
