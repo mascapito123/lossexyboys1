@@ -122,15 +122,9 @@ font-size: 25px;
     </style>   
 </head>
 <body>
-<<<<<<< Updated upstream
     <?php
 include ("encabezadoadmin.php");
 ?>
-=======
-  <?php
-    include ("encabezadoadmin.php");
-    ?>
->>>>>>> Stashed changes
     <form action="editado_admin.php" method="post" class="use">
         <label for="id">ID:</label>
         <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" reandonly><br>

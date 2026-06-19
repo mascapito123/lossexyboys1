@@ -178,13 +178,8 @@ font-size: 16px;
 </head>
 <body>
     <?php
-<<<<<<< Updated upstream
 include ("encabezadousua.php");
 ?>
-=======
-    include ("encabezadousua.php")
-    ?>
->>>>>>> Stashed changes
 </section>
 <h1>INICIAR SESIÓN</h1>
 

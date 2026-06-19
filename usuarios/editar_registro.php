@@ -123,13 +123,8 @@ font-size: 25px;
 </head>
 <body>
     <?php
-<<<<<<< Updated upstream
 include ("encabezadousua.php");
 ?>
-=======
-    include ("encabezadousua.php")
-    ?>
->>>>>>> Stashed changes
     <form action="editado_registro.php" method="post" class="use">
         <label for="CI">CI:</label>
         <input type="hidden" id="CI" name="CI" value="<?php echo $row['CI']; ?>" readonly><br>

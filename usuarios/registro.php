@@ -180,13 +180,8 @@ font-size: 16px;
 </head>
 <body>
     <?php
-<<<<<<< Updated upstream
 include ("encabezadousua.php");
 ?>
-=======
-    include ("encabezadousua.php")
-    ?>
->>>>>>> Stashed changes
 </section>
 <h1>REGISTRATE EN BOOMBLE</h1>
 <form action="create_registro.php" method="post" class="registr">

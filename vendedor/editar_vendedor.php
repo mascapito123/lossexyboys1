@@ -123,13 +123,8 @@ font-size: 25px;
     </head>
 <body>
   <?php
-<<<<<<< Updated upstream
 include ("encabezadovende.php");
 ?>
-=======
-  include ("encabezadovende.php");
-  ?>
->>>>>>> Stashed changes
     <form action="editado_vendedor.php" method="post" class="use">
                   <label for="codigo" class="use-label">Codigo:</label>
                   <input type="text" class="use-input" id="codigo" name="codigo" required value="<?php echo $row['codigo']; ?>"><br>
