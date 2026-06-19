@@ -85,27 +85,19 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD
-  <?php
-include ("encabezado.php");
-?>
-
-=======
       <?php
 include ("encabezado.php");
 ?>
->>>>>>> 9faa2606ff7fcc09d2056abf7beea390ccc3daec
-
 <div class="vasos">
   <h1>La fabricación de los vasos</h1>
   <div class="vasos-content">
     <div class="vasos-item">
       <p>Se selecciona un bambú maduro, luego a la caña se le corta en secciones con una sierra, utilizando los nudos internos como la base natural del vaso, luego se lija o se usa una escofina para dejar el interior completamente hueco y liso. Se limpia el interior y el exterior de la caña. Se deja secar completamente para asegurar su durabilidad. Se lijan los bordes y la superficie (con lija fina) para que queden suaves al tacto.</p>
-      <img src="lija.jpg" alt="lija">
+      <img src="imagenes/lija.jpg" alt="lija">
     </div>
     
     <div class="vasos-item">
-      <img src="sierra.jpg" alt="sierra">
+      <img src="imagenes/sierra.jpg" alt="sierra">
       <p>Se corta la cáscara dura con una segueta, serrucho o cúter. Es crucial que el corte sea limpio y recto. Se extrae toda la pulpa y las semillas de la parte interna (la "carne") con una cuchara, espátula o herramienta similar. Se raspa cuidadosamente el interior hasta que quede completamente limpio, liso y blanco. Se lijan los bordes del corte para suavizarlos.</p>
     </div>
   </div>

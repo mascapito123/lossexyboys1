@@ -102,41 +102,28 @@ input[type="submit"]:hover{
     </style>
 </head>
 <body>
-<<<<<<< HEAD
+
 <?php
 include ("encabezado.php");
 ?>
-=======
-    <?php
-include ("encabezado.php");
-?>
 
->>>>>>> 9faa2606ff7fcc09d2056abf7beea390ccc3daec
     <main class="main">
       <div class="form-box">
         <h1>¿Quieres comprar?</h1>
-        <form action="insert_produc.php" method="post" class="form-grid">
+        <form action="carrito/insert_carrito.php" method="post" class="form-grid">
+          
           <div>
-            <label for="Precio">Precio</label>
-            <input id="Precio" type="text" name="Precio" value="<?php echo $precio; ?>" readonly>
+            <label for="producto">Nombre del Producto</label>
+            <input id="produc" type="text" name="produc" value="<?php echo $jugo; ?>" readonly>
+          </div>
+         <label for="cantidad">Cantidad</label>
+            <div>
+             <input id="cantidad" type="number" name="cantidad" min="1" max="10" required>
           </div>
 
           <div>
-            <label for="producto">Producto</label>
-            <input id="producto" type="text" name="producto" value="<?php echo $jugo; ?>" readonly>
-          </div>
-          <div>
-            <label for="vasos">Vasos</label>
-            <select id="vasos" name="vasos" required>
-              <option value="tutuma">tutuma</option>
-              <option value="bambu">bambu</option>
-              <option value="vasos de vidrio">vasos de vidrio</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="cantidad">Cantidad</label>
-            <input id="cantidad" type="number" name="cantidad" min="1" max="10" required>
+            <label for="precio">Precio</label>
+            <input id="precio" type="number" name="precio" value="<?php echo $precio; ?>" readonly>
           </div>
 
           <div class="form-actions">

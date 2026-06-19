@@ -243,13 +243,8 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD:adminbueno.php
-    <?php
-include ("encabezado.php");
-?>
-=======
     <header>
-    <a href="pagina_principal.php">
+    <a href="../pagina_principal.php">
       <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
     </a>
     <nav>
@@ -262,7 +257,7 @@ include ("encabezado.php");
   <a href="#">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
+    <a href="../usuarios/registro.php">Registrarse</a>
     <a href="../creacion.php">Creación de vasos</a>
     <a href="../creacionjugos.php">Creación de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>
@@ -271,7 +266,6 @@ include ("encabezado.php");
       </ul>
     </nav>
   </header>
->>>>>>> 861c3b7fb6e38623d0c003272010bed0d6bff382:admin/adminbueno.php
 
     <div class="content">
       <aside>
@@ -280,9 +274,9 @@ include ("encabezado.php");
           </div>
           <ul>
               <li><a href="#" class="active">Inicio</a></li>
-              <li><a href="#">Usuarios</a></li>
+              <li><a href="../usuarios/read_registro.php">Usuarios</a></li>
               <li><a href="#">Productos</a></li>
-              <li><a href="vendedor/vendedor.php">Ventas</a></li>
+              <li><a href="../vendedor/vendedor.php">Ventas</a></li>
               <li><a href="#">Ajustes</a></li>
           </ul>
       </aside>
@@ -335,7 +329,7 @@ include ("encabezado.php");
                     <li>Eliminar del catálogo</li>
                 </ul>
                 <div class="card-actions">
-                    <a href="#" class="btn btn-primary">Inventario</a>
+                    <a href="../vendedor/vendedor.php" class="btn btn-primary">Inventario</a>
                 </div>
             </div>
 

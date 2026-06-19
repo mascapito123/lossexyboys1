@@ -11,8 +11,11 @@
     margin: 0;
     padding: 0;
   }
+<<<<<<< HEAD
   
   
+=======
+>>>>>>> 53d42f6550631473f3dd36e74763777fa09ad3ca
 section.cuadro{
     margin: 10px;
     display: grid;

@@ -2,7 +2,7 @@
     $servidor="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBD="admin1";
+    $nombreBD="boomblez";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
     if($conn -> connect_error){
@@ -12,8 +12,8 @@
         echo "si te conectaste ". "<br>";
     }
 
-    $id=$_GET['id'];
-    $sql="SELECT * FROM adminis WHERE id='$id'";
+    $CI=$_GET['CI'];
+    $sql="SELECT * FROM registro WHERE CI='$CI'";
     $query= mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($query);
 
@@ -123,34 +123,31 @@ font-size: 25px;
 </head>
 <body>
     <header>
-  <a href="../pagina_principal.php">
-  <img src="../imagenes/logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="productos.php">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .php">TELEFONOS</a></li>
-      <li class="dropdown">
-  <a href="productos.php">MÁS</a>
+    <a href="../pagina_principal.php">
+      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="../productos.php">NUESTROS JUGOS</a></li>
+        <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
+        <li><a href="../quienes.php">QUIENES SOMOS</a></li>
+        <li><a href="../telefonos .php">TELEFONOS</a></li>
+   <li class="dropdown">
+  <a href="#">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
-    <a href="creacion.php">Creacion de vasos</a>
-    <a href="creacionjugos.php">Creacion de jugos</a>
+    <a href="../registro.php">Registrarse</a>
+    <a href="../creacion.php">Creación de vasos</a>
+    <a href="../creacionjugos.php">Creación de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>
   </div>
 </li>
-    </ul>
-  </nav>
-</header>
-    <form action="editado_admin.php" method="post" class="use">
-        <label for="id">ID:</label>
-        <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" reandonly><br>
-
-        <label for="usuario" class="use-label">Usuario:</label>
-        <input type="text" class="use-input" id="usuario" name="usuario" required value="<?php echo $row['usuario']; ?>"><br>
+      </ul>
+    </nav>
+  </header>
+    <form action="editado_registro.php" method="post" class="use">
+        <label for="CI">CI:</label>
+        <input type="hidden" id="CI" name="CI" value="<?php echo $row['CI']; ?>" readonly><br>
 
         <label for="nombre">Nombre:</label>
         <input type="text" class="use-input" id="nombre" name="nombre" required value="<?php echo $row['nombre']; ?>"><br>
@@ -158,25 +155,16 @@ font-size: 25px;
         <label for="tele" class="use-label">Teléfono:</label>
         <input type="text" class="use-input" id="tele" name="tele" required value="<?php echo $row['tele']; ?>"><br>
 
-        <label for="naci" class="use-label">Fecha de nacimiento:</label>
-        <input type="date" class="use-input" id="naci" name="naci" required value="<?php echo $row['naci']; ?>"><br>
+        <label for="email" class="use-label">Correo:</label>
+        <input type="email" class="use-input" id="email" name="email" required value="<?php echo $row['email']; ?>"><br>
 
-        <label for="correo" class="use-label">Correo:</label>
-        <input type="email" class="use-input" id="correo" name="correo" required value="<?php echo $row['correo']; ?>"><br>
+        <label for="direccion" class="use-label">Direccion:</label>
+        <textarea class="use-input" id="direccion" name="direccion" required><?php echo $row['direccion']; ?></textarea><br>
 
-        <label for="contraseña" class="use-label">Contraseña:</label>
-        <input type="password" class="use-input" id="contraseña" name="contraseña" required><br>
+        <label for="comentarios" class="use-label">Comentarios:</label>
+        <input type="text" class="use-input" id="comentarios" name="comentarios" required value="<?php echo $row['comentarios']; ?>"><br>
 
-        <label for="reportes" class="use-label">Reportes:</label>
-        <input type="text" class="use-input" id="reportes" name="reportes" required value="<?php echo $row['reportes']; ?>"><br>
-
-        <label for="tipo" class="use-label">Tipo:</label>
-        <input type="text" class="use-input" id="tipo" name="tipo" required value="<?php echo $row['tipo']; ?>"><br>
-
-        <label for="dire" class="use-label">Dirección:</label>
-        <input type="text" class="use-input" id="dire" name="dire" required value="<?php echo $row['dire']; ?>"><br>
-    
-                <input type="submit" value="Registrar" class="bot">
+        <input type="submit" value="Registrar" class="bot">
     </form>
     <?php
       include("../pie_pg.php");

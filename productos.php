@@ -64,7 +64,7 @@
 </head>
 <body>
 <?php
-include ("encabezado.php");
+include ("encabezado_carry.php");
 ?>
   <section class="sections">
   <div class="reinaduende">
@@ -88,6 +88,7 @@ include ("encabezado.php");
   </div>
   <div class="reinaduende">
     <a href="comprar.php?jugo=naranja&precio=5"><img src="https://www.clarin.com/2022/08/21/KfHICuhUX_2000x1500__1.jpg" alt="Paquetes"></a>
+    <h2>Jugo de NARANJA</h2>
   </div>
   <div class="reinaduende">
     <a href="comprar.php?jugo=coco&precio=5"><img src="https://ilovemojitos.com/wp-content/uploads/2023/05/autres-cocktails-populaires.jpg" alt="Productos Naturales"></a>

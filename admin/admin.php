@@ -239,7 +239,7 @@ section.cuadro{
 </head>
 <body>
     <header>
-    <a href="pagina_principal.php">
+    <a href="../pagina_principal.php">
       <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
     </a>
     <nav>
@@ -252,7 +252,7 @@ section.cuadro{
   <a href="#">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
+    <a href="../usuarios/registro.php">Registrarse</a>
     <a href="../creacion.php">Creación de vasos</a>
     <a href="../creacionjugos.php">Creación de jugos</a>
     <a href="adminbueno.php">Panel de Administración</a>

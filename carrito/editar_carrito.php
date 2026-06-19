@@ -2,7 +2,7 @@
     $servidor="localhost";
     $usuario="root";
     $contraseña="";
-    $nombreBD="admin1";
+    $nombreBD="carrito";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
     if($conn -> connect_error){
@@ -12,8 +12,8 @@
         echo "si te conectaste ". "<br>";
     }
 
-    $id=$_GET['id'];
-    $sql="SELECT * FROM adminis WHERE id='$id'";
+    $codigo=$_GET['codigo'];
+    $sql="SELECT * FROM carro WHERE codigo='$codigo'";
     $query= mysqli_query($conn,$sql);
     $row=mysqli_fetch_array($query);
 
@@ -128,55 +128,37 @@ font-size: 25px;
   </a>
   <nav>
     <ul>
-      <li><a href="productos.php">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .php">TELEFONOS</a></li>
+      <li><a href="../productos.php">NUESTROS JUGOS</a></li>
+      <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
+      <li><a href="../quienes.php">QUIENES SOMOS</a></li>
+      <li><a href="../telefonos .php">TELEFONOS</a></li>
       <li class="dropdown">
-  <a href="productos.php">MÁS</a>
+  <a href="../productos.php">MÁS</a>
   <div class="dropdown-content">
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
-    <a href="creacion.php">Creacion de vasos</a>
-    <a href="creacionjugos.php">Creacion de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
+    <a href="../registro.php">Registrarse</a>
+    <a href="../creacion.php">Creacion de vasos</a>
+    <a href="../creacionjugos.php">Creacion de jugos</a>
+    <a href="../adminbueno.php">Panel de Administración</a>
   </div>
 </li>
     </ul>
   </nav>
 </header>
-    <form action="editado_admin.php" method="post" class="use">
-        <label for="id">ID:</label>
-        <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" reandonly><br>
+    <form action="editado_carrito.php" method="post" class="use">
+        <label for="id" class="use-label">codigo:</label>
+        <input type="text" class="use-input" id="codigo" name="codigo" value="<?php echo $row['codigo']; ?>" readonly><br>
 
-        <label for="usuario" class="use-label">Usuario:</label>
-        <input type="text" class="use-input" id="usuario" name="usuario" required value="<?php echo $row['usuario']; ?>"><br>
+        <label for="produc" class="use-label">producto:</label>
+        <input type="text" class="use-input" id="producto" name="producto" required value="<?php echo $row['producto']; ?>"><br>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" class="use-input" id="nombre" name="nombre" required value="<?php echo $row['nombre']; ?>"><br>
+        <label for="cantidad" class="use-label">Cantidad:</label>
+        <input type="number" class="use-input" id="cantidad" name="cantidad" required value="<?php echo $row['cantidad']; ?>"><br>
 
-        <label for="tele" class="use-label">Teléfono:</label>
-        <input type="text" class="use-input" id="tele" name="tele" required value="<?php echo $row['tele']; ?>"><br>
+        <label for="precio" class="use-label">precio:</label>
+        <input type="number" class="use-input" id="precio" name="precio" required value="<?php echo $row['precio']; ?>"><br>
 
-        <label for="naci" class="use-label">Fecha de nacimiento:</label>
-        <input type="date" class="use-input" id="naci" name="naci" required value="<?php echo $row['naci']; ?>"><br>
-
-        <label for="correo" class="use-label">Correo:</label>
-        <input type="email" class="use-input" id="correo" name="correo" required value="<?php echo $row['correo']; ?>"><br>
-
-        <label for="contraseña" class="use-label">Contraseña:</label>
-        <input type="password" class="use-input" id="contraseña" name="contraseña" required><br>
-
-        <label for="reportes" class="use-label">Reportes:</label>
-        <input type="text" class="use-input" id="reportes" name="reportes" required value="<?php echo $row['reportes']; ?>"><br>
-
-        <label for="tipo" class="use-label">Tipo:</label>
-        <input type="text" class="use-input" id="tipo" name="tipo" required value="<?php echo $row['tipo']; ?>"><br>
-
-        <label for="dire" class="use-label">Dirección:</label>
-        <input type="text" class="use-input" id="dire" name="dire" required value="<?php echo $row['dire']; ?>"><br>
-    
-                <input type="submit" value="Registrar" class="bot">
+        <input type="submit" value="Registrar" class="bot">
     </form>
     <?php
       include("../pie_pg.php");
