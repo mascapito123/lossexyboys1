@@ -204,40 +204,29 @@ font-size: 16px;
 <h1>REGISTRATE EN BOOMBLE</h1>
 <form action="create_registro.php" method="post" class="registr">
 <label for="nombre">NOMBRE COMPLETO:</label>
-<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" >
+<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" required>
 
 <label for="usuario">USUARIO:</label>
-<input type="text" placeholder="pepe torrico" id="usuario" name="usuario" >
+<input type="text" placeholder="pepe torrico" id="usuario" name="usuario" required>
 
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
 <input type="number" id="CI" name="CI" required>
 
 <label for="pass">CONTRASEÑA:</label>
-<input type="password" placeholder="pepe torrico" id="pass" name="pass" >
+<input type="password" placeholder="pepe torrico" id="pass" name="pass" required>
 
 <label for="telefono">TELEFONO</label>
-<input type="number" placeholder="12345678" id="telefono" name="telefono" >
+<input type="number" placeholder="12345678" id="telefono" name="telefono" required>
 
-<<<<<<< HEAD
 <label for="estado">ESTADO:</label>
 <input type="text" placeholder="12345678" id="estado" name="estado" required>
 
 <label for="rol">ROL:</label>
 <input type="number" placeholder="12345678" id="rol" name="rol" required>
-=======
-<label for="email">CORREO ELECTRONICO:</label>
-<input type="email" placeholder="pepe121@gmail.com" id="email" name="email" >
->>>>>>> 3f9bcdc74331d09e78a3934086acad603abf58c8
 
 <label for="direccion">DIRECCION:</label>
-<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" ></textarea>
+<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
 
-<<<<<<< HEAD
-=======
-<label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" >
-
->>>>>>> 3f9bcdc74331d09e78a3934086acad603abf58c8
 <label for="comentarios">COMENTARIOS ADICIONALES:</label>
 <textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
 

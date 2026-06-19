@@ -20,8 +20,13 @@ USE `carrito` ;
 CREATE TABLE IF NOT EXISTS `carrito`.`carro` (
   `codigo` INT NOT NULL AUTO_INCREMENT,
   `producto` VARCHAR(45) NULL,
+  `nombre` VARCHAR(45) NULL,
+  `estado` VARCHAR(45) NULL,
   `cantidad` INT NULL,
   `precio` INT NULL,
+  `vendedor` VARCHAR(45) NULL,
+  `nombre` VARCHAR(45) NULL,
+  `fecha_registro` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`codigo`))
 ENGINE = InnoDB;
 
