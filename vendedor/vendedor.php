@@ -339,7 +339,7 @@ section.cuadro{
                   <label for="cantidad" class="use-label">Cantidad:</label>
                   <input type="number" class="use-input" id="cantidad" name="cantidad" required><br>
 
-                  <label for="procio" class="use-label">Precio:</label>
+                  <label for="precio" class="use-label">Precio:</label>
                   <input type="number" class="use-input" id="precio" name="precio" required><br>
 
                   <label for="tipo" class="use-label">Tipo:</label>

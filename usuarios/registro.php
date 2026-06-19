@@ -204,25 +204,25 @@ font-size: 16px;
 <h1>REGISTRATE EN BOOMBLE</h1>
 <form action="create_registro.php" method="post" class="registr">
 <label for="nombre">NOMBRE COMPLETO:</label>
-<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" required>
+<input type="text" placeholder="pepe torrico" id="nombre" name="nombre" >
 
 <label for="usuario">USUARIO:</label>
-<input type="text" placeholder="pepe torrico" id="usuario" name="usuario" required>
+<input type="text" placeholder="pepe torrico" id="usuario" name="usuario" >
 
 <label for="pass">CONTRASEÑA:</label>
-<input type="password" placeholder="pepe torrico" id="pass" name="pass" required>
+<input type="password" placeholder="pepe torrico" id="pass" name="pass" >
 
 <label for="telefono">TELEFONO</label>
-<input type="number" placeholder="12345678" id="telefono" name="telefono" required>
+<input type="number" placeholder="12345678" id="telefono" name="telefono" >
 
 <label for="email">CORREO ELECTRONICO:</label>
-<input type="email" placeholder="pepe121@gmail.com" id="email" name="email" required>
+<input type="email" placeholder="pepe121@gmail.com" id="email" name="email" >
 
 <label for="direccion">DIRECCION:</label>
-<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" required></textarea>
+<textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" ></textarea>
 
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" required>
+<input type="number" id="CI" name="CI" >
 
 <label for="comentarios">COMENTARIOS ADICIONALES:</label>
 <textarea id="comentarios" name="comentarios" rows="3" placeholder="que buena pagina :)"></textarea>
@@ -233,38 +233,94 @@ font-size: 16px;
     <a href="iniciar_sesion.php">Inicia sesión aquí</a>
 </p>
 </form>
-<script>
-$(document).ready(function(){
-              $(".registr").validate({
-                rulesa:{
-                  nombre:{
+         <script>
+            $(document).ready(function(){
+              $(".use").validate({
+                rules:{
+                  usuario:{
                     requierd: true,
-                    minlegnth: 10,
-                    maxlegnth: 20
+                    minlegnth: 6,
+                    maxlegnth: 15
                   },
+                  nombre:{
+                    required: true,
+                    maxlegth: 15
+                  },
+                  pass:{
+                    required: true,
+                    maxlenht: 10,
+                    minlenght: 5
+                  }
                   telefono:{
                     required: true,
-                    maxlegth: 8
-                  },
-                  email:{
-                    required: true,
-                    maxength: 20,
-                    minlength: 20
-                  },
-                  direccion:{
-                    required: true,
-                    maxlenght: 20,
-                    minlenght: 10
+                    maxlegnth: 8,
+                    minlegnth: 8
                   },
                   CI:{
                     required: true,
-                    maxlength:7 ,
-                    minlenght:7 
+                    maxlenth: 8,
+                    minlenght: 7
                   },
+                  email:{
+                    required: true
+                  },
+                  contraseña:{
+                    required: true,
+                    maxlenght: 20,
+                    minlenght: 8
+                  },
+                  comentarios:{
+                    maxlength: 200
+                  },
+                  direccion:{
+                    required: true,
+                    maxlength: 200
+                  }
+                },
+                messages: {
+                  usuario: {
+                    required: "Ingreser un nombre de ususario apropiado",
+                    minlength: "Su usuario no bebe ser mayor de 6 caracteras",
+                    maxlength: "Su usuario no puede sobrepasar los 15 caracteres"
+                  },
+                  nombre: {
+                    required: "Ingresa tu nombre completo",
+                    maxlength: "Su nombre no puede sobrepasar los 15 caracteers"
+                  },
+                  pass: {
+                    required: "Por favor, ingresa una contraseña",
+                    maxlength: "La contraseña solo debe ser de 10 caracteres",
+                    minlength: "La contraseña bebe ser de al menos unos 5 ccaracters"
+                  },
+                  telefono: {
+                    required: "Ingresa tu numero telefonico",
+                    maxlength: "Ingresa tu numero de telefono verdadero",
+                    minlength: "El numero de telefono tiene que ser real"
+                  },
+                  CI: {
+                    required: "Ingresa tu carnet de identidad",
+                    maxlength: "Ingresa tu carnet de identidad veradadero",
+                    minlength: "Ingresa tu carnet de identidad veradadero"
+                  },
+                  email: {
+                    required: "Ingersa un correo electronico valido"
+                  },
+                  contraseña: {
+                    required: "Ingresa tu contraseña",
+                    maxlength: "La contraseña no puede tener más de 20 caracteres",
+                    minlength: "La contraseña debe tener al menos 8 caracteres"
+                  },
+                  comentarios: {
+                    maxlength: "Los comentarios dirirgidos a la empresas no bebe sobrepasar los 200 caracters"
+                  },
+                  direccion: {
+                    required: "Ingrese la direccion de su domicilio",
+                    maxlength: "Verificar que la direeccion sea verdadera"
+                  }
                 }
               })
             })
-</script>
+          </script>
 
 </form>
     <?php
