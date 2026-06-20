@@ -91,11 +91,37 @@
     margin: 40px auto;
   }
 
-</style>
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header img.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+    gap: 20px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+  </style>
 <body>
   <header>
     <a href="../pagina_principal.php">
-      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
+      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
     </a>
     <nav>
       <ul>
