@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boomble-canva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
     body {
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            color: #111;
+            background: #f5f7f6;
     }
     * {
     box-sizing: border-box;
@@ -100,41 +102,74 @@
     margin: 40px auto;
   }
   .reinaduende {
-    background: #fafafa;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    display: grid;
-    gap: 10px;
+    background: #ffffff;
+    border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
-  .reinaduende img {
+  .reinaduende:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.14);
+  }
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .image-wrapper img {
     width: 100%;
-    height: 500px;         
-    object-fit: cover;    
+    height: 380px;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;    
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
-  .reinaduende img:hover {
-    transform: scale(1.05);
+  .reinaduende:hover .image-wrapper img {
+    transform: scale(1.08);
+  }
+  .decri {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(4,33,19,0.18) 0%, rgba(4,33,19,0.75) 100%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    gap: 12px;
+    transition: opacity 0.3s ease;
+  }
+  .reinaduende:hover .decri {
+    opacity: 1;
+  }
+  .decri p {
+    color: #f5f7f6;
+    font-size: 0.96rem;
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  }
+  .add-btn {
+    align-self: flex-start;
+    background: #10b981;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .add-btn:hover {
+    background: #059669;
+    transform: translateY(-2px);
   }
   .reinaduende h2 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
-  }
-  .reinaduende a {
-    display: inline-block;
-    background: #111;
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  .reinaduende a:hover {
-    background: #333;
+    margin: 20px 0 10px;
+    color: #064e3b;
   }
     
     .promotion-link {
@@ -220,54 +255,99 @@
 
   <section class="sections">
   <div class="reinaduende">
-    <img src="https://images.aws.nestle.recipes/original/8eaf50148ed521383df5d9793cba995f_whatsapp_image_2022-04-28_at_1.00.26_pm_(2).jpeg" alt="Programas Hábitos">
+    <div class="image-wrapper">
+      <img src="https://images.aws.nestle.recipes/original/8eaf50148ed521383df5d9793cba995f_whatsapp_image_2022-04-28_at_1.00.26_pm_(2).jpeg" alt="Jugo de Horchata">
+      <div class="decri">
+        <p>Horchata es refrescante y rica en antioxidantes, ideal para hidratarte y calmar la sed.</p>
+        <a class="add-btn" href="comprar.php?jugo=horchata&precio=5">Añadir a carrito</a>
+      </div>
+    </div>
     <h2>Jugo de Horchata</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
   </div>
   <div class="reinaduende">
-    <img src="https://i.pinimg.com/1200x/c6/6d/a8/c66da8d73f7e6f1b8cffe9a1faf47a5e.jpg" alt="Paquetes">
+    <div class="image-wrapper">
+      <img src="https://i.pinimg.com/1200x/c6/6d/a8/c66da8d73f7e6f1b8cffe9a1faf47a5e.jpg" alt="Limonada">
+      <div class="decri">
+        <p>Limonada natural ayuda a desintoxicar el cuerpo y aporta vitamina C para fortalecer defensas.</p>
+        <a class="add-btn" href="comprar.php?jugo=limonada&precio=4">Añadir a carrito</a>
+      </div>
+    </div>
     <h2>Limonada</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
   </div>
   <div class="reinaduende">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZR99LVGfa08OLKxx2jbumqSjFOchJ61DnkAmMYHpNYrl1DB8" alt="Productos Naturales">
-    <h2>Agua de jamaica</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
+    <div class="image-wrapper">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZR99LVGfa08OLKxx2jbumqSjFOchJ61DnkAmMYHpNYrl1DB8" alt="Agua de Jamaica">
+      <div class="decri">
+        <p>Agua de Jamaica es refrescante y ayuda a reducir la inflamación con su aporte natural de antocianinas.</p>
+        <a class="add-btn" href="comprar.php?jugo=agua_de_jamaica&precio=3">Añadir a carrito</a>
+      </div>
+    </div>
+    <h2>Agua de Jamaica</h2>
   </div>
 </section>
 
 <section class="sections">
   <div class="reinaduende">
-    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTG1QLcdgKiPvjqqbh6LVIIHNIBkYaX-8t8RKoaJ0kr5BaY80ab" alt="Programas Hábitos">
-    <h2>Jugo de SANDIA</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
+    <div class="image-wrapper">
+      <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTG1QLcdgKiPvjqqbh6LVIIHNIBkYaX-8t8RKoaJ0kr5BaY80ab" alt="Jugo de Sandía">
+      <div class="decri">
+        <p>El jugo de sandía es hidratante y rico en licopeno, ideal para cuidar la piel y el corazón.</p>
+        <a class="add-btn" href="comprar.php?jugo=jugo_de_sandia&precio=6">Añadir a carrito</a>
+      </div>
+    </div>
+    <h2>Jugo de Sandía</h2>
   </div>
   <div class="reinaduende">
-    <img src="https://www.clarin.com/2022/08/21/KfHICuhUX_2000x1500__1.jpg" alt="Paquetes">
-    <h2>Jugo de NARANJA</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
+    <div class="image-wrapper">
+      <img src="https://www.clarin.com/2022/08/21/KfHICuhUX_2000x1500__1.jpg" alt="Jugo de Naranja">
+      <div class="decri">
+        <p>El jugo de naranja aporta vitamina C y ayuda a reforzar el sistema inmune con sabor fresco.</p>
+        <a class="add-btn" href="comprar.php?jugo=jugo_de_naranja&precio=5">Añadir a carrito</a>
+      </div>
+    </div>
+    <h2>Jugo de Naranja</h2>
   </div>
   <div class="reinaduende">
-    <img src="https://ilovemojitos.com/wp-content/uploads/2023/05/autres-cocktails-populaires.jpg" alt="Productos Naturales">
-    <h2>Jugo de COCO </h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
+    <div class="image-wrapper">
+      <img src="https://ilovemojitos.com/wp-content/uploads/2023/05/autres-cocktails-populaires.jpg" alt="Productos Naturales">
+      <div class="decri">
+        <p>Productos naturales ricos en vitaminas y minerales para una alimentación saludable.</p>
+        <a class="add-btn" href="comprar.php?jugo=jugo_de_coco&precio=6">Añadir a carrito</a>
+      </div>
+    </div>
+    <h2>Jugo de Coco</h2>
   </div>
 </section>
 <section class="sections">
   <div class="reinaduende">
-    <img src="https://www.recetas.com.bo/sites/default/files/2024-09/mocochinchi.jpg" alt="Programas Hábitos">
+    <div class="image-wrapper">
+      <img src="https://www.recetas.com.bo/sites/default/files/2024-09/mocochinchi.jpg" alt="Mocochinchi">
+      <div class="decri">
+        <p>Mocochinchi es digestivo y reconfortante, ideal para recuperarte con una bebida tradicional.</p>
+        <a class="add-btn" href="comprar.php?jugo=mocochinchi&precio=4">Añadir a carrito</a>
+      </div>
+    </div>
     <h2>Mocochinchi</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
   </div>
   <div class="reinaduende">
-    <img src="https://restobarprime.com/wp-content/uploads/2023/05/jugo-natural-mandarina.jpg" alt="Paquetes">
-    <h2>Jugo de MANDARINA</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
+    <div class="image-wrapper">
+      <img src="https://restobarprime.com/wp-content/uploads/2023/05/jugo-natural-mandarina.jpg" alt="Jugo de Mandarina">
+      <div class="decri">
+        <p>El jugo de mandarina es suave y rico en vitamina C, perfecto para un impulso de energía natural.</p>
+        <a class="add-btn" href="comprar.php?jugo=jugo_de_mandarina&precio=5">Añadir a carrito</a>
+      </div>
+    </div>
+    <h2>Jugo de Mandarina</h2>
   </div>
   <div class="reinaduende">
-    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQIQKwWOMPXHb9IpF9eIjkphj0WI6EoFdoYT66DkngHAYWPM3I_" alt="Productos Naturales">
+    <div class="image-wrapper">
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQIQKwWOMPXHb9IpF9eIjkphj0WI6EoFdoYT66DkngHAYWPM3I_" alt="Chicha Morada">
+      <div class="decri">
+        <p>Chicha morada es antioxidante y ayuda a regular la digestión con un sabor tradicional.</p>
+        <a class="add-btn" href="comprar.php?jugo=chicha_morada&precio=4">Añadir a carrito</a>
+      </div>
+    </div>
     <h2>Chicha Morada</h2>
-    <a href="vasos.php">COMPRAR AHORA</a>
   </div>
 </section>       
 </body>
