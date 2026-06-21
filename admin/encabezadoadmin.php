@@ -6,13 +6,13 @@
   <title>Document</title>
 </head>
 <style>
-  header {
-    background: #111;
-    color: #fff;
-    padding: 12px 40px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  /* Reserve space so page content doesn't sit under the fixed header */
+  body {
+    padding-top: calc(100px + 24px);
   }
   header {
     background: #111;
@@ -21,6 +21,12 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 9999;
   }
   header img.logo {
     height: 100px;
@@ -92,6 +98,10 @@
   }
 
 @media (max-width: 768px) {
+  /* Ajuste para móviles: reserva espacio según el alto del header móvil */
+  body {
+    padding-top: calc(80px + 40px);
+  }
   header {
     grid-template-columns: 1fr;
     justify-items: center;

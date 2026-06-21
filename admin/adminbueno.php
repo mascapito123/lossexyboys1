@@ -323,7 +323,7 @@ include ("encabezadoadmin.php");
                     <li>Exportar datos del sistema</li>
                 </ul>
                 <div class="card-actions">
-                    <a href="#" class="btn btn-primary">Ver Reportes</a>
+                    <a href="stock.php" class="btn btn-primary">Ver Reportes</a>
                 </div>
             </div>
 

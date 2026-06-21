@@ -311,7 +311,7 @@
     <div class="image-wrapper">
       <img src="https://ilovemojitos.com/wp-content/uploads/2023/05/autres-cocktails-populaires.jpg" alt="Productos Naturales">
       <div class="decri">
-        <p>Productos naturales ricos en vitaminas y minerales para una alimentación saludable.</p>
+        <p>El jugo de coco ayuda a mantener una buena hidratación gracias a sus electrolitos naturales.</p>
         <a class="add-btn" href="comprar.php?jugo=jugo_de_coco&precio=6">Añadir a carrito</a>
       </div>
     </div>
