@@ -296,11 +296,6 @@ include ("encabezadoadmin.php");
       </aside>
 
       <main>
-        <header>
-            <h1>Panel de Control</h1>
-            <p>Bienvenido de nuevo. Aquí tienes las herramientas de gestión del sistema.</p>
-        </header>
-
         <div class="dashboard-grid">
 
             <div class="card">
