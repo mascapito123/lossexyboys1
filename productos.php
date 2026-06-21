@@ -245,6 +245,85 @@
   .subscribe button:hover {
     background: #3cffce;
   }
+
+  @media (max-width: 768px) {
+    body {
+      background: #f5f7f6;
+    }
+
+    header {
+      padding: 12px 16px;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    header img.logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      grid-auto-flow: row;
+      gap: 12px;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .sections {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 20px 10px;
+    }
+
+    .reinaduende {
+      border-radius: 16px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    .image-wrapper img {
+      height: 260px;
+    }
+
+    .reinaduende h2 {
+      font-size: 20px;
+      margin: 14px 20px 20px;
+    }
+
+    .decri {
+      padding: 16px;
+    }
+
+    .decri p {
+      font-size: 0.95rem;
+    }
+
+    .add-btn {
+      padding: 10px 18px;
+      font-size: 0.94rem;
+    }
+
+    .promotion-link {
+      width: auto;
+      height: auto;
+      margin: 16px auto;
+      font-size: 32px;
+      padding: 20px;
+    }
+
+    footer {
+      padding: 24px 16px;
+    }
+
+    .goldaabajo {
+      grid-template-columns: 1fr;
+    }
+
+    .subscribe input {
+      width: 100%;
+    }
+  }
 </style>
 </head>
 <body>

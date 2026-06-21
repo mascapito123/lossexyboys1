@@ -49,36 +49,83 @@ section.cuadro{
     grid-area: b;
     background: linear-gradient(#b6d7a8, rgb(70, 180, 166));
     border-radius: 6px;
+    padding: 18px;
   }
+
   @media (max-width: 768px) {
     section.cuadro {
       grid-template-columns: 1fr;
       grid-template-areas:
         "c"
         "b";
+      margin: 10px;
+      gap: 16px;
     }
-   
-    
+
+    .c {
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+      gap: 16px;
+    }
+
+    .c img {
+      width: 180px;
+    }
+
+    .c h1 {
+      font-size: 32px;
+    }
+
+    .c p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #222;
+      text-align: center;
+      max-width: 650px;
+    }
+
+    .b {
+      padding: 12px 8px;
+      overflow-x: auto;
+    }
+
+    table {
+      min-width: 680px;
+    }
+
+    th, td {
+      padding: 10px;
+    }
   }
+
   table{
     width: 100%;
     height: 100%;
     border: 1px solid #000;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.95);
   }
   th{
     border: 1px solid #000;
     background-color: #333;
     color: #fff;
-    padding: 8px;
+    padding: 12px;
   }
   td{
     border: 1px solid #000;
-    padding: 8px;
+    padding: 12px;
     text-align: center;
+    background: rgba(255,255,255,0.92);
   }
   .modal {
     inset: 0;
     margin: auto;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    max-width: 92%;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
   }
   .botoncito { 
   padding: 10px 20px;
@@ -92,7 +139,10 @@ section.cuadro{
   .pan, .char, .joqui, .bomm, .panoch {
     padding: 10px 20px;
     background-color: transparent;
-    border:transparent;
+    border: transparent;
+    cursor: pointer;
+    color: #111;
+    font-weight: 700;
   }
     </style>
 </head>

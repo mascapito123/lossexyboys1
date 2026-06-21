@@ -176,6 +176,69 @@ margin-top: 20px;
 width: 100%;
 font-size: 16px;
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 12px 16px;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  header img.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .container,
+  .container2,
+  form {
+    padding: 20px 14px;
+    margin: 12px;
+  }
+
+  .contenido {
+    margin: 30px auto;
+    gap: 20px;
+  }
+
+  .contenido img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .letra {
+    min-width: 100%;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-top: 24px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+}
   </style>
 </head>
 <body>

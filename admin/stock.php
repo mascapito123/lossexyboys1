@@ -147,6 +147,64 @@ body{
 .btn-secondary:hover{
     background:#059669;
 }
+
+@media (max-width: 768px) {
+    body{
+        padding: 16px 10px;
+    }
+
+    .contenedor{
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .titulo{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .descripcion{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .estadisticas{
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .card{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .grafica{
+        padding: 20px;
+    }
+
+    .barras{
+        gap: 16px;
+        height: 220px;
+    }
+
+    .barra{
+        width: 50px;
+    }
+
+    .barra span{
+        font-size: 12px;
+    }
+
+    .botones{
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+}
 </style>
 
 </head>

@@ -82,7 +82,45 @@
   height: 24px;
   margin-right: 8px;
 }
-</style>
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 16px;
+    padding: 12px;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .contact-image {
+    width: 90px;
+    height: 90px;
+    margin-right: 0;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+  }
+
+  .whatsapp-link {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .whatsapp-link img {
+    width: 20px;
+    height: 20px;
+  }
+}</style>
 </head>
 <body>
     <?php

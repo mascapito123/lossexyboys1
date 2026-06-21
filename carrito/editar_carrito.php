@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
 
     $codigo=$_GET['codigo'];
     $sql="SELECT * FROM carro WHERE codigo='$codigo'";

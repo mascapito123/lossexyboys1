@@ -101,6 +101,46 @@ input[type="submit"]:hover{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .form-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .form-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-grid {
+    gap: 14px;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .form-actions {
+    margin-top: 14px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  main.main {
+    padding: 16px;
+  }
+}
     </style>
 </head>
 <body>

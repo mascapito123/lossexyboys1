@@ -5,12 +5,6 @@
     $nombreBD="admin2";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
-    if($conn -> connect_error){
-        echo "no te conectaste ";
-    }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
     $sql= "SELECT * FROM produc";
     $query = $conn->query($sql);
 
@@ -63,6 +57,90 @@ section.cuadro{
       grid-template-areas:
         "a"
         "b";
+      margin: 10px;
+      gap: 16px;
+    }
+
+    .a {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "i"
+        "d"
+        "n";
+      padding: 20px 12px;
+    }
+
+    .isac {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+    }
+
+    .d {
+      font-size: 48px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .info {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+      position: static;
+      top: auto;
+      left: auto;
+    }
+
+    .bot {
+      margin: 0 auto;
+      font-size: 18px;
+      padding: 12px 18px;
+    }
+
+    .use {
+      max-width: 100%;
+      padding: 16px;
+    }
+
+    .use-input {
+      width: 100%;
+    }
+
+    .carrito th,
+    .carrito td {
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    .carrito {
+      padding: 16px;
+      overflow-x: auto;
+    }
+
+    .botoncito,
+    .edi,
+    .eli,
+    #cerrarCarrito {
+      padding: 8px 10px;
+      font-size: 12px;
+      margin: 6px 0;
+    }
+
+    .goldaabajo {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 0 10px;
+    }
+
+    footer {
+      padding: 20px 12px;
+    }
+
+    .subscribe input {
+      width: 100%;
     }
   }
   table{

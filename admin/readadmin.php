@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
     $sql= "SELECT * FROM adminis";
     $query = $conn->query($sql);
 
@@ -121,11 +118,89 @@ section.cuadro{
     border-radius: 6px;
   }
   @media (max-width: 700px) {
+    header {
+      padding: 12px 16px;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      text-align: center;
+    }
+
+    nav ul {
+      grid-auto-flow: row;
+      gap: 12px;
+    }
+
     section.cuadro {
       grid-template-columns: 1fr;
       grid-template-areas:
         "a"
         "b";
+      margin: 10px 0;
+      gap: 14px;
+    }
+
+    .a {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "i"
+        "d"
+        "n";
+      padding: 16px;
+    }
+
+    .isac {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .d {
+      font-size: 48px;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      top: auto;
+      left: auto;
+    }
+
+    .bot {
+      width: calc(100% - 40px);
+      margin: 20px auto;
+      font-size: 18px;
+      max-width: 360px;
+    }
+
+    .modaluse,
+    .modal {
+      width: calc(100% - 24px);
+      max-width: 420px;
+    }
+
+    table {
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 10px 8px;
+    }
+
+    .edi,
+    .eli {
+      display: inline-block;
+      width: 48%;
+      margin: 4px 1%;
+      font-size: 12px;
+      padding: 8px 6px;
     }
   }
   table{

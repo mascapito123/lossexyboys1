@@ -70,6 +70,31 @@
         opacity: 0;
         pointer-events: none;
       }
+
+      @media (max-width: 768px) {
+        .mensaje-exito {
+          font-size: 40px;
+          padding: 1.5rem;
+          margin: 1.5rem auto;
+        }
+
+        .actions {
+          flex-direction: column;
+          gap: 16px;
+          padding: 1rem;
+        }
+
+        .btn {
+          width: 100%;
+          font-size: 18px;
+          padding: 14px 18px;
+        }
+
+        .seguir {
+          padding: 18px 20px;
+          font-size: 22px;
+        }
+      }
     </style>
 </head>
 <body>

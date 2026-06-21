@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
 
     $id=$_GET['id'];
     $sql="SELECT * FROM adminis WHERE id='$id'";

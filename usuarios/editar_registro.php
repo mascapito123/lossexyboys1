@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
 
     $CI=$_GET['CI'];
     $sql="SELECT * FROM registro WHERE CI='$CI'";

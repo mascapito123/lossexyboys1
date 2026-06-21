@@ -280,6 +280,75 @@ nav a:hover{
 .reinaduende a:hover{
     background:#333;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 16px;
+    }
+
+    .empresa {
+        font-size: 24px;
+    }
+
+    nav a {
+        margin-left: 0;
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 16px;
+    }
+
+    .contenido h1 {
+        font-size: 48px;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .botones {
+        gap: 16px;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .botones a {
+        font-size: 20px;
+        border-bottom-width: 2px;
+    }
+
+    .sections {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 30px 12px;
+        padding: 0;
+    }
+
+    .mitch img,
+    .bombastic img,
+    .reinaduende img {
+        height: 260px;
+    }
+
+    .mitch,
+    .bombastic,
+    .reinaduende {
+        padding: 18px;
+    }
+
+    .mitch h2,
+    .bombastic h2,
+    .reinaduende h2 {
+        font-size: 20px;
+    }
+
+    .mitch a,
+    .bombastic a,
+    .reinaduende a {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}
 </style>
 </head>
 <body>

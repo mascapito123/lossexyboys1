@@ -11,24 +11,34 @@
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
+
+    body {
+      background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
+      color: #2b2b2b;
+    }
+
     .titulo {
-      width: 100vw;
+      width: 100%;
       background: #111;
       color: #fff;
       text-align: center;
-      font-size: 28px;
-      padding: 20px 0;
+      font-size: 42px;
+      padding: 24px 0;
       margin-top: 20px;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+      animation: fadeInDown 1s ease;
     }
 
     .contenido {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       max-width: 1100px;
       margin: 60px auto;
-      gap: 40px;
+      gap: 32px;
+      animation: fadeInUp 1s ease;
     }
 
     .contenido.reverse {
@@ -36,65 +46,106 @@
     }
 
     .contenido img {
-      width: 350px;
+      width: 360px;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
       display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .contenido img:hover {
+      transform: scale(1.03);
     }
 
     .letra {
       flex: 1;
-      min-width: 300px;
-      line-height: 1.5;
-      font-size: 17px;
+      min-width: 320px;
+      line-height: 1.8;
+      font-size: 18px;
       color: #333;
       text-align: justify;
+      background: rgba(255,255,255,0.9);
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      border: 1px solid rgba(0,0,0,0.04);
     }
 
     .letra h2 {
-      font-size: 26px;
+      font-size: 28px;
       margin-bottom: 20px;
       text-align: center;
+      color: #111;
     }
-     p{
-      font-size: 30px;
+
+    .letra p {
+      font-size: 18px;
       line-height: 1.8;
       text-align: justify;
       color: #444;
-       font-family: "Times New Roman", Times, serif;
-        font-size: 20px;
+      font-family: "Times New Roman", Times, serif;
+      margin-bottom: 16px;
     }
-    .dropdown {
-  position: relative;
-  display: inline-block;
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #111;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 5px;
-}
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.dropdown-content a {
-  color: #fff;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.dropdown-content a:hover {
-  background-color: #333;
-  color: #5eff6ce5;
-}
+    @media (max-width: 900px) {
+      .titulo {
+        font-size: 34px;
+        padding: 20px 0;
+      }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+      .contenido {
+        margin: 40px auto;
+        gap: 24px;
+      }
+
+      .contenido img {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .letra {
+        min-width: 100%;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .titulo {
+        font-size: 28px;
+        padding: 16px 0;
+        letter-spacing: 0.5px;
+      }
+
+      .contenido {
+        gap: 18px;
+        margin: 24px auto;
+      }
+
+      .contenido img {
+        height: auto;
+      }
+
+      .letra {
+        padding: 16px;
+        font-size: 16px;
+      }
+
+      .letra p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+    }
   </style>
 </head>
 <body>
@@ -105,7 +156,7 @@ include ("encabezado.php");
   <div class="titulo">Historia de Boomble</div>
 
 <section class="contenido">
-  <img src="jugos1.jpg" alt="Preparación de jugos naturales">
+  <img src="imagenes/historia.png" alt="Preparación de jugos naturales">
   <div class="letra">
     <p>La historia de Boomble comenzó en la ciudad de Cochabamba, en las aulas del Colegio Pedro Poveda. Allí se conocieron dos jóvenes que, aunque provenían de lugares diferentes, compartían el mismo deseo de emprender y crear algo que dejara huella.
 Edson era originario del Beni. Desde pequeño había crecido rodeado de una gran variedad de frutas tropicales y había aprendido a valorar la riqueza natural de su tierra. Cuando se mudó a Cochabamba para continuar sus estudios en el Colegio Pedro Poveda, tuvo que adaptarse a una nueva ciudad, nuevos compañeros y nuevas experiencias.
@@ -115,7 +166,7 @@ Durante una actividad escolar relacionada con el emprendimiento, ambos comenzaro
 </section>
 
 <section class="contenido reverse">
-  <img src="jugos2.jpg" alt="Jugos frescos y naturales">
+  <img src="imagenes/refrescohisto.png" alt="Jugos frescos y naturales">
   <div class="letra">
     <p>Después de muchas conversaciones, nació una idea que les pareció perfecta: crear una empresa dedicada a la elaboración de jugos naturales que combinaran la riqueza de las frutas benianas con una visión moderna y sostenible.
 Comenzaron investigando recetas, probando mezclas de frutas y aprendiendo sobre nutrición y cuidado ambiental. Querían que sus productos fueran saludables, deliciosos y respetuosos con la naturaleza. Por eso decidieron utilizar recipientes reutilizables de bambú y tutuma, promoviendo hábitos de consumo responsables.

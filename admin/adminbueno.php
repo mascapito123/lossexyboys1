@@ -235,9 +235,43 @@
                 width: 100%;
                 border-right: none;
                 border-bottom: 1px solid #475569;
+                padding: 20px 16px;
             }
             main {
-                padding: 24px;
+                padding: 24px 16px 32px;
+            }
+            header {
+                margin-bottom: 24px;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .card-header h3 {
+                font-size: 18px;
+            }
+            .action-list li {
+                font-size: 13px;
+            }
+            .card-actions {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+            .dropdown {
+                width: 100%;
+            }
+            .dropdown-content {
+                min-width: unset;
+                width: 100%;
             }
         }
     </style>
