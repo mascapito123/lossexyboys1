@@ -63,6 +63,39 @@ background-color: #25645a;
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  td {
+    font-size: 13px;
+  }
+
+  .container {
+    background-color: rgba(255,255,255,0.95);
+  }
+}
+
 </style>
 </head>
 <body>

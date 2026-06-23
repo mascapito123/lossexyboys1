@@ -5,12 +5,6 @@
     $nombreBD="admin2";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
-    if($conn -> connect_error){
-        echo "no te conectaste ";
-    }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
 
     $codigo=$_GET['codigo'];
     $sql="SELECT * FROM produc WHERE codigo='$codigo'";
@@ -25,6 +19,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <style>
     * {
     box-sizing: border-box;
@@ -117,34 +113,12 @@ font-size: 25px;
   .subscribe button:hover {
     background: #3cffce;
   }
-    </style>   
+    </style>
 </head>
 <body>
-    </head>
-<body>
-  <header>
-    <a href="../pagina_principal.php">
-      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="../productos.php">NUESTROS JUGOS</a></li>
-        <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
-        <li><a href="../quienes.php">QUIENES SOMOS</a></li>
-        <li><a href="../telefonos .php">TELEFONOS</a></li>
-  <li class="dropdown">
-  <a href="#">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
-    <a href="../creacion.php">Creación de vasos</a>
-    <a href="../creacionjugos.php">Creación de jugos</a>
-    <a href="../admin/adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-      </ul>
-    </nav>
-  </header>
+  <?php
+include ("encabezadovende.php");
+?>
     <form action="editado_vendedor.php" method="post" class="use">
                   <label for="codigo" class="use-label">Codigo:</label>
                   <input type="text" class="use-input" id="codigo" name="codigo" required value="<?php echo $row['codigo']; ?>"><br>
@@ -208,5 +182,80 @@ font-size: 25px;
     </div>
   </div>
 </footer>
+<script>
+  $(document).ready(function(){
+    $(".use").validate({
+      rules: {
+        codigo: {
+          required: true,
+          digits: true
+        },
+        usuario: {
+          required: true,
+          minlength: 6,
+          maxlength: 15
+        },
+        nombrepro: {
+          required: true,
+          maxlength: 50
+        },
+        cantidad: {
+          required: true,
+          digits: true,
+          min: 1,
+          max: 999
+        },
+        precio: {
+          required: true,
+          number: true,
+          min: 1
+        },
+        tipo: {
+          required: true,
+          maxlength: 20
+        }
+      },
+      messages: {
+        codigo: {
+          required: "Ingresa el código del producto",
+          digits: "El código debe contener solo números"
+        },
+        usuario: {
+          required: "Ingresa un usuario",
+          minlength: "El usuario debe tener al menos 6 caracteres",
+          maxlength: "El usuario no debe superar los 15 caracteres"
+        },
+        nombrepro: {
+          required: "Ingresa el nombre del producto",
+          maxlength: "El nombre del producto no debe superar los 50 caracteres"
+        },
+        cantidad: {
+          required: "Ingresa la cantidad",
+          digits: "La cantidad debe ser un número entero",
+          min: "La cantidad debe ser al menos 1",
+          max: "La cantidad no puede ser mayor a 999"
+        },
+        precio: {
+          required: "Ingresa el precio",
+          number: "El precio debe ser un número",
+          min: "El precio debe ser mayor a 0"
+        },
+        tipo: {
+          required: "Ingresa el tipo de producto",
+          maxlength: "El tipo no debe superar los 20 caracteres"
+        }
+      },
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        error.css({
+          color: "red",
+          marginTop: "5px",
+          fontSize: "0.9em"
+        });
+        error.insertAfter(element);
+      }
+    });
+  });
+</script>
 </body>
 </html>

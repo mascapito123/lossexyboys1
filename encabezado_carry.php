@@ -5,12 +5,6 @@
     $nombreBD="carrito";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
-    if($conn -> connect_error){
-        echo "no te conectaste ";
-    }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
     $sql= "SELECT * FROM carro";
     $query = $conn->query($sql);
 
@@ -300,6 +294,70 @@ transition: .3s;
     max-width: 1200px;
 }
 
+@media (max-width: 768px) {
+  header {
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  nav {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  #añadir {
+    width: 54px;
+    height: 54px;
+    font-size: 2rem;
+  }
+
+  .carrito {
+    margin: 16px;
+    padding: 18px;
+  }
+
+  .carrito table {
+    font-size: 13px;
+  }
+
+  .carrito th,
+  .carrito td {
+    padding: 10px;
+  }
+
+  .carrito td {
+    font-size: 12px;
+  }
+
+  .pan,
+  .pagar,
+  .edi,
+  .eli,
+  #cerrarCarrito {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .modaluse {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
 </style>
 <body>
   <header>
@@ -318,7 +376,7 @@ transition: .3s;
     <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
     <a href="usuarios/registro.php">Registrarse</a>
     <a href="creacion.php">Creacion de vasos</a>
-    <a href="creacionjugos.php">Creacion de jugos</a>
+    <a href="historia.php">Creacion de jugos</a>
     <a href="admin/adminbueno.php">Panel de Administración</a>
   </div>
 </li>
@@ -366,7 +424,7 @@ transition: .3s;
                 </tbody>
                 <tr>
                     <td colspan="8">Total: $<?php echo number_format($total, 2); ?></td>
-                    <td><button class="pagar">PAGAR YA?</button></td>
+                    <td><button class="pagar" onclick="location.href='comprado.php'">PAGAR YA?</button></td>
                 </tr>
             </table>
         </div>

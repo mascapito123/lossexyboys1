@@ -20,14 +20,14 @@ USE `admin1` ;
 CREATE TABLE IF NOT EXISTS `admin1`.`adminis` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(45) NULL,
-  `reportes` VARCHAR(45) NULL,
-  `correo` VARCHAR(45) NULL,
-  `pass` VARCHAR(45) NULL,
-  `tipo` VARCHAR(45) NULL,
-  `naci` DATE NULL,
   `nombre` VARCHAR(45) NULL,
-  `dire` VARCHAR(45) NULL,
   `tele` INT NULL,
+  `naci` DATE NULL,
+  `correo` VARCHAR(45) NULL,
+  `contraseña` VARCHAR(45) NULL,
+  `reportes` VARCHAR(45) NULL,
+  `tipo` VARCHAR(45) NULL,
+  `dire` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

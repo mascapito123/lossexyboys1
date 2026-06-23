@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
 
     $id=$_GET['id'];
     $sql="SELECT * FROM adminis WHERE id='$id'";
@@ -25,6 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
     <style>
     * {
     box-sizing: border-box;
@@ -119,32 +119,12 @@ margin-top: 20px;
 width: 100%;
 font-size: 25px;
 }
-    </style>   
-</head>
+    </style>
+    </head>
 <body>
-    <header>
-  <a href="../pagina_principal.php">
-  <img src="../imagenes/logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="productos.php">NUESTROS JUGOS</a></li>
-      <li><a href="horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="telefonos .php">TELEFONOS</a></li>
-      <li class="dropdown">
-  <a href="productos.php">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="registro.php">Registrarse</a>
-    <a href="creacion.php">Creacion de vasos</a>
-    <a href="creacionjugos.php">Creacion de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-    </ul>
-  </nav>
-</header>
+    <?php
+include ("encabezadoadmin.php");
+?>
     <form action="editado_admin.php" method="post" class="use">
         <label for="id">ID:</label>
         <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" reandonly><br>
@@ -181,5 +161,102 @@ font-size: 25px;
     <?php
       include("../pie_pg.php");
     ?>
+<script>
+  $(document).ready(function(){
+    $(".use").validate({
+      rules: {
+        usuario: {
+          required: true,
+          minlength: 6,
+          maxlength: 15
+        },
+        nombre: {
+          required: true,
+          maxlength: 50
+        },
+        tele: {
+          required: true,
+          digits: true,
+          minlength: 7,
+          maxlength: 10
+        },
+        naci: {
+          required: true,
+          date: true
+        },
+        correo: {
+          required: true,
+          email: true
+        },
+        contraseña: {
+          required: true,
+          minlength: 8,
+          maxlength: 20
+        },
+        reportes: {
+          maxlength: 150
+        },
+        tipo: {
+          required: true,
+          maxlength: 30
+        },
+        dire: {
+          required: true,
+          maxlength: 200
+        }
+      },
+      messages: {
+        usuario: {
+          required: "Ingresa un usuario",
+          minlength: "El usuario debe tener al menos 6 caracteres",
+          maxlength: "El usuario no puede superar los 15 caracteres"
+        },
+        nombre: {
+          required: "Ingresa el nombre",
+          maxlength: "El nombre no puede superar los 50 caracteres"
+        },
+        tele: {
+          required: "Ingresa el teléfono",
+          digits: "El teléfono debe contener solo números",
+          minlength: "El teléfono debe tener al menos 7 dígitos",
+          maxlength: "El teléfono no puede superar los 10 dígitos"
+        },
+        naci: {
+          required: "Selecciona la fecha de nacimiento",
+          date: "Ingresa una fecha válida"
+        },
+        correo: {
+          required: "Ingresa el correo",
+          email: "Ingresa un correo válido"
+        },
+        contraseña: {
+          required: "Ingresa la contraseña",
+          minlength: "La contraseña debe tener al menos 8 caracteres",
+          maxlength: "La contraseña no puede superar los 20 caracteres"
+        },
+        reportes: {
+          maxlength: "Los reportes no pueden superar los 150 caracteres"
+        },
+        tipo: {
+          required: "Ingresa el tipo",
+          maxlength: "El tipo no puede superar los 30 caracteres"
+        },
+        dire: {
+          required: "Ingresa la dirección",
+          maxlength: "La dirección no puede superar los 200 caracteres"
+        }
+      },
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        error.css({
+          color: "red",
+          marginTop: "5px",
+          fontSize: "0.9em"
+        });
+        error.insertAfter(element);
+      }
+    });
+  });
+</script>
 </body>
 </html>

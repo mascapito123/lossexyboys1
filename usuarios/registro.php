@@ -6,8 +6,90 @@
   <title>Registrate en Boomble</title>
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+<<<<<<< HEAD
   <style>
     
+=======
+</script>
+<style>
+    header {
+    background: #111;
+    color: #fff;
+    padding: 12px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  header {
+    background: #111;
+    color: #fff;
+    padding: 12px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+  header img.logo {
+    height: 100px;
+    width: 100px;
+  }
+  nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    list-style: none;
+    gap: 70px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: #5eff6ce5;
+  }
+  .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            color: white;
+            text-align: center;
+    }
+    .container2 {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            text-align: center;
+            color: rgb(127, 255, 170);
+    }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: #5eff6ce5;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752
     .sections {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -101,6 +183,7 @@ font-size: 16px;
 }
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
 
   h1 {
     font-size: 28px;
@@ -135,11 +218,41 @@ font-size: 16px;
   .contenido.reverse {
     flex-direction: column;
     align-items: center;
+=======
+  header {
+    padding: 12px 16px;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  header img.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .container,
+  .container2,
+  form {
+    padding: 20px 14px;
+    margin: 12px;
+  }
+
+  .contenido {
+    margin: 30px auto;
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752
     gap: 20px;
   }
 
   .contenido img {
     width: 100%;
+<<<<<<< HEAD
     max-width: 300px;
   }
 
@@ -170,6 +283,43 @@ font-size: 16px;
    <?php
    include("encabezado.php");
    ?> 
+=======
+    max-width: 100%;
+  }
+
+  .letra {
+    min-width: 100%;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-top: 24px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+}
+  </style>
+</head>
+<body>
+    <?php
+include ("encabezadousua.php");
+?>
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752
 </section>
 <h1>REGISTRATE EN BOOMBLE</h1>
 <form action="create_registro.php" method="post" class="registr">
@@ -177,22 +327,31 @@ font-size: 16px;
 <input type="text" placeholder="pepe torrico" id="nombre" name="nombre">
 
 <label for="usuario">USUARIO:</label>
-<input type="text" placeholder="pepe torrico" id="usuario" name="usuario">
+<input type="text" placeholder="seximan" id="usuario" name="usuario">
 
 <label for="CI">CARNET DE IDENTIDAD(CI):</label>
-<input type="number" id="CI" name="CI" >
+<input type="number" id="CI" name="CI" placeholder="12345678">
 
 <label for="pass">Contraseña:</label>
-<input type="password" placeholder="pepe torrico" id="pass" name="pass">
+<input type="password" placeholder="Ingresa tu contraseña" id="pass" name="pass">
 
 <label for="telefono">Telefono</label>
 <input type="number" placeholder="12345678" id="telefono" name="telefono">
 
 <label for="estado">ESTADO:</label>
-<input type="text" placeholder="12345678" id="estado" name="estado">
+<select id="estado" name="estado">
+  <option value="" disabled selected>Selecciona un estado</option>
+  <option value="soltero">Soltero</option>
+  <option value="casado">Casado</option>
+</select>
 
 <label for="rol">ROL:</label>
-<input type="number" placeholder="12345678" id="rol" name="rol">
+<select id="rol" name="rol">
+  <option value="" disabled selected>Selecciona un rol</option>
+  <option value="cliente">Cliente</option>
+  <option value="administrador">Administrador</option>
+  <option value="vendedor">Vendedor</option>
+</select>
 
 <label for="direccion">DIRECCION:</label>
 <textarea id="direccion" placeholder="Av.oquendo y calama" name="direccion" rows="3" ></textarea>
@@ -206,92 +365,94 @@ font-size: 16px;
     <a href="iniciar_sesion.php">Inicia sesión aquí</a>
 </p>
 </form>
-         <script>
+          <script>
             $(document).ready(function(){
-              $(".use").validate({
+              $("form.registr").validate({
                 rules:{
                   nombre:{
                     required: true,
-                    maxlegth: 15
+                    maxlength: 50
                   },
-                    usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
+                  usuario:{
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
+                  },
+                  CI:{
+                    required: true,
+                    digits: true,
+                    minlength: 7,
+                    maxlength: 8
                   },
                   pass:{
                     required: true,
-                    maxlenht: 10,
-                    minlenght: 5
+                    minlength: 5,
+                    maxlength: 10
                   },
                   telefono:{
                     required: true,
-                    maxlegnth: 8,
-                    minlegnth: 8
+                    digits: true,
+                    minlength: 8,
+                    maxlength: 8
                   },
                   estado:{
-                    requiered: true
+                    required: true
                   },
                   rol:{
                     required: true
                   },
-                  CI:{
-                    required: true,
-                    maxlenth: 8,
-                    minlenght: 7
-                  },
-                  comentarios:{
-                    maxlength: 200
-                  },
                   direccion:{
                     required: true,
+                    maxlength: 200
+                  },
+                  comentarios:{
                     maxlength: 200
                   }
                 },
                 messages: {
-                  usuario: {
-                    required: "Ingreser un nombre de ususario apropiado",
-                    minlength: "Su usuario no bebe ser mayor de 6 caracteras",
-                    maxlength: "Su usuario no puede sobrepasar los 15 caracteres"
-                  },
                   nombre: {
                     required: "Ingresa tu nombre completo",
-                    maxlength: "Su nombre no puede sobrepasar los 15 caracteers"
+                    maxlength: "Su nombre no puede sobrepasar los 50 caracteres"
                   },
-                  pass: {
-                    required: "Por favor, ingresa una contraseña",
-                    maxlength: "La contraseña solo debe ser de 10 caracteres",
-                    minlength: "La contraseña bebe ser de al menos unos 5 ccaracters"
-                  },
-                  telefono: {
-                    required: "Ingresa tu numero telefonico",
-                    maxlength: "Ingresa tu numero de telefono verdadero",
-                    minlength: "El numero de telefono tiene que ser real"
+                  usuario: {
+                    required: "Ingresa un nombre de usuario apropiado",
+                    minlength: "Su usuario debe tener al menos 6 caracteres",
+                    maxlength: "Su usuario no puede sobrepasar los 15 caracteres"
                   },
                   CI: {
                     required: "Ingresa tu carnet de identidad",
-                    maxlength: "Ingresa tu carnet de identidad veradadero",
-                    minlength: "Ingresa tu carnet de identidad veradadero"
+                    digits: "El carnet solo puede contener números",
+                    minlength: "El carnet debe tener entre 7 y 8 dígitos",
+                    maxlength: "El carnet debe tener entre 7 y 8 dígitos"
+                  },
+                  pass: {
+                    required: "Por favor, ingresa una contraseña",
+                    minlength: "La contraseña debe tener al menos 5 caracteres",
+                    maxlength: "La contraseña no puede ser mayor a 10 caracteres"
+                  },
+                  telefono: {
+                    required: "Ingresa tu número telefónico",
+                    digits: "El teléfono solo puede contener números",
+                    minlength: "El número de teléfono debe tener 8 dígitos",
+                    maxlength: "El número de teléfono debe tener 8 dígitos"
                   },
                   estado: {
-                    required: "Ingresa tu estado actual"
+                    required: "Selecciona tu estado"
                   },
                   rol: {
-                    required: "Ingresa tu rol en la empresa"
-                  },
-                  comentarios: {
-                    maxlength: "Los comentarios dirirgidos a la empresas no bebe sobrepasar los 200 caracters"
+                    required: "Selecciona tu rol"
                   },
                   direccion: {
-                    required: "Ingrese la direccion de su domicilio",
-                    maxlength: "Verificar que la direeccion sea verdadera"
+                    required: "Ingrese la dirección de su domicilio",
+                    maxlength: "La dirección no debe sobrepasar los 200 caracteres"
+                  },
+                  comentarios: {
+                    maxlength: "Los comentarios no deben sobrepasar los 200 caracteres"
                   }
                 }
-              })
-            })
+              });
+            });
           </script>
-
-</form>
     <?php
      include("../pie_pg.php");
     ?>

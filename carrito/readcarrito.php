@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
     $sql= "SELECT * FROM carro";
     $query = $conn->query($sql);
 
@@ -21,6 +18,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
     <style>
         * {
     box-sizing: border-box;
@@ -236,33 +236,102 @@ section.cuadro{
     top: 200px;
     left: 200px;
   }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 12px 16px;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    nav ul {
+      grid-auto-flow: row;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .cuadro {
+      width: 100%;
+      margin: 10px 0;
+      gap: 16px;
+    }
+
+    .a {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "i"
+        "d"
+        "n";
+      padding: 20px 14px;
+    }
+
+    .isac {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+    }
+
+    .d {
+      font-size: 48px;
+      margin-top: 10px;
+    }
+
+    .info {
+      position: static;
+      top: auto;
+      left: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .bot {
+      margin: 0 auto;
+      font-size: 18px;
+      padding: 12px 18px;
+    }
+
+    .modaluse {
+      width: 100%;
+      max-width: 95%;
+      padding: 16px;
+    }
+
+    .use {
+      padding: 16px;
+    }
+
+    .use-input {
+      width: 100%;
+    }
+
+    table {
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    .botoncito,
+    .edi,
+    .eli {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+
+    .bot {
+      width: 100%;
+    }
+  }
 </style>
-</head>
+
 <body>
   
-    <header>
-    <a href="../pagina_principal.php">
-      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="../productos.php">NUESTROS JUGOS</a></li>
-        <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
-        <li><a href="../quienes.php">QUIENES SOMOS</a></li>
-        <li><a href="../telefonos .php">TELEFONOS</a></li>
-   <li class="dropdown">
-  <a href="#">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
-    <a href="../creacion.php">Creación de vasos</a>
-    <a href="../creacionjugos.php">Creación de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-      </ul>
-    </nav>
-  </header>
+    <?php
+include ("encabezadocarri.php");
+?>
 
     <section class="cuadro">
         <div class="a"><img src="Isac.png" alt="pep " class="isac" >
@@ -293,42 +362,51 @@ section.cuadro{
           <script>
             $(document).ready(function(){
               $(".use").validate({
-                rulesa:{
-                  usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
-                  },
-                  nombre:{
+                rules: {
+                  produc: {
                     required: true,
-                    maxlegth: 15
+                    maxlength: 100
                   },
-                  tele:{
+                  cantidad: {
                     required: true,
-                    maxength: 8,
-                    minlength: 8
+                    digits: true,
+                    min: 1,
+                    max: 9999
                   },
-                  naci:{
-                    reqiored: true
-                  },
-                  correo:{
-                    required: true
-                  },
-                  contraseña:{
+                  precio: {
                     required: true,
-                    maxlenght: 20,
-                    minlenght: 8
-                  },
-                  reportes:{
-                    maxlength: 150
-                  },
-                  dire:{
-                    required: true,
-                    maxlength: 200
+                    number: true,
+                    min: 0.01
                   }
+                },
+                messages: {
+                  produc: {
+                    required: "Ingresa el nombre del producto",
+                    maxlength: "El nombre del producto no puede superar los 100 caracteres"
+                  },
+                  cantidad: {
+                    required: "Ingresa la cantidad",
+                    digits: "La cantidad debe ser un número entero",
+                    min: "La cantidad debe ser al menos 1",
+                    max: "La cantidad no puede superar los 9999"
+                  },
+                  precio: {
+                    required: "Ingresa el precio",
+                    number: "El precio debe ser un número válido",
+                    min: "El precio debe ser mayor a 0"
+                  }
+                },
+                errorElement: "div",
+                errorPlacement: function(error, element) {
+                  error.css({
+                    color: "red",
+                    marginTop: "5px",
+                    fontSize: "0.9em"
+                  });
+                  error.insertAfter(element);
                 }
-              })
-            })
+              });
+            });
           </script>
         </div>
         <div class="b">

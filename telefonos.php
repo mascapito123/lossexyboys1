@@ -10,6 +10,17 @@
     margin: 0;
     padding: 0;
   }
+<<<<<<< HEAD:telefonos.php
+=======
+  header {
+    background: #111;
+    color: #fff;
+    padding: 12px 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752:telefonos .php
   body {
   background-color: #f5f5f5;
   font-family: Arial, sans-serif;
@@ -74,16 +85,24 @@
   height: 24px;
   margin-right: 8px;
 }
+<<<<<<< HEAD:telefonos.php
 
 @media (max-width: 768px) {
 
   .contact-container {
     padding: 15px;
     margin: 20px auto;
+=======
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 16px;
+    padding: 12px;
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752:telefonos .php
   }
 
   .contact-card {
     flex-direction: column;
+<<<<<<< HEAD:telefonos.php
     text-align: center;
     padding: 15px;
   }
@@ -97,25 +116,53 @@
 
   .contact-info p {
     font-size: 1rem;
+=======
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .contact-image {
+    width: 90px;
+    height: 90px;
+    margin-right: 0;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 16px;
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752:telefonos .php
   }
 
   .whatsapp-link {
     width: 100%;
     justify-content: center;
+<<<<<<< HEAD:telefonos.php
     padding: 12px;
     font-size: 14px;
+=======
+    padding: 12px 16px;
+    font-size: 16px;
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752:telefonos .php
   }
 
   .whatsapp-link img {
     width: 20px;
     height: 20px;
   }
+<<<<<<< HEAD:telefonos.php
 
   body {
     overflow-x: hidden;
   }
 }
 </style>
+=======
+}</style>
+>>>>>>> d72241f77988b2f2ee6c7a164b7ade0d1151c752:telefonos .php
 </head>
 <body>
     <?php

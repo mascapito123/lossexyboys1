@@ -82,6 +82,46 @@
   color: #444;
   font-family: "Times New Roman", Times, serif;
 }
+
+@media (max-width: 768px) {
+  .pepe {
+    padding: 40px 12px;
+  }
+
+  .pepe h1 {
+    font-size: 34px;
+  }
+
+  .pepe-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .vasos {
+    margin: 20px 10px;
+    padding: 16px;
+  }
+
+  .vasos h1 {
+    font-size: 34px;
+  }
+
+  .vasos-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .vasos-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .vasos-item p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
     </style>
 </head>
 <body>

@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `carrito`.`carro` (
   `cantidad` INT NULL,
   `precio` INT NULL,
   `vendedor` VARCHAR(45) NULL,
-  `fecha_registro` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `fecha_registro` DATE,
   PRIMARY KEY (`codigo`))
 ENGINE = InnoDB;
 

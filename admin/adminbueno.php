@@ -235,37 +235,51 @@
                 width: 100%;
                 border-right: none;
                 border-bottom: 1px solid #475569;
+                padding: 20px 16px;
             }
             main {
-                padding: 24px;
+                padding: 24px 16px 32px;
+            }
+            header {
+                margin-bottom: 24px;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .card {
+                padding: 20px;
+            }
+            .card-header h3 {
+                font-size: 18px;
+            }
+            .action-list li {
+                font-size: 13px;
+            }
+            .card-actions {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+            .dropdown {
+                width: 100%;
+            }
+            .dropdown-content {
+                min-width: unset;
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-    <a href="../pagina_principal.php">
-      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="../productos.php">NUESTROS JUGOS</a></li>
-        <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
-        <li><a href="../quienes.php">QUIENES SOMOS</a></li>
-        <li><a href="../telefonos .php">TELEFONOS</a></li>
-   <li class="dropdown">
-  <a href="#">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../usuarios/registro.php">Registrarse</a>
-    <a href="../creacion.php">Creación de vasos</a>
-    <a href="../creacionjugos.php">Creación de jugos</a>
-    <a href="adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-      </ul>
-    </nav>
-  </header>
+    <?php
+include ("encabezadoadmin.php");
+?>
 
     <div class="content">
       <aside>
@@ -282,11 +296,6 @@
       </aside>
 
       <main>
-        <header>
-            <h1>Panel de Control</h1>
-            <p>Bienvenido de nuevo. Aquí tienes las herramientas de gestión del sistema.</p>
-        </header>
-
         <div class="dashboard-grid">
 
             <div class="card">
@@ -343,7 +352,7 @@
                     <li>Exportar datos del sistema</li>
                 </ul>
                 <div class="card-actions">
-                    <a href="#" class="btn btn-primary">Ver Reportes</a>
+                    <a href="stock.php" class="btn btn-primary">Ver Reportes</a>
                 </div>
             </div>
 

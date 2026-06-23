@@ -101,6 +101,46 @@ input[type="submit"]:hover{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .form-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .form-box h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-grid {
+    gap: 14px;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .form-actions {
+    margin-top: 14px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  main.main {
+    padding: 16px;
+  }
+}
     </style>
 </head>
 <body>
@@ -113,7 +153,16 @@ include ("encabezado.php");
       <div class="form-box">
         <h1>¿Quieres comprar?</h1>
         <form action="carrito/insert_carrito.php" method="post" class="form-grid">
-          
+          <div>
+            <label for="producto">Nombre del Usuario</label>
+            <input id="usuario" type="text" name="usuario" >
+          </div>
+
+          <div>
+            <label for="estado">ESTADO </label>
+            <input id="estado" type="text" name="estado">
+          </div>
+
           <div>
             <label for="producto">Nombre del Producto</label>
             <input id="produc" type="text" name="produc" value="<?php echo $jugo; ?>" readonly>
@@ -128,6 +177,11 @@ include ("encabezado.php");
             <input id="precio" type="number" name="precio" value="<?php echo $precio; ?>" readonly>
           </div>
 
+          <div>
+            <label for="vendedor">Nombre del Vendedor</label>
+            <input id="vendedor" type="text" name="vendedor" value="Isac Castellon" >
+          </div>
+
           <div class="form-actions">
             <input type="submit" value="Enviar">
           </div>
@@ -137,6 +191,75 @@ include ("encabezado.php");
     <?php
 include("pie_pg.php");
 ?>
-
+<script>
+  $(document).ready(function(){
+    $(".form-grid").validate({
+      rules: {
+        usuario: {
+          required: true,
+          minlength: 4,
+          maxlength: 50
+        },
+        estado: {
+          required: true,
+          maxlength: 20
+        },
+        produc: {
+          required: true,
+          maxlength: 100
+        },
+        cantidad: {
+          required: true,
+          digits: true,
+          min: 1,
+          max: 10
+        },
+        vendedor: {
+          required: true,
+          minlength: 4,
+          maxlength: 50
+        }
+      },
+      messages: {
+        usuario: {
+          required: "Ingresa tu nombre",
+          minlength: "El nombre debe tener al menos 4 caracteres",
+          maxlength: "El nombre no puede superar los 50 caracteres"
+        },
+        estado: {
+          required: "Ingresa tu estado",
+          maxlength: "El estado no puede superar los 20 caracteres"
+        },
+        produc: {
+          required: "El nombre del producto es requerido",
+          maxlength: "El nombre del producto no puede superar los 100 caracteres"
+        },
+        cantidad: {
+          required: "Ingresa la cantidad",
+          digits: "La cantidad debe ser un número entero",
+          min: "La cantidad debe ser al menos 1",
+          max: "La cantidad no puede ser mayor a 10"
+        },
+        vendedor: {
+          required: "Ingresa el nombre del vendedor",
+          minlength: "El nombre del vendedor debe tener al menos 4 caracteres",
+          maxlength: "El nombre del vendedor no puede superar los 50 caracteres"
+        }
+      },
+      errorElement: "div",
+      errorPlacement: function(error, element) {
+        error.css({
+          color: "#ffdddd",
+          background: "#a12",
+          padding: "6px",
+          borderRadius: "6px",
+          marginTop: "5px",
+          fontSize: "0.9em"
+        });
+        error.insertAfter(element);
+      }
+    });
+  });
+</script>
 </body>
 </html>

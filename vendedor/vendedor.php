@@ -5,12 +5,6 @@
     $nombreBD="admin2";
 
     $conn= new mysqli($servidor,$usuario,$contraseña,$nombreBD);
-    if($conn -> connect_error){
-        echo "no te conectaste ";
-    }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
     $sql= "SELECT * FROM produc";
     $query = $conn->query($sql);
 
@@ -63,6 +57,90 @@ section.cuadro{
       grid-template-areas:
         "a"
         "b";
+      margin: 10px;
+      gap: 16px;
+    }
+
+    .a {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "i"
+        "d"
+        "n";
+      padding: 20px 12px;
+    }
+
+    .isac {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto;
+    }
+
+    .d {
+      font-size: 48px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .info {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+      position: static;
+      top: auto;
+      left: auto;
+    }
+
+    .bot {
+      margin: 0 auto;
+      font-size: 18px;
+      padding: 12px 18px;
+    }
+
+    .use {
+      max-width: 100%;
+      padding: 16px;
+    }
+
+    .use-input {
+      width: 100%;
+    }
+
+    .carrito th,
+    .carrito td {
+      padding: 10px;
+      font-size: 12px;
+    }
+
+    .carrito {
+      padding: 16px;
+      overflow-x: auto;
+    }
+
+    .botoncito,
+    .edi,
+    .eli,
+    #cerrarCarrito {
+      padding: 8px 10px;
+      font-size: 12px;
+      margin: 6px 0;
+    }
+
+    .goldaabajo {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin: 0 10px;
+    }
+
+    footer {
+      padding: 20px 12px;
+    }
+
+    .subscribe input {
+      width: 100%;
     }
   }
   table{
@@ -236,29 +314,9 @@ section.cuadro{
     </style>
 </head>
 <body>
-  <header>
-    <a href="../pagina_principal.php">
-      <img src="../imagenes/logo bomble.png" alt="Logo" class="logo">
-    </a>
-    <nav>
-      <ul>
-        <li><a href="../productos.php">NUESTROS JUGOS</a></li>
-        <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
-        <li><a href="../quienes.php">QUIENES SOMOS</a></li>
-        <li><a href="../telefonos .php">TELEFONOS</a></li>
-  <li class="dropdown">
-  <a href="#">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
-    <a href="../creacion.php">Creación de vasos</a>
-    <a href="../creacionjugos.php">Creación de jugos</a>
-    <a href="../admin/adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-      </ul>
-    </nav>
-  </header>
+  <?php
+  include ("encabezadovende.php");
+  ?>
     <section class="cuadro">
         <div class="a"><img src="fer.png" alt="pep " class="isac" >
           <nav>
@@ -386,52 +444,52 @@ section.cuadro{
         });
        $(document).ready(function(){
           $(".use").validate({
-                rulesa:{
+                rules:{
                   usuario:{
-                    requierd: true,
-                    minlegnth: 6,
-                    maxlegnth: 15
+                    required: true,
+                    minlength: 6,
+                    maxlength: 15
                   },
                   nombrepro:{
                     required: true,
-                    maxlegth: 20
+                    maxlength: 20
                   },
                   cantidad:{
                     required: true,
-                    maxlegnth: 3,
-                    minlegnth: 1
+                    maxlength: 3,
+                    minlength: 1
                   },
                   precio:{
-                    required: true,
+                    required: true
+                  },
                   tipo:{
                     required: true,
-                    maxlenght: 15,
-                    minlenght: 11
+                    maxlength: 15,
+                    minlength: 3
                   }
-              },
                 },
-              messajes:{
-                usuartio:{
+              messages:{
+                usuario:{
                     required: "Ingresa un nombre de usuario",
-                    minlenght: "El usuario debe ser de 6 caractreres",
-                    maxlenght: "El usuario no debe sobrepasar los 15 caracteres"
+                    minlength: "El usuario debe ser de al menos 6 caracteres",
+                    maxlength: "El usuario no debe sobrepasar los 15 caracteres"
                   },
                   nombrepro:{
-                    required: "Ingresa el nombre del producto que se desea agregar al catalogo",
-                    maxlenght: "Ingrese un nombre de producto valido"
+                    required: "Ingresa el nombre del producto que se desea agregar al catálogo",
+                    maxlength: "Ingrese un nombre de producto válido"
                   },
                   cantidad:{
-                    required: "Ingresa la cantidad del producto que se desea agregar al catalogo",
-                    maxlenght: "La cantidad del producto no debe sobrepasar la centena",
-                    minlenght: "La cantidad del producto debe ser almenos de 1 unidad"
+                    required: "Ingresa la cantidad del producto que se desea agregar al catálogo",
+                    maxlength: "La cantidad del producto no debe sobrepasar los 3 dígitos",
+                    minlength: "La cantidad del producto debe ser al menos 1 unidad"
                   },
                   precio:{
                     required: "Ingresa el precio del producto"
                   },
                   tipo:{
                     required: "Ingresa el tipo del producto",
-                    maxlenght: "El tipo del producto debe ser valido",
-                    minlenght: "El tipo dde producto debe ser valido"    
+                    maxlength: "El tipo del producto debe ser válido",
+                    minlength: "El tipo de producto debe ser válido"
                 }
               }
             })

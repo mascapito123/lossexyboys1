@@ -8,9 +8,6 @@
     if($conn -> connect_error){
         echo "no te conectaste ";
     }
-    else{
-        echo "si te conectaste ". "<br>";
-    }
 
     $codigo=$_GET['codigo'];
     $sql="SELECT * FROM carro WHERE codigo='$codigo'";
@@ -122,29 +119,9 @@ font-size: 25px;
     </style>   
 </head>
 <body>
-    <header>
-  <a href="../pagina_principal.php">
-  <img src="../imagenes/logo bomble.png" alt="Logo" class="logo" style="border-radius: 50%;">
-  </a>
-  <nav>
-    <ul>
-      <li><a href="../productos.php">NUESTROS JUGOS</a></li>
-      <li><a href="../horarioatencion.php">PROGRAMAS</a></li>
-      <li><a href="../quienes.php">QUIENES SOMOS</a></li>
-      <li><a href="../telefonos .php">TELEFONOS</a></li>
-      <li class="dropdown">
-  <a href="../productos.php">MÁS</a>
-  <div class="dropdown-content">
-    <a href="https://maps.app.goo.gl/L1Kd1FhKZzSNHeTV7">Ubicación</a>
-    <a href="../registro.php">Registrarse</a>
-    <a href="../creacion.php">Creacion de vasos</a>
-    <a href="../creacionjugos.php">Creacion de jugos</a>
-    <a href="../adminbueno.php">Panel de Administración</a>
-  </div>
-</li>
-    </ul>
-  </nav>
-</header>
+    <?php
+include ("encabezadocarri.php");
+?>
     <form action="editado_carrito.php" method="post" class="use">
         <label for="id" class="use-label">codigo:</label>
         <input type="text" class="use-input" id="codigo" name="codigo" value="<?php echo $row['codigo']; ?>" readonly><br>
